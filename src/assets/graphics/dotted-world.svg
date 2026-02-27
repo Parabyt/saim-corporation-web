@@ -1,0 +1,27 @@
+<svg width="980" height="420" viewBox="0 0 980 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="dotPattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="2.2" cy="2.2" r="1.8" fill="#D6DFEE" />
+    </pattern>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox">
+      <feGaussianBlur stdDeviation="0.8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g opacity="0.92" filter="url(#softGlow)">
+    <path d="M88 172C123 142 165 120 212 121C245 121 282 131 307 157C332 184 337 224 328 255C318 289 290 312 257 326C222 341 180 345 146 333C112 320 88 294 78 262C69 231 61 198 88 172Z" fill="url(#dotPattern)"/>
+    <path d="M232 320C247 316 265 321 274 333C286 348 282 369 270 383C255 400 231 407 210 401C194 395 185 380 186 364C188 344 212 327 232 320Z" fill="url(#dotPattern)"/>
+
+    <path d="M402 103C432 84 468 76 504 74C546 72 591 79 626 102C654 120 676 145 681 176C686 209 675 242 652 267C627 293 590 309 551 315C509 321 464 319 430 298C398 277 376 245 372 210C368 173 374 129 402 103Z" fill="url(#dotPattern)"/>
+    <path d="M492 314C511 305 535 307 553 317C573 329 585 352 583 376C582 395 569 410 551 417C531 425 507 422 490 410C473 399 463 379 465 359C467 341 476 323 492 314Z" fill="url(#dotPattern)"/>
+
+    <path d="M697 144C727 124 764 115 801 117C836 119 870 133 891 161C908 185 911 216 899 243C886 273 859 294 829 307C798 321 763 324 731 313C699 302 670 277 660 244C650 211 669 166 697 144Z" fill="url(#dotPattern)"/>
+    <path d="M785 314C801 307 821 308 836 317C851 326 861 342 860 359C858 377 845 392 828 399C811 407 791 407 775 399C760 391 749 376 749 360C750 341 767 322 785 314Z" fill="url(#dotPattern)"/>
+
+    <path d="M900 304C916 297 935 298 949 309C962 319 966 338 959 354C953 369 939 380 923 384C906 388 888 381 878 366C868 351 871 330 883 317C888 312 893 307 900 304Z" fill="url(#dotPattern)"/>
+  </g>
+</svg>

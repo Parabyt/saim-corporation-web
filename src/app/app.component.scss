@@ -1,0 +1,33 @@
+.app-shell {
+  position: relative;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+main {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  background: #ffffff;
+  transform-origin: top center;
+  padding-top: var(--header-height);
+  margin-bottom: var(--site-footer-height, 320px);
+}
+
+main.home-route {
+  padding-top: 0;
+}
+
+app-site-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+@media (max-width: 980px) {
+  main {
+    padding-top: var(--header-height-mobile);
+  }
+}

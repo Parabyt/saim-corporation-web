@@ -1,0 +1,109 @@
+<section class="about-hero">
+  <div class="about-shell">
+    <p class="kicker">About Saim Corporation</p>
+    <h1>Built for precision manufacturing and dependable global export partnerships.</h1>
+    <p>
+      We are an export-focused company delivering leather goods, sportswear, gym wear, uniforms, and private-label
+      product programs through a quality-first production model.
+    </p>
+  </div>
+</section>
+
+<section class="about-intro about-shell">
+  <article>
+    <h2>Who We Are</h2>
+    <p>
+      Saim Corporation combines product craftsmanship, operational discipline, and market understanding to serve
+      wholesalers, institutional buyers, and global brands. Our teams coordinate every stage, from sourcing and
+      sampling to quality control and export dispatch.
+    </p>
+  </article>
+  <aside>
+    <p class="mini">Since 2014</p>
+    <h3>Empowering partners to scale with consistent quality, responsive production, and reliable timelines.</h3>
+    <a routerLink="/catalog">Explore Catalog</a>
+  </aside>
+</section>
+
+<section class="ceo-note about-shell">
+  <p class="ceo-tag">CEO Message</p>
+  <div class="ceo-media">
+    <img src="assets/graphics/ceo-placeholder.svg" alt="CEO placeholder portrait without background" />
+  </div>
+  <article class="ceo-message">
+    <h2>Message from the CEO</h2>
+    <p>
+      “Our commitment is simple: build products our partners can trust, and deliver programs they can scale.
+      We invest in people, process, and product integrity so every order reflects the same standard of excellence.”
+    </p>
+    <strong>Chief Executive Officer (Placeholder)</strong>
+  </article>
+</section>
+
+<section class="metric-band">
+  <div class="about-shell metrics-grid">
+    @for (metric of metrics; track metric.label) {
+      <article>
+        <strong>{{ metric.value }}</strong>
+        <span>{{ metric.label }}</span>
+      </article>
+    }
+  </div>
+</section>
+
+<section class="dual-focus about-shell">
+  <article>
+    <img
+      src="https://images.pexels.com/photos/3184302/pexels-photo-3184302.jpeg?auto=compress&cs=tinysrgb&w=1400"
+      alt="Manufacturing and quality workflow"
+    />
+    <h3>Our Growth Philosophy</h3>
+    <p>Long-term growth comes from repeatable quality, transparent communication, and continuous process refinement.</p>
+  </article>
+  <article>
+    <img
+      src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1400"
+      alt="Team collaboration"
+    />
+    <h3>Unified Team Effort</h3>
+    <p>Merchandising, production, QA, and logistics teams work as one unit to maintain execution consistency.</p>
+  </article>
+</section>
+
+<section class="csr-section">
+  <div class="about-shell">
+    <h2>Corporate Responsibility</h2>
+    <div class="csr-grid">
+      @for (pillar of csrPillars; track pillar.title) {
+        <article>
+          <h3>{{ pillar.title }}</h3>
+          <p>{{ pillar.text }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="journey about-shell">
+  <h2>Journey of Excellence</h2>
+  <div class="timeline">
+    @for (item of milestones; track item.year) {
+      <article>
+        <strong>{{ item.year }}</strong>
+        <p>{{ item.text }}</p>
+      </article>
+    }
+  </div>
+</section>
+
+<section class="compliance about-shell">
+  <h2>Compliance & Assurance</h2>
+  <p>Our workflows are aligned with export documentation, quality checks, and production accountability standards.</p>
+  <div class="badge-row">
+    <span>Quality Assurance</span>
+    <span>Responsible Sourcing</span>
+    <span>Production Traceability</span>
+    <span>Export Documentation</span>
+    <span>On-Time Dispatch</span>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+<article class="product-card">
+  <div class="image-wrap">
+    <a [routerLink]="['/products', product.slug]">
+      <img [src]="product.imageUrl" [alt]="product.title" />
+    </a>
+
+    <button type="button" class="wish" [class.active]="wished()" (click)="toggleWish()" aria-label="Wishlist">❤</button>
+
+    <a class="quick" [routerLink]="['/products', product.slug]">Quick View</a>
+  </div>
+
+  <h3><a [routerLink]="['/products', product.slug]">{{ product.title }}</a></h3>
+  <p class="description">{{ product.description }}</p>
+  <small>Origin: {{ product.originCountry }}</small>
+  <div class="bottom" [class.no-price]="!showPrice">
+    @if (showPrice) {
+      <strong>{{ product.currency }} {{ product.price.toFixed(2) }}</strong>
+    }
+    <a class="inq" [routerLink]="['/products', product.slug]">Add to Inquiry</a>
+  </div>
+</article>

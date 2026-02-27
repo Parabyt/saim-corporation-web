@@ -1,0 +1,159 @@
+.section-width {
+  width: min(var(--container-max), 92vw);
+  margin: 0 auto;
+}
+
+.inquiry-page {
+  padding: 1.25rem 0 var(--section-space-lg);
+}
+
+.inquiry-hero {
+  margin-bottom: 1rem;
+}
+
+.kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.74rem;
+  color: #ef7c1a;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0.45rem 0 0.62rem;
+  font-size: clamp(1.65rem, 3.8vw, 2.55rem);
+  color: #0f2742;
+}
+
+.inquiry-hero p {
+  margin: 0;
+  max-width: 74ch;
+  color: #4f5d6c;
+  line-height: 1.65;
+}
+
+.inquiry-layout {
+  display: grid;
+  grid-template-columns: 0.82fr 1.35fr;
+  gap: 1rem;
+}
+
+.inquiry-notes,
+.inquiry-form {
+  border: 1px solid #d9e2ec;
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 1rem;
+}
+
+.inquiry-notes h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.inquiry-notes ul {
+  margin: 0.65rem 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.45rem;
+  color: #4f5d6c;
+  font-size: 0.86rem;
+}
+
+.inquiry-notes a {
+  text-decoration: none;
+  color: #113a63;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 0.7rem;
+  color: #18304a;
+  font-size: 0.79rem;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  border: 1px solid #d0d9e5;
+  border-radius: 10px;
+  padding: 0.65rem 0.72rem;
+  font-size: 0.86rem;
+  font-family: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.reference-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+}
+
+.upload input[type='file'] {
+  padding: 0.4rem;
+}
+
+.form-actions {
+  margin-top: 0.25rem;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.76rem 1.35rem;
+  border-radius: 999px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  line-height: 1;
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  border: 0;
+  cursor: pointer;
+}
+
+.primary {
+  background: var(--color-primary);
+  color: #111111;
+}
+
+.btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.status {
+  margin: 0.8rem 0 0;
+  font-size: 0.84rem;
+  color: #1a7f4f;
+}
+
+.status.error {
+  color: #c4402f;
+}
+
+@media (max-width: 980px) {
+  .inquiry-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .form-grid,
+  .reference-row {
+    grid-template-columns: 1fr;
+  }
+}

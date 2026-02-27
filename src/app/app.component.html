@@ -1,0 +1,7 @@
+<div class="app-shell">
+  <app-site-header />
+  <main [@routeTransition]="routeState()" [class.home-route]="isHomeRoute()">
+    <router-outlet />
+  </main>
+  <app-site-footer />
+</div>

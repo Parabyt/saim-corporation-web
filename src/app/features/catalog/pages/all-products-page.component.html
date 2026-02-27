@@ -1,0 +1,45 @@
+<section class="all-products-page section-width">
+  <div class="head">
+    <div>
+      <p class="crumb">
+        <a routerLink="/">Home</a> / <a routerLink="/catalog">Catalog</a> / All Products
+      </p>
+      <h1>
+        Products
+        @if (selectedCategoryMeta(); as category) {
+          <span>/ {{ category.title }}</span>
+        }
+      </h1>
+    </div>
+    <a class="back-btn" routerLink="/catalog">Back To Catalog</a>
+  </div>
+
+  <div class="toolbar">
+    <div class="search-group">
+      <input
+        type="search"
+        [value]="searchDraft()"
+        (input)="searchDraft.set($any($event.target).value)"
+        placeholder="Search products by title, description, SKU..."
+      />
+      <button type="button" (click)="applySearch()">Search</button>
+      @if (appliedSearch()) {
+        <button class="clear" type="button" (click)="clearSearch()">Clear</button>
+      }
+    </div>
+    <p>{{ products().length }} items</p>
+  </div>
+
+  <div class="sub-filter-bar">
+    <button [class.active]="selectedSubcategory() === null" (click)="setSubcategoryFilter(null)">All Subcategories</button>
+    @for (sub of subcategories(); track sub.id) {
+      <button [class.active]="selectedSubcategory() === sub.id" (click)="setSubcategoryFilter(sub.id)">{{ sub.title }}</button>
+    }
+  </div>
+
+  <div class="grid">
+    @for (product of products(); track product.id) {
+      <app-product-card [product]="product" />
+    }
+  </div>
+</section>

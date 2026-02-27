@@ -1,0 +1,94 @@
+<section class="contact-page section-width">
+  <header class="contact-hero">
+    <p class="kicker">Contact Us</p>
+    <h1>Let’s Build Your Export Program</h1>
+    <p>
+      Reach us through your preferred channel or send a detailed message below. We respond with sourcing, manufacturing,
+      and shipment guidance tailored to your market.
+    </p>
+  </header>
+
+  <div class="contact-layout">
+    <aside class="contact-channels">
+      <h2>Reach Us Through</h2>
+      <div class="channel-grid">
+        @for (channel of channels; track channel.title) {
+          <article>
+            <h3>{{ channel.title }}</h3>
+            <p class="value">{{ channel.value }}</p>
+            <p>{{ channel.detail }}</p>
+          </article>
+        }
+      </div>
+
+      <div class="social-row">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+      </div>
+    </aside>
+
+    <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="submitContactMessage()">
+      <h2>Send Message</h2>
+
+      <div class="form-grid">
+        <label>
+          Full Name
+          <input type="text" formControlName="fullName" />
+        </label>
+        <label>
+          Company Name
+          <input type="text" formControlName="companyName" />
+        </label>
+        <label>
+          Work Email
+          <input type="email" formControlName="email" />
+        </label>
+        <label>
+          Phone / WhatsApp
+          <input type="text" formControlName="phone" />
+        </label>
+        <label>
+          Country
+          <input type="text" formControlName="country" />
+        </label>
+        <label>
+          Subject
+          <input type="text" formControlName="subject" />
+        </label>
+      </div>
+
+      <label>
+        Message
+        <textarea rows="5" formControlName="message" placeholder="Share your requirement details, target quantity, and timeline."></textarea>
+      </label>
+
+      <label class="check-line">
+        <input type="checkbox" formControlName="acceptedTerms" />
+        <span>I accept the terms and conditions.</span>
+      </label>
+
+      <div class="recaptcha-shell" [class.disabled]="!isCaptchaEnabled()">
+        <div class="recaptcha-widget" #recaptchaHost></div>
+        @if (!isCaptchaEnabled()) {
+          <div class="recaptcha-overlay" aria-hidden="true"></div>
+        }
+      </div>
+
+      @if (!isCaptchaEnabled()) {
+        <p class="recaptcha-help">Complete all required fields and accept terms to enable reCAPTCHA.</p>
+      }
+      @if (isCaptchaLoadFailed()) {
+        <p class="recaptcha-help error">reCAPTCHA could not be loaded. Please refresh and try again.</p>
+      }
+
+      <button class="btn primary" type="submit" [disabled]="submitState() === 'submitting' || contactForm.invalid">
+        {{ submitState() === 'submitting' ? 'Sending...' : 'Send Message' }}
+      </button>
+
+      @if (statusMessage()) {
+        <p class="status" [class.error]="submitState() === 'error'">{{ statusMessage() }}</p>
+      }
+    </form>
+  </div>
+</section>

@@ -1,0 +1,3574 @@
+{
+  "source": {
+    "date": "2026-02-22T12:12:34.202Z",
+    "collectionsUrl": "https://kumas.com/collections.xml",
+    "productsUrl": "https://kumas.com/products.xml"
+  },
+  "categories": [
+    {
+      "id": "cat-1",
+      "slug": "deniz-konsepti",
+      "title": "Deniz Konsepti",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Deniz Konsepti collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-2",
+      "slug": "desenler",
+      "title": "Desenler",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Desenler collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-3",
+      "slug": "doga-konseptli",
+      "title": "Doga Konseptli",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Doga Konseptli collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-4",
+      "slug": "duz-renk",
+      "title": "Duz Renk",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Duz Renk collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-5",
+      "slug": "ekose-desenli",
+      "title": "Ekose Desenli",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Ekose Desenli collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-6",
+      "slug": "etnik-desenli",
+      "title": "Etnik Desenli",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Etnik Desenli collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-7",
+      "slug": "gokyuzu-konseptli",
+      "title": "Gokyuzu Konseptli",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Gokyuzu Konseptli collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-8",
+      "slug": "hayvan-konseptli",
+      "title": "Hayvan Konseptli",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Hayvan Konseptli collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-9",
+      "slug": "jakarli-desenli",
+      "title": "Jakarli Desenli",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Jakarli Desenli collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-10",
+      "slug": "jut-desenli",
+      "title": "Jut Desenli",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Jut Desenli collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-11",
+      "slug": "kabile-konseptli",
+      "title": "Kabile Konseptli",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Kabile Konseptli collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-12",
+      "slug": "kadife-kumas",
+      "title": "Kadife Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Kadife Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-13",
+      "slug": "kare-muslin-bez",
+      "title": "Kare Muslin Bez",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Kare Muslin Bez collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-14",
+      "slug": "keten-kumas",
+      "title": "Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Keten Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-15",
+      "slug": "meyve-konseptli",
+      "title": "Meyve Konseptli",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Meyve Konseptli collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-16",
+      "slug": "muslin-bezi-kumas",
+      "title": "Muslin Bezi Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Muslin Bezi Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-17",
+      "slug": "muzik-konsepti",
+      "title": "Muzik Konsepti",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Muzik Konsepti collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-18",
+      "slug": "naturel-konseptli",
+      "title": "Naturel Konseptli",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Naturel Konseptli collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-19",
+      "slug": "noel-baba-desenli",
+      "title": "Noel Baba Desenli",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Noel Baba Desenli collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-20",
+      "slug": "pazen-kumas",
+      "title": "Pazen Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Pazen Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-21",
+      "slug": "penye-kumas",
+      "title": "Penye Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Penye Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-22",
+      "slug": "poplin-kumas",
+      "title": "Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Poplin Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-23",
+      "slug": "saten-kumas",
+      "title": "Saten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Saten Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-24",
+      "slug": "sevgililer-gunu-konseptli",
+      "title": "Sevgililer Gunu Konseptli",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Sevgililer Gunu Konseptli collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-25",
+      "slug": "uzay-konseptli",
+      "title": "Uzay Konseptli",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Uzay Konseptli collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-26",
+      "slug": "viskon-kumas",
+      "title": "Viskon Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Viskon Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-27",
+      "slug": "yilbasi-konseptli",
+      "title": "Yilbasi Konseptli",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Yilbasi Konseptli collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-28",
+      "slug": "yilbasi-susleri-desenli",
+      "title": "Yilbasi Susleri Desenli",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Yilbasi Susleri Desenli collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-29",
+      "slug": "cocuk-konsepti",
+      "title": "Cocuk Konsepti",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Cocuk Konsepti collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-30",
+      "slug": "sekil-ve-motif-konseptli",
+      "title": "Sekil Ve Motif Konseptli",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Sekil Ve Motif Konseptli collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-31",
+      "slug": "duz-renk-pazen-kumaslar",
+      "title": "Duz Renk Pazen Kumaslar",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Duz Renk Pazen Kumaslar collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-32",
+      "slug": "fitilli-kadife-kumas",
+      "title": "Fitilli Kadife Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Fitilli Kadife Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-33",
+      "slug": "linen-keten-kumas",
+      "title": "Linen Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Linen Keten Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-34",
+      "slug": "viskon-keten-kumaslar",
+      "title": "Viskon Keten Kumaslar",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Viskon Keten Kumaslar collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-35",
+      "slug": "4-kat-muslin-bezi-kumas",
+      "title": "4 Kat Muslin Bezi Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "4 Kat Muslin Bezi Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-36",
+      "slug": "havlu-kumas",
+      "title": "Havlu Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Havlu Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-37",
+      "slug": "fisto-kumas",
+      "title": "Fisto Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Fisto Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-38",
+      "slug": "haftanin-firsat-kategorisi",
+      "title": "Haftanin Firsat Kategorisi",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Haftanin Firsat Kategorisi collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-39",
+      "slug": "diger-konseptler",
+      "title": "Diger Konseptler",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Diger Konseptler collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-40",
+      "slug": "amerikan-bezi",
+      "title": "Amerikan Bezi",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Amerikan Bezi collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-41",
+      "slug": "cendere-kumas",
+      "title": "Cendere Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Cendere Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-42",
+      "slug": "dertsiz-kumas",
+      "title": "Dertsiz Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Dertsiz Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-43",
+      "slug": "dogal-ve-ham-kumaslar",
+      "title": "Dogal Ve Ham Kumaslar",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Dogal Ve Ham Kumaslar collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-44",
+      "slug": "kase-kumas",
+      "title": "Kase Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Kase Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-45",
+      "slug": "jut-kumaslar",
+      "title": "Jut Kumaslar",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Jut Kumaslar collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-46",
+      "slug": "oduncu-kumas",
+      "title": "Oduncu Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Oduncu Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-47",
+      "slug": "pike-kumas",
+      "title": "Pike Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Pike Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-48",
+      "slug": "tela-kumas",
+      "title": "Tela Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Tela Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-49",
+      "slug": "vual-kumas",
+      "title": "Vual Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Vual Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-50",
+      "slug": "welsoft-kumas",
+      "title": "Welsoft Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Welsoft Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-51",
+      "slug": "ayin-firsat-kategorisi",
+      "title": "Ayin Firsat Kategorisi",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Ayin Firsat Kategorisi collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-52",
+      "slug": "flam-keten-kumas",
+      "title": "Flam Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Flam Keten Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-53",
+      "slug": "gabardin-kumas",
+      "title": "Gabardin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Gabardin Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-54",
+      "slug": "poliviskon-kumas",
+      "title": "Poliviskon Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Poliviskon Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-55",
+      "slug": "burumcuk-muslin-bezi",
+      "title": "Burumcuk Muslin Bezi",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Burumcuk Muslin Bezi collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-56",
+      "slug": "duz-kare-muslin-bez",
+      "title": "Duz Kare Muslin Bez",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Duz Kare Muslin Bez collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-57",
+      "slug": "tensel-keten-kumaslar",
+      "title": "Tensel Keten Kumaslar",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Tensel Keten Kumaslar collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-58",
+      "slug": "balik-sirti-pamuk-keten-kumas",
+      "title": "Balik Sirti Pamuk Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Balik Sirti Pamuk Keten Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-59",
+      "slug": "yakma-kumas",
+      "title": "Yakma Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Yakma Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-60",
+      "slug": "kenevir-keten-kumas",
+      "title": "Kenevir Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Kenevir Keten Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-61",
+      "slug": "kullanim-alanlari",
+      "title": "Kullanim Alanlari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Kullanim Alanlari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-62",
+      "slug": "bebek-ve-cocuk-kumaslari",
+      "title": "Bebek Ve Cocuk Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Bebek Ve Cocuk Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-63",
+      "slug": "ev-tekstili-kumaslari",
+      "title": "Ev Tekstili Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Ev Tekstili Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-64",
+      "slug": "giyim-kumaslari",
+      "title": "Giyim Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Giyim Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-65",
+      "slug": "hobi-kumaslari",
+      "title": "Hobi Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Hobi Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-66",
+      "slug": "ic-astari-kumaslari",
+      "title": "Ic Astari Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Ic Astari Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-67",
+      "slug": "yikanmis-keten-kumaslar",
+      "title": "Yikanmis Keten Kumaslar",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Yikanmis Keten Kumaslar collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-68",
+      "slug": "ipek-saten-kumas",
+      "title": "Ipek Saten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Ipek Saten Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-69",
+      "slug": "battaniye-kumaslari",
+      "title": "Battaniye Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Battaniye Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-70",
+      "slug": "bornoz-kumaslari",
+      "title": "Bornoz Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Bornoz Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-71",
+      "slug": "yatak-ortusu-kumaslari-2",
+      "title": "Yatak Ortusu Kumaslari 2",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Yatak Ortusu Kumaslari 2 collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-72",
+      "slug": "el-ve-yuz-havlusu-kumaslari",
+      "title": "El Ve Yuz Havlusu Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "El Ve Yuz Havlusu Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-73",
+      "slug": "panco-kumaslari",
+      "title": "Panco Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Panco Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-74",
+      "slug": "kaban-kumaslari",
+      "title": "Kaban Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Kaban Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-75",
+      "slug": "paskalya-konsepti",
+      "title": "Paskalya Konsepti",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Paskalya Konsepti collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-76",
+      "slug": "tensel-kumas",
+      "title": "Tensel Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Tensel Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-77",
+      "slug": "kot-kumas",
+      "title": "Kot Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Kot Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-78",
+      "slug": "modal-kumaslar",
+      "title": "Modal Kumaslar",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Modal Kumaslar collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-79",
+      "slug": "duck-kumas",
+      "title": "Duck Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Duck Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-80",
+      "slug": "ic-camasiri-kumaslari",
+      "title": "Ic Camasiri Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Ic Camasiri Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-81",
+      "slug": "sal-ve-atki-kumaslari",
+      "title": "Sal Ve Atki Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Sal Ve Atki Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-82",
+      "slug": "cadilar-bayrami-konsepti",
+      "title": "Cadilar Bayrami Konsepti",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Cadilar Bayrami Konsepti collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-83",
+      "slug": "desenli-pazen-kumaslar",
+      "title": "Desenli Pazen Kumaslar",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Desenli Pazen Kumaslar collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-84",
+      "slug": "pullu-payet-kumaslar",
+      "title": "Pullu Payet Kumaslar",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Pullu Payet Kumaslar collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-85",
+      "slug": "divitin-pazen-kumas",
+      "title": "Divitin Pazen Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Divitin Pazen Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-86",
+      "slug": "duz-renk-duck-kumas",
+      "title": "Duz Renk Duck Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Duz Renk Duck Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-87",
+      "slug": "duz-renk-poplin-kumaslar",
+      "title": "Duz Renk Poplin Kumaslar",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Duz Renk Poplin Kumaslar collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-88",
+      "slug": "giyim-astari-kumaslari",
+      "title": "Giyim Astari Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Giyim Astari Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-89",
+      "slug": "desenli-penye-kumas",
+      "title": "Desenli Penye Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Desenli Penye Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-90",
+      "slug": "duz-renk-viskon-kumaslar",
+      "title": "Duz Renk Viskon Kumaslar",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Duz Renk Viskon Kumaslar collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-91",
+      "slug": "yeni-gelen-kumaslar",
+      "title": "Yeni Gelen Kumaslar",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Yeni Gelen Kumaslar collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-92",
+      "slug": "sile-bezi-kumas",
+      "title": "Sile Bezi Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Sile Bezi Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-93",
+      "slug": "sifon-kumas",
+      "title": "Sifon Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Sifon Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-94",
+      "slug": "duz-renk-penye-kumas",
+      "title": "Duz Renk Penye Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Duz Renk Penye Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-95",
+      "slug": "suni-deri-kumas",
+      "title": "Suni Deri Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Suni Deri Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-96",
+      "slug": "desenli-viskon-kumaslar",
+      "title": "Desenli Viskon Kumaslar",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Desenli Viskon Kumaslar collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-97",
+      "slug": "dijital-baski-kumas",
+      "title": "Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Dijital Baski Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-98",
+      "slug": "dosemelik-kumaslar",
+      "title": "Dosemelik Kumaslar",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Dosemelik Kumaslar collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-99",
+      "slug": "desenli-kare-muslin-bez",
+      "title": "Desenli Kare Muslin Bez",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Desenli Kare Muslin Bez collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-100",
+      "slug": "bebek-ortu-ve-kundak-kumaslari",
+      "title": "Bebek Ortu Ve Kundak Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Bebek Ortu Ve Kundak Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-101",
+      "slug": "desenli-poplin-kumaslar",
+      "title": "Desenli Poplin Kumaslar",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Desenli Poplin Kumaslar collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-102",
+      "slug": "bebek-besik-ve-yatak-korumalik-kumaslari",
+      "title": "Bebek Besik Ve Yatak Korumalik Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Bebek Besik Ve Yatak Korumalik Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-103",
+      "slug": "puset-ortusu-kumaslari",
+      "title": "Puset Ortusu Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Puset Ortusu Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-104",
+      "slug": "bebek-alt-acmasi-kumaslari",
+      "title": "Bebek Alt Acmasi Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Bebek Alt Acmasi Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-105",
+      "slug": "bebek-tulumu-kumaslari",
+      "title": "Bebek Tulumu Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Bebek Tulumu Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-106",
+      "slug": "babynest-kumaslari",
+      "title": "Babynest Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Babynest Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-107",
+      "slug": "nevresimlik-kumaslar",
+      "title": "Nevresimlik Kumaslar",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Nevresimlik Kumaslar collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-108",
+      "slug": "emzirme-onlugu-ve-yastigi-kumaslari",
+      "title": "Emzirme Onlugu Ve Yastigi Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Emzirme Onlugu Ve Yastigi Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-109",
+      "slug": "oyun-mati-kumaslari",
+      "title": "Oyun Mati Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Oyun Mati Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-110",
+      "slug": "gecelik-kumaslari",
+      "title": "Gecelik Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Gecelik Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-111",
+      "slug": "pamuk-keten-kumaslar",
+      "title": "Pamuk Keten Kumaslar",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Pamuk Keten Kumaslar collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-112",
+      "slug": "ceket-kumaslari",
+      "title": "Ceket Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Ceket Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-113",
+      "slug": "ihrac-fazlasi-kumaslar",
+      "title": "Ihrac Fazlasi Kumaslar",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Ihrac Fazlasi Kumaslar collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-114",
+      "slug": "bluz-kumaslari",
+      "title": "Bluz Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Bluz Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-115",
+      "slug": "gomlek-kumaslari",
+      "title": "Gomlek Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Gomlek Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-116",
+      "slug": "jile-kumaslari",
+      "title": "Jile Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Jile Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-117",
+      "slug": "sort-ve-kapri-kumaslari",
+      "title": "Sort Ve Kapri Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Sort Ve Kapri Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-118",
+      "slug": "kimono-kumaslari",
+      "title": "Kimono Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Kimono Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-119",
+      "slug": "pareo-kumaslari",
+      "title": "Pareo Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Pareo Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-120",
+      "slug": "tunik-kumaslari",
+      "title": "Tunik Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Tunik Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-121",
+      "slug": "salvarlik-kumaslar",
+      "title": "Salvarlik Kumaslar",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Salvarlik Kumaslar collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-122",
+      "slug": "canta-astari-kumaslari",
+      "title": "Canta Astari Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Canta Astari Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-123",
+      "slug": "gofre-kumas",
+      "title": "Gofre Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Gofre Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-124",
+      "slug": "yelek-kumaslari",
+      "title": "Yelek Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Yelek Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-125",
+      "slug": "pijama-kumaslari",
+      "title": "Pijama Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Pijama Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-126",
+      "slug": "scuba-kumas",
+      "title": "Scuba Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Scuba Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-127",
+      "slug": "elbiselik-kumaslar",
+      "title": "Elbiselik Kumaslar",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Elbiselik Kumaslar collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-128",
+      "slug": "etek-kumaslari",
+      "title": "Etek Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Etek Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-129",
+      "slug": "pantolon-kumaslari",
+      "title": "Pantolon Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Pantolon Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-130",
+      "slug": "cocuk-veya-bebek-kiyafetleri-kumaslari",
+      "title": "Cocuk Veya Bebek Kiyafetleri Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Cocuk Veya Bebek Kiyafetleri Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-131",
+      "slug": "kirkyama-sanati-kumaslari",
+      "title": "Kirkyama Sanati Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Kirkyama Sanati Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-132",
+      "slug": "indirimli-kumaslar",
+      "title": "Indirimli Kumaslar",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Indirimli Kumaslar collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-133",
+      "slug": "lavanta-kesesi-veya-kavanoz-kapagi-kumaslari",
+      "title": "Lavanta Kesesi Veya Kavanoz Kapagi Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Lavanta Kesesi Veya Kavanoz Kapagi Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-134",
+      "slug": "abajur-ve-lambader-kumaslari",
+      "title": "Abajur Ve Lambader Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Abajur Ve Lambader Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-135",
+      "slug": "defolu-kumaslar",
+      "title": "Defolu Kumaslar",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Defolu Kumaslar collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-136",
+      "slug": "krep-kumas",
+      "title": "Krep Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Krep Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-137",
+      "slug": "koltuk-ortusu-kumaslari",
+      "title": "Koltuk Ortusu Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Koltuk Ortusu Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-138",
+      "slug": "desenli-duck-kumas",
+      "title": "Desenli Duck Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Desenli Duck Kumas collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-139",
+      "slug": "amerikan-servis-ve-supla-kumaslari",
+      "title": "Amerikan Servis Ve Supla Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Amerikan Servis Ve Supla Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-140",
+      "slug": "koltuk-kilifi-kumaslari",
+      "title": "Koltuk Kilifi Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Koltuk Kilifi Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-141",
+      "slug": "kirlent-ve-minder-kumaslari",
+      "title": "Kirlent Ve Minder Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Kirlent Ve Minder Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-142",
+      "slug": "masa-ortusu-kumaslari",
+      "title": "Masa Ortusu Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Masa Ortusu Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-143",
+      "slug": "mutfak-onlugu-kumaslari",
+      "title": "Mutfak Onlugu Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Mutfak Onlugu Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-144",
+      "slug": "perde-kumaslari",
+      "title": "Perde Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Perde Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-145",
+      "slug": "runner-kumaslari",
+      "title": "Runner Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Runner Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-146",
+      "slug": "canta-kumaslari",
+      "title": "Canta Kumaslari",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Canta Kumaslari collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-147",
+      "slug": "pecetelik-kumaslar",
+      "title": "Pecetelik Kumaslar",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Pecetelik Kumaslar collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-148",
+      "slug": "ham-keten-kumaslar",
+      "title": "Ham Keten Kumaslar",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Ham Keten Kumaslar collection imported from Kumas sitemap."
+    },
+    {
+      "id": "cat-149",
+      "slug": "zefir-kumas",
+      "title": "Zefir Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      "description": "Zefir Kumas collection imported from Kumas sitemap."
+    }
+  ],
+  "products": [
+    {
+      "id": "prd-1",
+      "slug": "4-kat-duz-renk-muslin-kumas",
+      "categoryId": "cat-1",
+      "title": "4 Kat Duz Renk Muslin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "4 Kat Duz Renk Muslin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 6.76,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-2",
+      "slug": "afrikan-kiz-panama-keten-kumas",
+      "categoryId": "cat-2",
+      "title": "Afrikan Kiz Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Afrikan Kiz Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 9.19,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-3",
+      "slug": "anemon-cicegi-panama-keten-kumas",
+      "categoryId": "cat-3",
+      "title": "Anemon Cicegi Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Anemon Cicegi Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 10.24,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-4",
+      "slug": "antique-panama-keten-kumas",
+      "categoryId": "cat-4",
+      "title": "Antique Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Antique Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.48,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-5",
+      "slug": "acelya-cicegi-poplin-kumas",
+      "categoryId": "cat-5",
+      "title": "Acelya Cicegi Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Acelya Cicegi Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 7.78,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-6",
+      "slug": "bahcedeki-cardak-panama-keten-kumas",
+      "categoryId": "cat-6",
+      "title": "Bahcedeki Cardak Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Bahcedeki Cardak Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 5.42,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-7",
+      "slug": "balerin-prenses-poplin-kumas",
+      "categoryId": "cat-7",
+      "title": "Balerin Prenses Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Balerin Prenses Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 7.35,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-8",
+      "slug": "balkabaklari-muslin-bez-kumas",
+      "categoryId": "cat-8",
+      "title": "Balkabaklari Muslin Bez Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Balkabaklari Muslin Bez Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.53,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-9",
+      "slug": "baykuslar-panama-keten-kumas",
+      "categoryId": "cat-9",
+      "title": "Baykuslar Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Baykuslar Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 3.99,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-10",
+      "slug": "bej-karisik-sekiller-ipek-saten-kumas",
+      "categoryId": "cat-10",
+      "title": "Bej Karisik Sekiller Ipek Saten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Bej Karisik Sekiller Ipek Saten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 7.81,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-11",
+      "slug": "bej-zebra-ipek-saten-kumas",
+      "categoryId": "cat-11",
+      "title": "Bej Zebra Ipek Saten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Bej Zebra Ipek Saten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 7.07,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-12",
+      "slug": "beyaz-sulu-cicekler-panama-keten-kumas",
+      "categoryId": "cat-12",
+      "title": "Beyaz Sulu Cicekler Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Beyaz Sulu Cicekler Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 4.48,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-13",
+      "slug": "beyaz-yapraklar-poplin-kumas",
+      "categoryId": "cat-13",
+      "title": "Beyaz Yapraklar Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Beyaz Yapraklar Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 3.56,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-14",
+      "slug": "beyaz-cicekler-dijital-baski-kumas",
+      "categoryId": "cat-14",
+      "title": "Beyaz Cicekler Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Beyaz Cicekler Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 9.83,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-15",
+      "slug": "bordo-guller-duck-bezi",
+      "categoryId": "cat-15",
+      "title": "Bordo Guller Duck Bezi",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Bordo Guller Duck Bezi product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 6.86,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-16",
+      "slug": "boz-ayilar-pazen-kumas",
+      "categoryId": "cat-16",
+      "title": "Boz Ayilar Pazen Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Boz Ayilar Pazen Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 5.27,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-17",
+      "slug": "bulutlu-gokkusagi-pazen-kumas",
+      "categoryId": "cat-17",
+      "title": "Bulutlu Gokkusagi Pazen Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Bulutlu Gokkusagi Pazen Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 9.07,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-18",
+      "slug": "bulutlu-hayvanlar-poplin-kumas",
+      "categoryId": "cat-18",
+      "title": "Bulutlu Hayvanlar Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Bulutlu Hayvanlar Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 9.89,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-19",
+      "slug": "butterfly-and-science-dijital-baski-kumas",
+      "categoryId": "cat-19",
+      "title": "Butterfly And Science Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Butterfly And Science Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 9.53,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-20",
+      "slug": "burumcuk-muslin-bezi-kumas",
+      "categoryId": "cat-20",
+      "title": "Burumcuk Muslin Bezi Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Burumcuk Muslin Bezi Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 6.48,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-21",
+      "slug": "buyuculer-diyari-muslin-bez-kumas",
+      "categoryId": "cat-21",
+      "title": "Buyuculer Diyari Muslin Bez Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Buyuculer Diyari Muslin Bez Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 5.54,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-22",
+      "slug": "buyuculer-diyari-poplin-kumas",
+      "categoryId": "cat-22",
+      "title": "Buyuculer Diyari Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Buyuculer Diyari Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 5.61,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-23",
+      "slug": "buyuk-beyaz-noktalar-poplin-kumas",
+      "categoryId": "cat-23",
+      "title": "Buyuk Beyaz Noktalar Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Buyuk Beyaz Noktalar Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 9.15,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-24",
+      "slug": "buyuk-gul-panama-keten-kumas",
+      "categoryId": "cat-24",
+      "title": "Buyuk Gul Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Buyuk Gul Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 5.99,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-25",
+      "slug": "buyuk-kirmizi-kareli-ekose-panama-keten-kumas",
+      "categoryId": "cat-25",
+      "title": "Buyuk Kirmizi Kareli Ekose Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Buyuk Kirmizi Kareli Ekose Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 3.41,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-26",
+      "slug": "buyuk-sirali-cizgiler-duck-bezi-kumas",
+      "categoryId": "cat-26",
+      "title": "Buyuk Sirali Cizgiler Duck Bezi Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Buyuk Sirali Cizgiler Duck Bezi Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.03,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-27",
+      "slug": "buyuk-tropik-yapraklar-panama-keten-kumas",
+      "categoryId": "cat-27",
+      "title": "Buyuk Tropik Yapraklar Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Buyuk Tropik Yapraklar Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 10.48,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-28",
+      "slug": "buyuk-yapraklar-panama-keten-kumas",
+      "categoryId": "cat-28",
+      "title": "Buyuk Yapraklar Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Buyuk Yapraklar Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 7.45,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-29",
+      "slug": "buyuk-yaprakli-orman-keten-kumas",
+      "categoryId": "cat-29",
+      "title": "Buyuk Yaprakli Orman Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Buyuk Yaprakli Orman Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 6.31,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-30",
+      "slug": "buyuk-yaprakli-orman-panama-keten-kumas",
+      "categoryId": "cat-30",
+      "title": "Buyuk Yaprakli Orman Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Buyuk Yaprakli Orman Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 7.74,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-31",
+      "slug": "bicaklar-dijital-baski-kumas",
+      "categoryId": "cat-31",
+      "title": "Bicaklar Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Bicaklar Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 3.67,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-32",
+      "slug": "canli-guller-duck-bezi-kumas",
+      "categoryId": "cat-32",
+      "title": "Canli Guller Duck Bezi Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Canli Guller Duck Bezi Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.55,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-33",
+      "slug": "cats-power-dijital-baski-kumas",
+      "categoryId": "cat-33",
+      "title": "Cats Power Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Cats Power Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 7.08,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-34",
+      "slug": "cendere-ham-kumas",
+      "categoryId": "cat-34",
+      "title": "Cendere Ham Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Cendere Ham Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 6.23,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-35",
+      "slug": "chickens-panama-keten-kumas",
+      "categoryId": "cat-35",
+      "title": "Chickens Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Chickens Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 4.73,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-36",
+      "slug": "chini-dijital-baski-kumas",
+      "categoryId": "cat-36",
+      "title": "Chini Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Chini Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.07,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-37",
+      "slug": "christmas-plaid-panama-keten-kumas",
+      "categoryId": "cat-37",
+      "title": "Christmas Plaid Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Christmas Plaid Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.06,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-38",
+      "slug": "colorful-cats-dijital-baski-kumas",
+      "categoryId": "cat-38",
+      "title": "Colorful Cats Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Colorful Cats Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 7.15,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-39",
+      "slug": "colorful-waves-dijital-baski-kumas",
+      "categoryId": "cat-39",
+      "title": "Colorful Waves Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Colorful Waves Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 6.64,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-40",
+      "slug": "colorful-fishes-dijital-baski-kumas",
+      "categoryId": "cat-40",
+      "title": "Colorful Fishes Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Colorful Fishes Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 10.9,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-41",
+      "slug": "dairesel-yelkenler-pazen-kumas",
+      "categoryId": "cat-41",
+      "title": "Dairesel Yelkenler Pazen Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Dairesel Yelkenler Pazen Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 6.39,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-42",
+      "slug": "daisy-and-poppy-pazen-kumas",
+      "categoryId": "cat-42",
+      "title": "Daisy And Poppy Pazen Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Daisy And Poppy Pazen Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 10.51,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-43",
+      "slug": "dal-ve-yaprak-pike-kumas",
+      "categoryId": "cat-43",
+      "title": "Dal Ve Yaprak Pike Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Dal Ve Yaprak Pike Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.28,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-44",
+      "slug": "daldaki-kuslar-pike-kumas",
+      "categoryId": "cat-44",
+      "title": "Daldaki Kuslar Pike Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Daldaki Kuslar Pike Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 4.11,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-45",
+      "slug": "daldaki-limonlar-dijital-baski-kumas",
+      "categoryId": "cat-45",
+      "title": "Daldaki Limonlar Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Daldaki Limonlar Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 3.14,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-46",
+      "slug": "daldaki-cicekler-poplin-kumas",
+      "categoryId": "cat-46",
+      "title": "Daldaki Cicekler Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Daldaki Cicekler Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 8.17,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-47",
+      "slug": "dalgalar-duck-bezi-kumas",
+      "categoryId": "cat-47",
+      "title": "Dalgalar Duck Bezi Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Dalgalar Duck Bezi Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 9.37,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-48",
+      "slug": "dalgalar-poplin-kumas",
+      "categoryId": "cat-48",
+      "title": "Dalgalar Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Dalgalar Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 10.57,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-49",
+      "slug": "dalgalar-ipek-saten-kumas",
+      "categoryId": "cat-49",
+      "title": "Dalgalar Ipek Saten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Dalgalar Ipek Saten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 7.21,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-50",
+      "slug": "dallar-duck-bezi-kumas",
+      "categoryId": "cat-50",
+      "title": "Dallar Duck Bezi Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Dallar Duck Bezi Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 3.52,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-51",
+      "slug": "dallar-muslin-bezi-kumas",
+      "categoryId": "cat-51",
+      "title": "Dallar Muslin Bezi Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Dallar Muslin Bezi Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 6.12,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-52",
+      "slug": "dallar-panama-keten-kumas",
+      "categoryId": "cat-52",
+      "title": "Dallar Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Dallar Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 3.88,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-53",
+      "slug": "dalli-kedi-kopekler-poplin-kumas",
+      "categoryId": "cat-53",
+      "title": "Dalli Kedi Kopekler Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Dalli Kedi Kopekler Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.8,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-54",
+      "slug": "dalli-cicekler-poplin-kumas",
+      "categoryId": "cat-54",
+      "title": "Dalli Cicekler Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Dalli Cicekler Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 8.37,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-55",
+      "slug": "damask-duck-bezi-kumas",
+      "categoryId": "cat-55",
+      "title": "Damask Duck Bezi Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Damask Duck Bezi Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 8.69,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-56",
+      "slug": "deniz-kabuklari-dijital-baski-kumas",
+      "categoryId": "cat-56",
+      "title": "Deniz Kabuklari Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Deniz Kabuklari Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 10.61,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-57",
+      "slug": "desenli-dalga-panama-keten-kumas",
+      "categoryId": "cat-57",
+      "title": "Desenli Dalga Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Desenli Dalga Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 5.64,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-58",
+      "slug": "dinosaurs-muslin-bez-kumas",
+      "categoryId": "cat-58",
+      "title": "Dinosaurs Muslin Bez Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Dinosaurs Muslin Bez Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.57,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-59",
+      "slug": "dondurmali-unicorn-panama-keten-kumas",
+      "categoryId": "cat-59",
+      "title": "Dondurmali Unicorn Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Dondurmali Unicorn Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 8.45,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-60",
+      "slug": "dondurmali-unicorn-pazen-kumas",
+      "categoryId": "cat-60",
+      "title": "Dondurmali Unicorn Pazen Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Dondurmali Unicorn Pazen Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 4.2,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-61",
+      "slug": "dondurmali-unicorn-poplin-kumas",
+      "categoryId": "cat-61",
+      "title": "Dondurmali Unicorn Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Dondurmali Unicorn Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 4.14,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-62",
+      "slug": "donut-dijital-baski-kumas",
+      "categoryId": "cat-62",
+      "title": "Donut Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Donut Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 4.11,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-63",
+      "slug": "dot-poplin-kumas",
+      "categoryId": "cat-63",
+      "title": "Dot Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Dot Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 9.96,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-64",
+      "slug": "dogadaki-bukalemun-ipek-saten-kumas",
+      "categoryId": "cat-64",
+      "title": "Dogadaki Bukalemun Ipek Saten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Dogadaki Bukalemun Ipek Saten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 8.38,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-65",
+      "slug": "dogadaki-tavsanlar-pazen-kumas",
+      "categoryId": "cat-65",
+      "title": "Dogadaki Tavsanlar Pazen Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Dogadaki Tavsanlar Pazen Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 10.45,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-66",
+      "slug": "dumen-panama-keten-kumas",
+      "categoryId": "cat-66",
+      "title": "Dumen Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Dumen Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 9.15,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-67",
+      "slug": "dunya-haritasi-panama-keten-kumas",
+      "categoryId": "cat-67",
+      "title": "Dunya Haritasi Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Dunya Haritasi Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 6.31,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-68",
+      "slug": "duz-balik-sirti-pamuk-keten-kumas",
+      "categoryId": "cat-68",
+      "title": "Duz Balik Sirti Pamuk Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Duz Balik Sirti Pamuk Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 8.64,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-69",
+      "slug": "duz-duck-bezi-kumas",
+      "categoryId": "cat-69",
+      "title": "Duz Duck Bezi Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Duz Duck Bezi Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 3.18,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-70",
+      "slug": "duz-havlu-kumas",
+      "categoryId": "cat-70",
+      "title": "Duz Havlu Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Duz Havlu Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 7.9,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-71",
+      "slug": "duz-renk-36-1-penye-kumas",
+      "categoryId": "cat-71",
+      "title": "Duz Renk 36 1 Penye Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Duz Renk 36 1 Penye Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 4.26,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-72",
+      "slug": "duz-renk-fitilli-kadife-kumas",
+      "categoryId": "cat-72",
+      "title": "Duz Renk Fitilli Kadife Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Duz Renk Fitilli Kadife Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 8.3,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-73",
+      "slug": "duz-renk-flam-keten-kumas",
+      "categoryId": "cat-73",
+      "title": "Duz Renk Flam Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Duz Renk Flam Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.62,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-74",
+      "slug": "duz-renk-kase-kumas",
+      "categoryId": "cat-74",
+      "title": "Duz Renk Kase Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Duz Renk Kase Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 5.1,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-75",
+      "slug": "duz-renk-linen-keten-kumas",
+      "categoryId": "cat-75",
+      "title": "Duz Renk Linen Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Duz Renk Linen Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 5.03,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-76",
+      "slug": "duz-renk-pazen-kumas",
+      "categoryId": "cat-76",
+      "title": "Duz Renk Pazen Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Duz Renk Pazen Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 4.21,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-77",
+      "slug": "duz-renk-vual-kumas",
+      "categoryId": "cat-77",
+      "title": "Duz Renk Vual Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Duz Renk Vual Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.09,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-78",
+      "slug": "duz-renk-sile-bezi",
+      "categoryId": "cat-78",
+      "title": "Duz Renk Sile Bezi",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Duz Renk Sile Bezi product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 10.57,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-79",
+      "slug": "dugum-panama-keten-kumas",
+      "categoryId": "cat-79",
+      "title": "Dugum Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Dugum Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.11,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-80",
+      "slug": "dugumlu-ipler-panama-keten-kumas",
+      "categoryId": "cat-80",
+      "title": "Dugumlu Ipler Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Dugumlu Ipler Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.68,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-81",
+      "slug": "ekoseler-pazen-kumas",
+      "categoryId": "cat-81",
+      "title": "Ekoseler Pazen Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Ekoseler Pazen Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 9.94,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-82",
+      "slug": "eski-cag-ipek-saten-kumas",
+      "categoryId": "cat-82",
+      "title": "Eski Cag Ipek Saten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Eski Cag Ipek Saten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 9.55,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-83",
+      "slug": "etnical-candels-panama-keten-kumas",
+      "categoryId": "cat-83",
+      "title": "Etnical Candels Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Etnical Candels Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 10.68,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-84",
+      "slug": "etnik-antika-ipek-saten-kumas",
+      "categoryId": "cat-84",
+      "title": "Etnik Antika Ipek Saten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Etnik Antika Ipek Saten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 6.37,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-85",
+      "slug": "etnik-figurler-panama-keten-kumas",
+      "categoryId": "cat-85",
+      "title": "Etnik Figurler Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Etnik Figurler Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.1,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-86",
+      "slug": "etnik-jut-panama-keten-kumas",
+      "categoryId": "cat-86",
+      "title": "Etnik Jut Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Etnik Jut Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.31,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-87",
+      "slug": "etnik-yapraklar-ipek-saten-kumas",
+      "categoryId": "cat-87",
+      "title": "Etnik Yapraklar Ipek Saten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Etnik Yapraklar Ipek Saten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.76,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-88",
+      "slug": "extreme-yaris-poplin-kumas",
+      "categoryId": "cat-88",
+      "title": "Extreme Yaris Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Extreme Yaris Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.52,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-89",
+      "slug": "falling-colorful-leaf-duck-bezi-kumas",
+      "categoryId": "cat-89",
+      "title": "Falling Colorful Leaf Duck Bezi Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Falling Colorful Leaf Duck Bezi Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 4.09,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-90",
+      "slug": "festival-orman-muslin-bez-kumas",
+      "categoryId": "cat-90",
+      "title": "Festival Orman Muslin Bez Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Festival Orman Muslin Bez Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 3.52,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-91",
+      "slug": "figurlu-kalpler-panama-keten-kumas",
+      "categoryId": "cat-91",
+      "title": "Figurlu Kalpler Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Figurlu Kalpler Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 4.37,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-92",
+      "slug": "flock-of-fish-panama-keten-kumas",
+      "categoryId": "cat-92",
+      "title": "Flock Of Fish Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Flock Of Fish Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 6.7,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-93",
+      "slug": "flowers-and-birds-duck-bezi-kumas",
+      "categoryId": "cat-93",
+      "title": "Flowers And Birds Duck Bezi Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Flowers And Birds Duck Bezi Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 7.3,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-94",
+      "slug": "fransiz-koyluler-panama-keteni-kumas",
+      "categoryId": "cat-94",
+      "title": "Fransiz Koyluler Panama Keteni Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Fransiz Koyluler Panama Keteni Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 10.01,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-95",
+      "slug": "fransiz-koyluler-poplin-kumas",
+      "categoryId": "cat-95",
+      "title": "Fransiz Koyluler Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Fransiz Koyluler Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 9.43,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-96",
+      "slug": "fulya-cicegi-poplin-kumas",
+      "categoryId": "cat-96",
+      "title": "Fulya Cicegi Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Fulya Cicegi Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 5.69,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-97",
+      "slug": "fuschia-girls-dijital-baski-kumas",
+      "categoryId": "cat-97",
+      "title": "Fuschia Girls Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Fuschia Girls Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.49,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-98",
+      "slug": "fusya-gelincik-duck-bezi",
+      "categoryId": "cat-98",
+      "title": "Fusya Gelincik Duck Bezi",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Fusya Gelincik Duck Bezi product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.8,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-99",
+      "slug": "fusya-yaprakli-guller-ipek-saten-kumas",
+      "categoryId": "cat-99",
+      "title": "Fusya Yaprakli Guller Ipek Saten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Fusya Yaprakli Guller Ipek Saten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 5.62,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-100",
+      "slug": "firca-dertsiz-kumas",
+      "categoryId": "cat-100",
+      "title": "Firca Dertsiz Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Firca Dertsiz Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 3.82,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-101",
+      "slug": "firca-cizgiler-duck-bezi",
+      "categoryId": "cat-101",
+      "title": "Firca Cizgiler Duck Bezi",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Firca Cizgiler Duck Bezi product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 3.06,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-102",
+      "slug": "gece-ayisi-panama-keten-kumas",
+      "categoryId": "cat-102",
+      "title": "Gece Ayisi Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Gece Ayisi Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 4.47,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-103",
+      "slug": "gece-koalasi-poplin-kumas",
+      "categoryId": "cat-103",
+      "title": "Gece Koalasi Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Gece Koalasi Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 6.6,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-104",
+      "slug": "gece-kusu-muslin-bez-kumas",
+      "categoryId": "cat-104",
+      "title": "Gece Kusu Muslin Bez Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Gece Kusu Muslin Bez Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 9.99,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-105",
+      "slug": "geleneksel-poplin-kumas",
+      "categoryId": "cat-105",
+      "title": "Geleneksel Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Geleneksel Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 10.28,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-106",
+      "slug": "gemiler-panama-keten-kumas",
+      "categoryId": "cat-106",
+      "title": "Gemiler Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Gemiler Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 10.07,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-107",
+      "slug": "genis-siyah-cizgiler-panama-keten-kumas",
+      "categoryId": "cat-107",
+      "title": "Genis Siyah Cizgiler Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Genis Siyah Cizgiler Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 6.4,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-108",
+      "slug": "genis-cizgiler-panama-keten-kumas",
+      "categoryId": "cat-108",
+      "title": "Genis Cizgiler Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Genis Cizgiler Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 6.53,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-109",
+      "slug": "geometrik-deniz-canlilari-dijital-baski-kumas",
+      "categoryId": "cat-109",
+      "title": "Geometrik Deniz Canlilari Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Geometrik Deniz Canlilari Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 5.6,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-110",
+      "slug": "karo-duck-bezi",
+      "categoryId": "cat-110",
+      "title": "Karo Duck Bezi",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Karo Duck Bezi product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 10.87,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-111",
+      "slug": "geyikli-orman-poplin-kumas",
+      "categoryId": "cat-111",
+      "title": "Geyikli Orman Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Geyikli Orman Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 7.64,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-112",
+      "slug": "gezgin-cocuk-poplin-kumas",
+      "categoryId": "cat-112",
+      "title": "Gezgin Cocuk Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Gezgin Cocuk Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 3.57,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-113",
+      "slug": "gold-crystal-duck-bezi-kumas",
+      "categoryId": "cat-113",
+      "title": "Gold Crystal Duck Bezi Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Gold Crystal Duck Bezi Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 4.9,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-114",
+      "slug": "gold-palm-dijital-baski-kumas",
+      "categoryId": "cat-114",
+      "title": "Gold Palm Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Gold Palm Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.66,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-115",
+      "slug": "grey-flowers-dijital-baski-kumas",
+      "categoryId": "cat-115",
+      "title": "Grey Flowers Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Grey Flowers Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 8.53,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-116",
+      "slug": "gri-aslanlar-poplin-kumas",
+      "categoryId": "cat-116",
+      "title": "Gri Aslanlar Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Gri Aslanlar Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.02,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-117",
+      "slug": "gokkusagi-diyari-poplin-kumas",
+      "categoryId": "cat-117",
+      "title": "Gokkusagi Diyari Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Gokkusagi Diyari Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 9.31,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-118",
+      "slug": "gokyuzundeki-ayi-poplin-kumas",
+      "categoryId": "cat-118",
+      "title": "Gokyuzundeki Ayi Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Gokyuzundeki Ayi Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 6.9,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-119",
+      "slug": "gokyuzundeki-filler-pazen-kumas",
+      "categoryId": "cat-119",
+      "title": "Gokyuzundeki Filler Pazen Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Gokyuzundeki Filler Pazen Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 8.77,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-120",
+      "slug": "gokyuzundeki-filler-pazen-kumas-1",
+      "categoryId": "cat-120",
+      "title": "Gokyuzundeki Filler Pazen Kumas 1",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Gokyuzundeki Filler Pazen Kumas 1 product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 9.84,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-121",
+      "slug": "gokyuzundeki-pandalar-pazen-kumas",
+      "categoryId": "cat-121",
+      "title": "Gokyuzundeki Pandalar Pazen Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Gokyuzundeki Pandalar Pazen Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 8.44,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-122",
+      "slug": "gozler-dijital-baski-kumas",
+      "categoryId": "cat-122",
+      "title": "Gozler Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Gozler Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 10.1,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-123",
+      "slug": "gul-yuzler-dijital-baski-kumas",
+      "categoryId": "cat-123",
+      "title": "Gul Yuzler Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Gul Yuzler Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 7.81,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-124",
+      "slug": "gul-calisi-panama-keten-kumas",
+      "categoryId": "cat-124",
+      "title": "Gul Calisi Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Gul Calisi Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 3.94,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-125",
+      "slug": "guller-poplin-kumas",
+      "categoryId": "cat-125",
+      "title": "Guller Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Guller Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 7.31,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-126",
+      "slug": "halkali-sekiller-duck-bezi",
+      "categoryId": "cat-126",
+      "title": "Halkali Sekiller Duck Bezi",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Halkali Sekiller Duck Bezi product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 5,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-127",
+      "slug": "ham-keten-kumas",
+      "categoryId": "cat-127",
+      "title": "Ham Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Ham Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 8.83,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-128",
+      "slug": "havali-ayilar-poplin-kumas",
+      "categoryId": "cat-128",
+      "title": "Havali Ayilar Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Havali Ayilar Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 6.14,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-129",
+      "slug": "hayalimdeki-uzay-pazen-kumas",
+      "categoryId": "cat-129",
+      "title": "Hayalimdeki Uzay Pazen Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Hayalimdeki Uzay Pazen Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 9.13,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-130",
+      "slug": "hayvan-karnavali-pazen-kumas",
+      "categoryId": "cat-130",
+      "title": "Hayvan Karnavali Pazen Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Hayvan Karnavali Pazen Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 7.03,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-131",
+      "slug": "hayvan-takimi-pazen-kumas",
+      "categoryId": "cat-131",
+      "title": "Hayvan Takimi Pazen Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Hayvan Takimi Pazen Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.36,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-132",
+      "slug": "hilal-poplin-kumas",
+      "categoryId": "cat-132",
+      "title": "Hilal Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Hilal Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.5,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-133",
+      "slug": "historical-patchwork-dijital-baski-kumas",
+      "categoryId": "cat-133",
+      "title": "Historical Patchwork Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Historical Patchwork Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.1,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-134",
+      "slug": "japon-koyluler-duck-bezi",
+      "categoryId": "cat-134",
+      "title": "Japon Koyluler Duck Bezi",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Japon Koyluler Duck Bezi product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 8.94,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-135",
+      "slug": "japonca-harfler-dijital-baski-kumas",
+      "categoryId": "cat-135",
+      "title": "Japonca Harfler Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Japonca Harfler Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 3.95,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-136",
+      "slug": "jut-tas-evler-dijital-baski-kumas",
+      "categoryId": "cat-136",
+      "title": "Jut Tas Evler Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Jut Tas Evler Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 10.49,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-137",
+      "slug": "jut-zemin-yapraklar-duck-bezi",
+      "categoryId": "cat-137",
+      "title": "Jut Zemin Yapraklar Duck Bezi",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Jut Zemin Yapraklar Duck Bezi product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 6.39,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-138",
+      "slug": "jut-orgu-panama-keten-kumas",
+      "categoryId": "cat-138",
+      "title": "Jut Orgu Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Jut Orgu Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.97,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-139",
+      "slug": "kabile-cini-dijital-baski-kumas",
+      "categoryId": "cat-139",
+      "title": "Kabile Cini Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kabile Cini Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 9.54,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-140",
+      "slug": "kafalar-poplin-kumas",
+      "categoryId": "cat-140",
+      "title": "Kafalar Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kafalar Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 9.53,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-141",
+      "slug": "kahlos-and-tree-dijital-baski-kumas",
+      "categoryId": "cat-141",
+      "title": "Kahlos And Tree Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kahlos And Tree Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 7.96,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-142",
+      "slug": "kahlos-paints-dijital-baski-kumas",
+      "categoryId": "cat-142",
+      "title": "Kahlos Paints Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kahlos Paints Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 9.74,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-143",
+      "slug": "kahlos-in-the-wood-dijital-baski-kumas",
+      "categoryId": "cat-143",
+      "title": "Kahlos In The Wood Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kahlos In The Wood Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 3.73,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-144",
+      "slug": "kahve-motif-daireler-panama-keten-kumas",
+      "categoryId": "cat-144",
+      "title": "Kahve Motif Daireler Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kahve Motif Daireler Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 7.58,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-145",
+      "slug": "kahverengi-haberler-dijital-baski-kumas",
+      "categoryId": "cat-145",
+      "title": "Kahverengi Haberler Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kahverengi Haberler Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 6.02,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-146",
+      "slug": "kalpler-muslin-bez-kumas",
+      "categoryId": "cat-146",
+      "title": "Kalpler Muslin Bez Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kalpler Muslin Bez Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 6.96,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-147",
+      "slug": "kalin-ekose-poplin-kumas",
+      "categoryId": "cat-147",
+      "title": "Kalin Ekose Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kalin Ekose Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 6.57,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-148",
+      "slug": "kamuflaj-desen-duck-bezi-kumas",
+      "categoryId": "cat-148",
+      "title": "Kamuflaj Desen Duck Bezi Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kamuflaj Desen Duck Bezi Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 5.12,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-149",
+      "slug": "kamuflaj-panama-keten-kumas",
+      "categoryId": "cat-149",
+      "title": "Kamuflaj Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kamuflaj Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.82,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-150",
+      "slug": "kanguru-muslin-bez-kumas",
+      "categoryId": "cat-1",
+      "title": "Kanguru Muslin Bez Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kanguru Muslin Bez Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 4.36,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-151",
+      "slug": "kar-kristalleri-panama-keten-kumas",
+      "categoryId": "cat-2",
+      "title": "Kar Kristalleri Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kar Kristalleri Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 4.07,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-152",
+      "slug": "kar-taneleri-pazen-kumas",
+      "categoryId": "cat-3",
+      "title": "Kar Taneleri Pazen Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kar Taneleri Pazen Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 3.75,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-153",
+      "slug": "kara-gullu-orman-dijital-baski-kumas",
+      "categoryId": "cat-4",
+      "title": "Kara Gullu Orman Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kara Gullu Orman Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 9.19,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-154",
+      "slug": "kara-kaplanlar-ipek-saten-kumas",
+      "categoryId": "cat-5",
+      "title": "Kara Kaplanlar Ipek Saten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kara Kaplanlar Ipek Saten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 8.61,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-155",
+      "slug": "kara-motif-palmiye-panama-keten-kumas",
+      "categoryId": "cat-6",
+      "title": "Kara Motif Palmiye Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kara Motif Palmiye Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 5.35,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-156",
+      "slug": "kara-resim-dijital-baski-kumas",
+      "categoryId": "cat-7",
+      "title": "Kara Resim Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kara Resim Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 6.97,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-157",
+      "slug": "karanfil-cicegi-poplin-kumas",
+      "categoryId": "cat-8",
+      "title": "Karanfil Cicegi Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Karanfil Cicegi Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.36,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-158",
+      "slug": "kardan-adam-pazen-kumas",
+      "categoryId": "cat-9",
+      "title": "Kardan Adam Pazen Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kardan Adam Pazen Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 3.05,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-159",
+      "slug": "oduncu-ekose-pazen-kumas-1",
+      "categoryId": "cat-10",
+      "title": "Oduncu Ekose Pazen Kumas 1",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Oduncu Ekose Pazen Kumas 1 product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 8.17,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-160",
+      "slug": "kareler-poplin-kumas",
+      "categoryId": "cat-11",
+      "title": "Kareler Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kareler Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.24,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-161",
+      "slug": "kareli-kiraz-salkimlari-panama-keten-kumas",
+      "categoryId": "cat-12",
+      "title": "Kareli Kiraz Salkimlari Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kareli Kiraz Salkimlari Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.72,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-162",
+      "slug": "karli-evler-panama-keten-kumas",
+      "categoryId": "cat-13",
+      "title": "Karli Evler Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Karli Evler Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 10.99,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-163",
+      "slug": "karli-orman-dijital-baski-kumas",
+      "categoryId": "cat-14",
+      "title": "Karli Orman Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Karli Orman Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 9.81,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-164",
+      "slug": "karli-orman-pazen-kumas",
+      "categoryId": "cat-15",
+      "title": "Karli Orman Pazen Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Karli Orman Pazen Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 6.66,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-165",
+      "slug": "karmasik-yapraklar-panama-keten-kumas",
+      "categoryId": "cat-16",
+      "title": "Karmasik Yapraklar Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Karmasik Yapraklar Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 8.52,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-166",
+      "slug": "karo-dertsiz-kumas",
+      "categoryId": "cat-17",
+      "title": "Karo Dertsiz Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Karo Dertsiz Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 3.03,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-167",
+      "slug": "karpuz-dilimleri-poplin-kumas",
+      "categoryId": "cat-18",
+      "title": "Karpuz Dilimleri Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Karpuz Dilimleri Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 3.28,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-168",
+      "slug": "karpuz-ve-ananas-duck-bezi",
+      "categoryId": "cat-19",
+      "title": "Karpuz Ve Ananas Duck Bezi",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Karpuz Ve Ananas Duck Bezi product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 9.27,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-169",
+      "slug": "karisik-bitkiler-duck-bezi",
+      "categoryId": "cat-20",
+      "title": "Karisik Bitkiler Duck Bezi",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Karisik Bitkiler Duck Bezi product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 7.77,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-170",
+      "slug": "kedili-kopekler-dijital-baski-kumas",
+      "categoryId": "cat-21",
+      "title": "Kedili Kopekler Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kedili Kopekler Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 4.55,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-171",
+      "slug": "kesik-cizgiler-duck-bezi-kumas",
+      "categoryId": "cat-22",
+      "title": "Kesik Cizgiler Duck Bezi Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kesik Cizgiler Duck Bezi Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 5.68,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-172",
+      "slug": "kilim-kirkyama-dijital-baski-kumas",
+      "categoryId": "cat-23",
+      "title": "Kilim Kirkyama Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kilim Kirkyama Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 11.74,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-173",
+      "slug": "kilim-panama-keten-kumas",
+      "categoryId": "cat-24",
+      "title": "Kilim Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kilim Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 9.56,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-174",
+      "slug": "koakoala-muslin-bez-kumas",
+      "categoryId": "cat-25",
+      "title": "Koakoala Muslin Bez Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Koakoala Muslin Bez Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 7.72,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-175",
+      "slug": "koala-pazen-kumas",
+      "categoryId": "cat-26",
+      "title": "Koala Pazen Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Koala Pazen Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 6.15,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-176",
+      "slug": "koala-poplin-kumas",
+      "categoryId": "cat-27",
+      "title": "Koala Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Koala Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 10.4,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-177",
+      "slug": "koyu-zemin-yildizlar-poplin-kumas",
+      "categoryId": "cat-28",
+      "title": "Koyu Zemin Yildizlar Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Koyu Zemin Yildizlar Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 4.12,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-178",
+      "slug": "kozalakli-geyikler-dijital-baski-kumas",
+      "categoryId": "cat-29",
+      "title": "Kozalakli Geyikler Dijital Baski Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kozalakli Geyikler Dijital Baski Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 3.72,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-179",
+      "slug": "kosan-tavsanlar-poplin-kumas",
+      "categoryId": "cat-30",
+      "title": "Kosan Tavsanlar Poplin Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kosan Tavsanlar Poplin Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 4.27,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-180",
+      "slug": "kral-hayvanlar-panama-keten-kumas",
+      "categoryId": "cat-31",
+      "title": "Kral Hayvanlar Panama Keten Kumas",
+      "imageUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "description": "Kral Hayvanlar Panama Keten Kumas product imported from Kumas sitemap.",
+      "originCountry": "Turkey",
+      "price": 5.02,
+      "currency": "USD"
+    }
+  ]
+}

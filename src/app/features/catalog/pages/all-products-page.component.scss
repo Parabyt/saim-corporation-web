@@ -1,0 +1,147 @@
+.section-width {
+  width: min(var(--container-max), 95vw);
+  margin: 0 auto;
+}
+
+.all-products-page {
+  padding: var(--section-space-md) 0 var(--section-space-lg);
+}
+
+.crumb,
+.crumb a {
+  margin: 0;
+  color: #697b8d;
+  text-decoration: none;
+  font-size: var(--text-xs);
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+h1 {
+  margin: 0.35rem 0 0;
+  font-size: clamp(1.45rem, 3vw, 2.05rem);
+}
+
+h1 span {
+  font-size: 0.72em;
+  color: #667a8d;
+  font-weight: 500;
+}
+
+.back-btn {
+  text-decoration: none;
+  border-radius: 999px;
+  border: 1px solid #cfdae7;
+  padding: 0.55rem 0.95rem;
+  color: #1b3857;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.toolbar {
+  margin-top: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.search-group {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.search-group input {
+  width: min(540px, 85vw);
+  max-width: 100%;
+  border: 1px solid #d0dbe8;
+  border-radius: 999px;
+  padding: 0.55rem 0.82rem;
+  font-size: 0.83rem;
+}
+
+.search-group button {
+  border: 1px solid #d0dbe8;
+  border-radius: 999px;
+  background: #ffffff;
+  padding: 0.52rem 0.86rem;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.search-group button.clear {
+  color: #3f566d;
+}
+
+.toolbar p {
+  margin: 0;
+  color: #6d7f91;
+  font-size: 0.8rem;
+}
+
+.sub-filter-bar {
+  margin-top: 0.85rem;
+  display: flex;
+  gap: 0.45rem;
+  overflow-x: auto;
+  padding-bottom: 0.2rem;
+}
+
+.sub-filter-bar button {
+  white-space: nowrap;
+  border-radius: 999px;
+  border: 1px solid #d0dcea;
+  background: #ffffff;
+  color: #243f5b;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.74rem;
+  cursor: pointer;
+}
+
+.sub-filter-bar button.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #111111;
+}
+
+.grid {
+  margin-top: 0.9rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 580px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,142 @@
+.product-card {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: #ffffff;
+  overflow: hidden;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(8, 31, 51, 0.08);
+}
+
+.image-wrap {
+  position: relative;
+}
+
+.image-wrap img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.product-card:hover .image-wrap img {
+  transform: scale(1.04);
+  filter: saturate(1.06);
+}
+
+.wish {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  border: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  color: #7a8796;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.wish:hover {
+  transform: scale(1.06);
+}
+
+.wish.active {
+  color: #d04545;
+}
+
+.quick {
+  position: absolute;
+  left: 50%;
+  bottom: 0.65rem;
+  transform: translateX(-50%) translateY(6px);
+  text-decoration: none;
+  background: rgba(3, 28, 55, 0.86);
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 0.38rem 0.8rem;
+  font-size: 0.78rem;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.product-card:hover .quick {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+h3,
+.description,
+small,
+.bottom {
+  padding: 0 0.9rem;
+}
+
+h3 {
+  margin: 0.82rem 0 0.45rem;
+  min-height: 2.65rem;
+}
+
+h3 a {
+  text-decoration: none;
+  color: #11263d;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-clamp: 2;
+  line-height: 1.32;
+}
+
+.description {
+  margin: 0;
+  color: var(--color-muted-text);
+  font-size: 0.88rem;
+  min-height: 2.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-clamp: 2;
+  line-height: 1.45;
+}
+
+small {
+  display: block;
+  margin-top: 0.42rem;
+  color: #617182;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin: auto 0 0.95rem;
+}
+
+.bottom.no-price {
+  justify-content: flex-end;
+}
+
+.inq {
+  text-decoration: none;
+  font-size: 0.78rem;
+  color: #0d2238;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.28rem 0.62rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.inq:hover {
+  background: #f4f8fc;
+  border-color: #bed0df;
+}

@@ -1,0 +1,46 @@
+<header class="site-header" [class.scrolled]="isScrolled()">
+  <div class="header-row">
+    <a class="brand" routerLink="/" (click)="closeMobileMenu()">
+      <span class="logo-mark"></span>
+      <span class="brand-text">
+        <strong>Saim Exports</strong>
+        <small>Global Trade Network</small>
+      </span>
+    </a>
+
+    <nav class="desktop-nav">
+      <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      <a class="nav-link" routerLink="/about" routerLinkActive="active">About Us</a>
+      <a class="nav-link" routerLink="/catalog/all" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Products</a>
+      <a class="nav-link" routerLink="/catalog" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Catalogs</a>
+      <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact Us</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="utility-menu" type="button" aria-label="Open menu" (click)="toggleMobileMenu()">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="inquiry-btn" routerLink="/inquiry">Inquiry Now</a>
+      <button class="menu-btn" type="button" aria-label="Menu" (click)="toggleMobileMenu()">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer-overlay" [class.open]="mobileMenuOpen()" (click)="closeMobileMenu()"></div>
+<aside class="mobile-drawer" [class.open]="mobileMenuOpen()" aria-label="Mobile navigation">
+  <div class="drawer-head">
+    <strong>Menu</strong>
+    <button type="button" (click)="closeMobileMenu()">✕</button>
+  </div>
+
+  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMobileMenu()">Home</a>
+  <a routerLink="/about" routerLinkActive="active" (click)="closeMobileMenu()">About Us</a>
+  <a routerLink="/catalog/all" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMobileMenu()">Products</a>
+  <a routerLink="/catalog" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMobileMenu()">Catalogs</a>
+  <a routerLink="/contact" routerLinkActive="active" (click)="closeMobileMenu()">Contact</a>
+
+  <p class="drawer-title">Collections</p>
+  @for (item of categoryQuickLinks(); track item.id) {
+    <a [routerLink]="['/collections', item.slug]" routerLinkActive="active" (click)="closeMobileMenu()">{{ item.title }}</a>
+  }
+</aside>

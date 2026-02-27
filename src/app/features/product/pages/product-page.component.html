@@ -1,0 +1,60 @@
+<section class="product-page section-width">
+  @if (product(); as item) {
+    <p class="crumb"><a routerLink="/">Home</a> / <a routerLink="/catalog">Catalog</a> / {{ item.title }}</p>
+
+    <div class="layout">
+      <div class="gallery">
+        <img [src]="item.imageUrl" [alt]="item.title" />
+        <div class="thumbs">
+          @for (image of item.gallery; track image) {
+            <img [src]="image" [alt]="item.title" />
+          }
+        </div>
+      </div>
+
+      <div class="detail">
+        <h1>{{ item.title }}</h1>
+        <p class="desc">{{ item.description }}</p>
+
+        <div class="meta">
+          <p><strong>Origin:</strong> {{ item.originCountry }}</p>
+          <p><strong>SKU:</strong> {{ item.slug }}</p>
+          <p><strong>Availability:</strong> In stock</p>
+        </div>
+
+        @if (showPrice) {
+          <p class="price">{{ item.currency }} {{ item.price.toFixed(2) }}</p>
+        }
+
+        <div class="cta-row">
+          <button type="button">Add to Inquiry</button>
+          <button type="button" class="secondary">Buy Sample</button>
+        </div>
+
+        <div class="shipping-box">
+          <p><strong>Shipping:</strong> Free over $2,000</p>
+          <p><strong>Dispatch:</strong> 2-4 business days</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="related">
+      <h2>Related Products</h2>
+      <div class="grid">
+        @for (related of relatedProducts(); track related.id) {
+          <article>
+            <a [routerLink]="['/products', related.slug]">
+              <img [src]="related.imageUrl" [alt]="related.title" />
+            </a>
+            <h3><a [routerLink]="['/products', related.slug]">{{ related.title }}</a></h3>
+            @if (showPrice) {
+              <p>{{ related.currency }} {{ related.price.toFixed(2) }}</p>
+            }
+          </article>
+        }
+      </div>
+    </div>
+  } @else {
+    <p class="not-found">Product not found.</p>
+  }
+</section>

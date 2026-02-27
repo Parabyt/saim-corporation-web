@@ -1,0 +1,58 @@
+<section class="catalog-page section-width">
+  <div class="top">
+    <p class="crumb">Home / Collections</p>
+    <h1>Product Catalog</h1>
+  </div>
+
+  <div class="catalog-layout">
+    <aside class="sidebar">
+      <h2>Collections</h2>
+      <div class="filters">
+        <button [class.active]="selectedCategory() === null" (click)="setCategoryFilter(null)">All Products</button>
+        @for (category of categories(); track category.id) {
+          <button [class.active]="selectedCategory() === category.id" (click)="setCategoryFilter(category.id)">{{ category.title }}</button>
+        }
+      </div>
+
+      <div class="sub-list">
+        <h3>Subcategories</h3>
+        <button class="sub-all" [class.active]="selectedSubcategory() === null" (click)="setSubcategoryFilter(null)">
+          All in selected category
+        </button>
+        @for (sub of subcategories(); track sub.id) {
+          <button class="sub-item" [class.active]="selectedSubcategory() === sub.id" (click)="setSubcategoryFilter(sub.id)">
+            <img [src]="sub.imageUrl" [alt]="sub.title" />
+            <div>
+              <strong>{{ sub.title }}</strong>
+              <p>{{ sub.description }}</p>
+            </div>
+          </button>
+        }
+      </div>
+    </aside>
+
+    <div>
+      <div class="products-head">
+        <h2>
+          Products
+          @if (selectedSubcategoryTitle(); as label) {
+            <span class="active-sub">/ {{ label }}</span>
+          }
+        </h2>
+        <p>{{ products().length }} items</p>
+      </div>
+
+      <div class="grid products-grid">
+        @for (product of finiteProducts(); track product.id) {
+          <app-product-card [product]="product" />
+        }
+      </div>
+
+      @if (hasMoreProducts()) {
+        <div class="view-all-wrap">
+          <a class="view-all-btn" [routerLink]="['/catalog/all']" [queryParams]="viewAllQueryParams()">View All Products</a>
+        </div>
+      }
+    </div>
+  </div>
+</section>

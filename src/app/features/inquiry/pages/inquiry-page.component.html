@@ -1,0 +1,87 @@
+<section class="inquiry-page section-width">
+  <header class="inquiry-hero">
+    <p class="kicker">Export Partnership Desk</p>
+    <h1>Send Your Sourcing Requirements</h1>
+    <p>
+      Share product specs, category focus, and target quantity. Our team will map production and shipment options for
+      your market.
+    </p>
+  </header>
+
+  <div class="inquiry-layout">
+    <aside class="inquiry-notes">
+      <h2>What to include</h2>
+      <ul>
+        <li>Product category and preferred materials</li>
+        <li>Target order volume or monthly program estimate</li>
+        <li>Destination country and compliance needs</li>
+        <li>Reference image or style direction (optional)</li>
+      </ul>
+      <a routerLink="/catalog">Browse current catalog</a>
+    </aside>
+
+    <form class="inquiry-form" [formGroup]="inquiryForm" (ngSubmit)="submitInquiry()">
+      <div class="form-grid">
+        <label>
+          Company Name
+          <input type="text" formControlName="companyName" />
+        </label>
+        <label>
+          Contact Person
+          <input type="text" formControlName="contactPerson" />
+        </label>
+        <label>
+          Work Email
+          <input type="email" formControlName="email" />
+        </label>
+        <label>
+          Phone / WhatsApp
+          <input type="text" formControlName="phone" />
+        </label>
+        <label>
+          Country
+          <input type="text" formControlName="country" />
+        </label>
+        <label>
+          Target Quantity
+          <input type="text" formControlName="targetQuantity" />
+        </label>
+      </div>
+
+      <label>
+        Product Focus
+        <textarea rows="3" formControlName="productFocus" placeholder="Example: Leather jackets, boxing gloves, team kits..."></textarea>
+      </label>
+
+      <label>
+        Requirement Details
+        <textarea
+          rows="5"
+          formControlName="message"
+          placeholder="Share quality requirements, sizes, packaging preferences, and timeline."
+        ></textarea>
+      </label>
+
+      <div class="reference-row">
+        <label>
+          Reference Image URL (optional)
+          <input type="url" formControlName="referenceImageUrl" />
+        </label>
+        <label class="upload">
+          Upload Reference (optional)
+          <input type="file" accept="image/*" (change)="onReferenceSelected($event)" />
+        </label>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn primary" type="submit" [disabled]="submitState() === 'submitting' || isUploading()">
+          {{ submitState() === 'submitting' ? 'Sending...' : 'Submit Requirements' }}
+        </button>
+      </div>
+
+      @if (submitMessage()) {
+        <p class="status" [class.error]="submitState() === 'error'">{{ submitMessage() }}</p>
+      }
+    </form>
+  </div>
+</section>

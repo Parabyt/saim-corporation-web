@@ -1,0 +1,227 @@
+<section class="hero-slider" [style.--slide-duration]="slideDurationMs + 'ms'">
+  <div class="slide-track" aria-hidden="true">
+    <div class="slide-strip" [style.transform]="trackTransform()">
+    @for (slide of heroSlides(); track slide.id; let i = $index) {
+      <figure
+        class="hero-slide"
+        [style.background-image]="'linear-gradient(rgba(4, 22, 32, 0.43), rgba(4, 22, 32, 0.43)), url(' + slide.imageUrl + ')'"
+      ></figure>
+    }
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <p class="eyebrow">Global Import Export Network</p>
+    <h1>{{ currentSlide().title }}</h1>
+    <p class="sub">{{ currentSlide().subtitle }}</p>
+
+    <div class="hero-tags">
+      @for (tag of currentSlide().tags; track tag) {
+        <span>{{ tag }}</span>
+      }
+    </div>
+
+    <div class="hero-actions">
+      <a routerLink="/catalog" class="btn primary">Explore Catalog</a>
+      <a routerLink="/contact" class="btn secondary">Get In Touch</a>
+    </div>
+  </div>
+
+  <div class="slider-indicators">
+    @for (slide of heroSlides(); track slide.id; let i = $index) {
+      <button [class.active]="activeIndicatorIndex() === i" (click)="setSlide(i)" [attr.aria-label]="'Go to slide ' + (i + 1)">
+        <span class="indicator-fill"></span>
+      </button>
+    }
+  </div>
+
+  <button class="slide-arrow left" type="button" aria-label="Previous slide" (click)="previousSlide()">&#10094;</button>
+  <button class="slide-arrow right" type="button" aria-label="Next slide" (click)="nextSlide()">&#10095;</button>
+</section>
+
+<section class="running-line">
+  <div class="marquee-track">
+    <p>{{ homeContent().marqueeText }}</p>
+    <p aria-hidden="true">{{ homeContent().marqueeText }}</p>
+  </div>
+</section>
+
+<section class="company-overview">
+  <div class="section-width company-overview-inner">
+    <div class="company-copy">
+      <p class="mini">About Saim Corporation</p>
+      <h2>Built for reliable global trade across leather, sportswear, gym wear, and uniforms.</h2>
+      <p class="lead">
+        We operate as an export-focused manufacturing and supply partner for international brands, wholesalers, and
+        institutional buyers. Our model combines dependable production quality, responsive customization, and
+        shipment-ready execution.
+      </p>
+
+      <div class="company-pillars">
+        @for (pillar of companyPillars; track pillar.title) {
+          <article>
+            <h3>{{ pillar.title }}</h3>
+            <p>{{ pillar.text }}</p>
+          </article>
+        }
+      </div>
+    </div>
+
+    <aside class="company-highlight">
+      <p class="since">SINCE 2014</p>
+      <h3>Delivering export programs that keep your supply chain predictable and growth-ready.</h3>
+      <div class="metrics">
+        @for (metric of companyMetrics; track metric.label) {
+          <div>
+            <strong>{{ metric.value }}</strong>
+            <span>{{ metric.label }}</span>
+          </div>
+        }
+      </div>
+      <a routerLink="/about">About Company</a>
+    </aside>
+  </div>
+</section>
+
+<section class="categories-showcase section-width">
+  <div class="section-head">
+    <h2>Categories</h2>
+    <div class="carousel-actions">
+      <button type="button" aria-label="Previous categories" (click)="scrollCategories('prev')">&#10094;</button>
+      <button type="button" aria-label="Next categories" (click)="scrollCategories('next')">&#10095;</button>
+    </div>
+  </div>
+
+  <div class="categories-track" #categoriesTrack>
+    @for (category of allCategories(); track category.id) {
+      <article class="category-tile">
+        <img [src]="category.imageUrl" [alt]="category.title" />
+        <div class="tile-content">
+          <h3>{{ category.title }}</h3>
+          <p>{{ category.description }}</p>
+          <a [routerLink]="['/collections', category.slug]">Explore</a>
+        </div>
+      </article>
+    }
+  </div>
+</section>
+
+<section class="product-section section-width">
+  <div class="section-head">
+    <h2>Featured Products</h2>
+    <a routerLink="/catalog">View All</a>
+  </div>
+
+  <div class="products-grid">
+    @for (product of featuredProducts(); track product.id) {
+      <app-product-card [product]="product" />
+    }
+  </div>
+</section>
+
+<section class="process-section section-width">
+  <div class="section-head">
+    <h2>Our Process</h2>
+  </div>
+
+  <div class="process-marquee">
+    <div class="process-track">
+      @for (stage of processStages; track stage.title) {
+        <article class="process-item">
+          <img [src]="stage.imageUrl" [alt]="stage.title" />
+          <h3>{{ stage.title }}</h3>
+        </article>
+      }
+      @for (stage of processStages; track 'dup-' + stage.title) {
+        <article class="process-item" aria-hidden="true">
+          <img [src]="stage.imageUrl" [alt]="stage.title" />
+          <h3>{{ stage.title }}</h3>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="network-band">
+  <div class="section-width network-shell">
+    <div class="network-canvas" aria-hidden="true">
+      <span class="route-line line-a"></span>
+      <span class="route-line line-b"></span>
+      <span class="route-line line-c"></span>
+      <span class="route-line line-d"></span>
+      <span class="route-node node-a"></span>
+      <span class="route-node node-b"></span>
+      <span class="route-node node-c"></span>
+      <span class="route-node node-d"></span>
+      <span class="route-node node-e"></span>
+      <p class="network-watermark">global network</p>
+    </div>
+
+    <div class="network-copy">
+      <p class="network-kicker">Export destinations connected through reliable production and freight lanes.</p>
+      <p class="network-text">
+        Serving {{ exportDestinations.join(', ') }}, and more through a production-to-delivery supply chain built for
+        consistency.
+      </p>
+      <div class="destination-chips">
+        @for (destination of exportDestinations; track destination) {
+          <span>{{ destination }}</span>
+        }
+      </div>
+      <a routerLink="/contact">Get In Touch</a>
+    </div>
+  </div>
+</section>
+
+<section class="collections section-width">
+  <h2>Collections</h2>
+  <div class="collection-list">
+    @for (category of featuredCategories(); track category.id) {
+      <a [routerLink]="['/collections', category.slug]">{{ category.title }}</a>
+    }
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="newsletter-inner section-width">
+    <div class="trade-strip-copy">
+      <p class="trade-strip-kicker">Export Partnership Desk</p>
+      <h2>{{ homeContent().newsletterTitle }}</h2>
+      <p>{{ homeContent().newsletterText }}</p>
+    </div>
+
+    <ul class="trade-strip-list">
+      @for (item of tradeQuickFacts; track item.value) {
+        <li>
+          <strong>{{ item.value }}</strong> {{ item.label }}
+        </li>
+      }
+    </ul>
+
+    <div class="trade-strip-actions">
+      <a routerLink="/inquiry" class="btn primary">Send Requirements</a>
+      <a routerLink="/catalog" class="btn secondary trade-alt" style="margin-left: 0.9rem;">Browse Catalog</a>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials section-width">
+  <h2>Customer Reviews</h2>
+  <div class="testimonial-grid">
+    @for (item of testimonials; track item.author) {
+      <article>
+        <p>“{{ item.quote }}”</p>
+        <span>{{ item.author }}</span>
+      </article>
+    }
+  </div>
+</section>
+
+<section class="rich-text section-width">
+  <h2>Reliable Leather, Sportswear, Gym Wear, And Uniform Export Operations</h2>
+  <p>
+    This storefront is designed for scalable B2B trade programs across leather products, sports goods, activewear, and
+    uniform supply. Categories, subcategories, products, media assets, and visual themes can be centrally managed while
+    preserving fast performance and straightforward customization for future admin workflows.
+  </p>
+</section>
