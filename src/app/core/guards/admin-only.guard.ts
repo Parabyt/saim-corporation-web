@@ -8,7 +8,8 @@ export const adminOnlyGuard: CanActivateFn = async () => {
   const authService = inject(AuthService);
   const router = inject(Router);
 
-  if (!authService.isAuthAvailable() && environment.allowCustomizeWithoutAuth) {
+  // Development bypass: allow admin routes locally when explicitly enabled.
+  if (environment.allowCustomizeWithoutAuth && !environment.production) {
     return true;
   }
 

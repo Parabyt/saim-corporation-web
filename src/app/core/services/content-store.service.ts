@@ -1,8 +1,19 @@
-import { Injectable, computed, signal } from '@angular/core';
+import { Injectable, computed, inject, signal } from '@angular/core';
 
 import { NICHE_CATEGORIES, NICHE_PRODUCT_SEEDS, NICHE_SUBCATEGORY_SEEDS } from '../data/niche-catalog.data';
-import { Category, Product, Subcategory } from '../models/catalog.models';
+import {
+  Category,
+  CategoryCreateInput,
+  CategoryUpdateInput,
+  Product,
+  ProductCreateInput,
+  ProductUpdateInput,
+  Subcategory,
+  SubcategoryCreateInput,
+  SubcategoryUpdateInput
+} from '../models/catalog.models';
 import { HomeContent } from '../models/home.models';
+import { FirebaseCatalogService } from './firebase-catalog.service';
 
 const CATALOG_SEED_VERSION = 'niche-v3-2026-02-24';
 
@@ -93,6 +104,7 @@ const DEFAULT_HOME_CONTENT: HomeContent = {
 
 @Injectable({ providedIn: 'root' })
 export class ContentStoreService {
+  private readonly firebaseCatalog = inject(FirebaseCatalogService, { optional: true });
   private readonly forceCatalogReseed = localStorage.getItem(STORAGE_KEYS.catalogVersion) !== CATALOG_SEED_VERSION;
   private readonly categoriesState = signal<Category[]>(this.loadCategories());
   private readonly subcategoriesState = signal<Subcategory[]>(this.loadSubcategories());
@@ -106,35 +118,135 @@ export class ContentStoreService {
 
   constructor() {
     localStorage.setItem(STORAGE_KEYS.catalogVersion, CATALOG_SEED_VERSION);
+    this.startFirebaseCatalogSync();
   }
 
-  addCategory(category: Omit<Category, 'id' | 'slug'>): void {
+  addCategory(category: CategoryCreateInput): void {
+    this.createCategory(category);
+  }
+
+  createCategory(category: CategoryCreateInput): Category {
+    const created = { ...category, id: this.newId('cat'), slug: this.slugify(category.title) };
     this.categoriesState.update((existing) => [
       ...existing,
-      { ...category, id: this.newId('cat'), slug: this.slugify(category.title) }
+      created
     ]);
+    this.persistCategories();
+    return created;
+  }
+
+  updateCategory(id: string, update: CategoryUpdateInput): void {
+    this.categoriesState.update((existing) =>
+      existing.map((item) => {
+        if (item.id !== id) {
+          return item;
+        }
+        const title = update.title ?? item.title;
+        return {
+          ...item,
+          ...update,
+          title,
+          slug: this.slugify(title)
+        };
+      })
+    );
     this.persistCategories();
   }
 
-  addSubcategory(subcategory: Omit<Subcategory, 'id' | 'slug'>): void {
+  deleteCategory(id: string): void {
+    this.categoriesState.update((existing) => existing.filter((item) => item.id !== id));
+    const subcategoryIds = new Set(this.subcategoriesState().filter((item) => item.categoryId === id).map((item) => item.id));
+    this.subcategoriesState.update((existing) => existing.filter((item) => item.categoryId !== id));
+    this.productsState.update(
+      (existing) => existing.filter((item) => item.categoryId !== id && (!item.subcategoryId || !subcategoryIds.has(item.subcategoryId)))
+    );
+    this.persistCategories();
+    this.persistSubcategories();
+    this.persistProducts();
+  }
+
+  addSubcategory(subcategory: SubcategoryCreateInput): void {
+    this.createSubcategory(subcategory);
+  }
+
+  createSubcategory(subcategory: SubcategoryCreateInput): Subcategory {
+    const created = { ...subcategory, id: this.newId('sub'), slug: this.slugify(subcategory.title) };
     this.subcategoriesState.update((existing) => [
       ...existing,
-      { ...subcategory, id: this.newId('sub'), slug: this.slugify(subcategory.title) }
+      created
     ]);
+    this.persistSubcategories();
+    return created;
+  }
+
+  updateSubcategory(id: string, update: SubcategoryUpdateInput): void {
+    this.subcategoriesState.update((existing) =>
+      existing.map((item) => {
+        if (item.id !== id) {
+          return item;
+        }
+        const title = update.title ?? item.title;
+        return {
+          ...item,
+          ...update,
+          title,
+          slug: this.slugify(title)
+        };
+      })
+    );
     this.persistSubcategories();
   }
 
-  addProduct(product: Omit<Product, 'id' | 'slug' | 'gallery' | 'currency'>): void {
+  deleteSubcategory(id: string): void {
+    this.subcategoriesState.update((existing) => existing.filter((item) => item.id !== id));
+    this.productsState.update((existing) => existing.filter((item) => item.subcategoryId !== id));
+    this.persistSubcategories();
+    this.persistProducts();
+  }
+
+  addProduct(product: ProductCreateInput): void {
+    this.createProduct(product);
+  }
+
+  createProduct(product: ProductCreateInput): Product {
+    const created = {
+      ...product,
+      id: this.newId('prd'),
+      slug: this.slugify(product.title),
+      gallery: [product.imageUrl],
+      currency: 'USD'
+    };
     this.productsState.update((existing) => [
       ...existing,
-      {
-        ...product,
-        id: this.newId('prd'),
-        slug: this.slugify(product.title),
-        gallery: [product.imageUrl],
-        currency: 'USD'
-      }
+      created
     ]);
+    this.persistProducts();
+    return created;
+  }
+
+  updateProduct(id: string, update: ProductUpdateInput): void {
+    this.productsState.update((existing) =>
+      existing.map((item) => {
+        if (item.id !== id) {
+          return item;
+        }
+        const title = update.title ?? item.title;
+        const imageUrl = update.imageUrl ?? item.imageUrl;
+        return {
+          ...item,
+          ...update,
+          title,
+          imageUrl,
+          slug: this.slugify(title),
+          gallery: [imageUrl]
+        };
+      })
+    );
+    this.persistProducts();
+  }
+
+  deleteProduct(id: string): void {
+    this.productsState.update((existing) => existing.filter((item) => item.id !== id));
     this.persistProducts();
   }
 
@@ -358,5 +470,44 @@ export class ContentStoreService {
     } catch {
       return null;
     }
+  }
+
+  private startFirebaseCatalogSync(): void {
+    if (!this.firebaseCatalog) {
+      return;
+    }
+
+    this.firebaseCatalog.getCategories().subscribe((categories) => {
+      if (!categories.length) {
+        return;
+      }
+      this.categoriesState.set(this.mergeSnapshot(this.categoriesState(), categories));
+      this.persistCategories();
+    });
+
+    this.firebaseCatalog.getSubcategories().subscribe((subcategories) => {
+      if (!subcategories.length) {
+        return;
+      }
+      this.subcategoriesState.set(this.mergeSnapshot(this.subcategoriesState(), subcategories));
+      this.persistSubcategories();
+    });
+
+    this.firebaseCatalog.getProducts().subscribe((products) => {
+      if (!products.length) {
+        return;
+      }
+      this.productsState.set(this.mergeSnapshot(this.productsState(), products));
+      this.persistProducts();
+    });
+  }
+
+  // Merge cloud snapshots into local state to avoid destructive replacement when cloud has partial data.
+  private mergeSnapshot<T extends { id: string }>(localItems: T[], remoteItems: T[]): T[] {
+    const remoteById = new Map(remoteItems.map((item) => [item.id, item]));
+    const merged = localItems.map((item) => remoteById.get(item.id) ?? item);
+    const localIds = new Set(localItems.map((item) => item.id));
+    const appended = remoteItems.filter((item) => !localIds.has(item.id));
+    return [...merged, ...appended];
   }
 }

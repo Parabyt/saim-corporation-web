@@ -33,6 +33,11 @@ export const routes: Routes = [
     loadComponent: () => import('./features/customize/pages/content-editor-page.component').then((m) => m.ContentEditorPageComponent)
   },
   {
+    path: 'admin',
+    canActivate: [adminOnlyGuard],
+    loadComponent: () => import('./features/admin/pages/admin-page.component').then((m) => m.AdminPageComponent)
+  },
+  {
     path: 'about',
     loadComponent: () => import('./features/about/pages/about-page.component').then((m) => m.AboutPageComponent)
   },

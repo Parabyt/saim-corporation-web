@@ -8,7 +8,13 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "import:kumas": "node scripts/import-kumas-sitemap.mjs --out=data/kumas-seed.json --assets-out=src/assets/seeds/kumas-seed.json --max-products=180",
-    "seed:firestore": "node scripts/seed-firestore.mjs --seed=data/kumas-seed.json --service-account=service-account.json"
+    "seed:firestore": "node scripts/seed-firestore.mjs --seed=data/kumas-seed.json --service-account=service-account.json",
+    "firebase:login": "npx firebase-tools login",
+    "firebase:use": "npx firebase-tools use --add",
+    "firebase:emulators": "npx firebase-tools emulators:start",
+    "firebase:deploy:rules": "npx firebase-tools deploy --only firestore:rules,firestore:indexes,storage",
+    "firebase:deploy:hosting": "npx firebase-tools deploy --only hosting",
+    "firebase:deploy": "npx firebase-tools deploy"
   },
   "private": true,
   "dependencies": {

@@ -1,0 +1,70 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    // Replace these emails with your real admin emails after first deploy.
+    function isAdmin() {
+      return isSignedIn() &&
+        request.auth.token.email in [
+          "admin@saim-corporation.com",
+          "owner@saim-corporation.com"
+        ];
+    }
+
+    function isSmallString(value, maxLen) {
+      return value is string && value.size() > 0 && value.size() <= maxLen;
+    }
+
+    // Public catalog browsing.
+    match /categories/{docId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /subcategories/{docId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /products/{docId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    // Website contact/inquiry submissions.
+    match /requirements/{docId} {
+      allow create: if
+        isSmallString(request.resource.data.companyName, 120) &&
+        isSmallString(request.resource.data.contactPerson, 120) &&
+        isSmallString(request.resource.data.email, 160) &&
+        isSmallString(request.resource.data.phone, 60) &&
+        isSmallString(request.resource.data.country, 80) &&
+        isSmallString(request.resource.data.productFocus, 400) &&
+        isSmallString(request.resource.data.targetQuantity, 120) &&
+        isSmallString(request.resource.data.message, 2000);
+      allow read, update, delete: if isAdmin();
+    }
+
+    match /contactMessages/{docId} {
+      allow create: if
+        isSmallString(request.resource.data.fullName, 120) &&
+        isSmallString(request.resource.data.companyName, 120) &&
+        isSmallString(request.resource.data.email, 160) &&
+        isSmallString(request.resource.data.phone, 60) &&
+        isSmallString(request.resource.data.country, 80) &&
+        isSmallString(request.resource.data.subject, 180) &&
+        isSmallString(request.resource.data.message, 2000) &&
+        request.resource.data.acceptedTerms == true &&
+        request.resource.data.captchaConfirmed == true;
+      allow read, update, delete: if isAdmin();
+    }
+
+    // Default deny for everything else.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

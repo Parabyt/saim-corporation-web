@@ -1,0 +1,52 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    function isImage() {
+      return request.resource.contentType.matches('image/(jpeg|png|webp)');
+    }
+
+    function under2Mb() {
+      return request.resource.size < 2 * 1024 * 1024;
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    // Replace with your real admin emails after first deploy.
+    function isAdmin() {
+      return isSignedIn() &&
+        request.auth.token.email in [
+          "admin@saim-corporation.com",
+          "owner@saim-corporation.com"
+        ];
+    }
+
+    // Publicly viewable media used by website.
+    match /categories/{allPaths=**} {
+      allow read: if true;
+      allow write: if isAdmin() && isImage() && under2Mb();
+    }
+
+    match /subcategories/{allPaths=**} {
+      allow read: if true;
+      allow write: if isAdmin() && isImage() && under2Mb();
+    }
+
+    match /products/{allPaths=**} {
+      allow read: if true;
+      allow write: if isAdmin() && isImage() && under2Mb();
+    }
+
+    // Inquiry attachments are private to admins.
+    match /requirements/{allPaths=**} {
+      allow read: if isAdmin();
+      allow write: if isAdmin() && isImage() && under2Mb();
+    }
+
+    // Default deny.
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

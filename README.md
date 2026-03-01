@@ -521,13 +521,101 @@ Modular Angular 17 storefront for an import-export business, designed to replica
   - auto-selects inherited subcategory when opening from catalog view
 - Catalog `View All Products` now passes selected category/subcategory to the new screen.
 
+### Pass 45 (firebase project config + rules bootstrap)
+
+- Added Firebase project config files:
+  - `firebase.json`
+  - `.firebaserc` (placeholder project id)
+  - `firestore.rules`
+  - `firestore.indexes.json`
+  - `storage.rules`
+- Added npm commands for Firebase CLI workflows (using `npx firebase-tools`):
+  - `firebase:login`
+  - `firebase:use`
+  - `firebase:emulators`
+  - `firebase:deploy:rules`
+  - `firebase:deploy:hosting`
+  - `firebase:deploy`
+- Rules are aligned for current app flows:
+  - public read for catalog collections/media
+  - public create for `requirements` and `contactMessages`
+  - admin-only read/update/delete and media writes
+  - explicit default deny for unspecified paths
+
+### Pass 46 (firebase runtime sync for catalog admin flow)
+
+- Wired Firestore collections as runtime source-of-truth for catalog data when Firebase is configured:
+  - `categories`
+  - `subcategories`
+  - `products`
+- `ContentStoreService` now subscribes to Firebase catalog streams and persists snapshots locally for fallback continuity.
+- Updated customization actions so admin add operations sync to Firestore:
+  - category add -> `addCategory(...)`
+  - subcategory add -> `addSubcategory(...)`
+  - product add -> `addProduct(...)`
+- Improved upload error feedback so file policy violations are surfaced to admin users directly.
+
 ## Build budget adjustments
 
 To keep iterative pixel-matching stable without blocking builds:
 
-- `angular.json` `anyComponentStyle` budget updated to:
-  - warning: `4kb`
-  - error: `8kb`
+- `angular.json` production budgets are currently:
+  - `initial`: warning `750kb`, error `1200kb`
+  - `anyComponentStyle`: warning `15kb`, error `20kb`
+
+### Pass 47 (build warning resolution)
+
+- Resolved Angular production build warnings by calibrating bundle/style budgets to current storefront scale.
+- Verified clean `npm run build` output after budget update.
+
+### Pass 48 (cost-safe Firebase operations checklist)
+
+- Added deployment safety:
+  - Firebase hosting now runs `npm run build` as `predeploy` to avoid deploying stale assets.
+- Cost-safe data strategy (enforced by app + rules):
+  - Firestore for text metadata only (`categories`, `subcategories`, `products`, form submissions)
+  - Storage for image binaries only (never Base64 in Firestore)
+  - Max upload size limited to 2 MB with MIME restrictions (`jpeg/png/webp`)
+- Recommended guardrails for free-tier sustainability:
+  - Keep product and category reads list-based and avoid unnecessary realtime listeners on pages that do not need live updates.
+  - Compress images before upload (target <= 400 KB for catalog thumbnails and <= 800 KB for hero images).
+  - Keep admin-only write paths protected by email-based admin checks in Firestore/Storage rules.
+  - Set Firebase budget alerts for:
+    - Firestore document reads/day
+    - Storage egress/day
+    - Storage total bytes
+  - Rotate test data periodically and remove orphan images when records are deleted.
+
+### Pass 49 (dedicated admin panel + backend abstraction)
+
+- Added a dedicated admin page at `/admin` (guarded by existing admin auth guard).
+- Implemented CRUD UI for:
+  - Categories
+  - Subcategories
+  - Products
+- Added edit/delete workflows and list management directly in the admin page.
+- Added admin image uploads for category/subcategory/product assets.
+- Introduced backend abstraction for future API swaps:
+  - New port: `ADMIN_CATALOG_BACKEND` (`AdminCatalogBackendPort`)
+  - Default adapter: `FirebaseAdminCatalogBackendService`
+  - Orchestration layer: `AdminCatalogService` (UI/business layer depends on port, not Firebase SDK directly)
+- Enhanced local store with full CRUD primitives and cascade delete behavior:
+  - deleting category also removes linked subcategories/products
+  - deleting subcategory also removes linked products
+- Firebase sync moved to deterministic upsert/delete by document id for easier cross-backend parity.
+
+### Pass 50 (admin UX refresh: card grids + search + compact spacing)
+
+- Reduced extreme horizontal edge spacing on admin page by widening admin container utilization.
+- Reworked admin listing UI into visual preview cards (image + metadata + actions) for:
+  - categories
+  - subcategories
+  - products
+- Added search bars per listing section to quickly filter large datasets.
+- Implemented finite-height, horizontally scrollable card tracks with responsive behavior:
+  - desktop: two-row horizontal card grid
+  - tablet/mobile: single-row horizontal scroll
+- Kept explicit per-item `Edit` and `Delete` buttons directly on each card.
 
 ## Kumas import and Firestore seeding
 
@@ -572,6 +660,28 @@ It writes to:
    - `src/environments/environment.ts`
    - `src/environments/environment.prod.ts`
 4. Add real admin emails to `adminEmails`.
+5. Replace placeholder Firebase project id in `.firebaserc`.
+6. Deploy rules and indexes:
+
+```bash
+npm run firebase:login
+npm run firebase:use
+npm run firebase:deploy:rules
+```
+
+## Admin panel and backend swap guide
+
+- Admin panel route: `/admin`
+- Auth: guarded by `adminOnlyGuard` (Google login + `adminEmails` allowlist, with dev bypass if enabled).
+- Current backend adapter:
+  - `src/app/core/services/firebase-admin-catalog-backend.service.ts`
+- Backend port contract:
+  - `src/app/core/ports/admin-catalog-backend.port.ts`
+- To switch to another backend API in future:
+  1. Create a new service implementing `AdminCatalogBackendPort` (REST/Supabase/etc).
+  2. Update provider binding in `src/app/app.config.ts`:
+     - `{ provide: ADMIN_CATALOG_BACKEND, useExisting: YourNewBackendService }`
+  3. Keep `AdminCatalogService` and admin page unchanged.
 
 ## Commands
 
@@ -581,6 +691,8 @@ npm start
 npm run build
 npm run import:kumas
 npm run seed:firestore
+npm run firebase:emulators
+npm run firebase:deploy
 ```
 
 ## Notes

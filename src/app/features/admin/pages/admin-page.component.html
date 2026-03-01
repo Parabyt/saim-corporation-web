@@ -1,0 +1,180 @@
+<section class="admin-page section-width">
+  <header class="admin-head">
+    <h1>Admin Panel</h1>
+    <p>Manage categories, subcategories, and products from one backend-agnostic workflow.</p>
+  </header>
+
+  @if (statusMessage()) {
+    <p class="status">{{ statusMessage() }}</p>
+  }
+
+  <div class="forms-grid">
+    <form class="admin-form" (ngSubmit)="saveCategory()">
+      <h2>{{ editingCategoryId() ? 'Edit Category' : 'Create Category' }}</h2>
+      <label>Title <input required [(ngModel)]="categoryForm.title" name="categoryTitle" /></label>
+      <label>Description <textarea required [(ngModel)]="categoryForm.description" name="categoryDescription"></textarea></label>
+      <label>Image URL <input required [(ngModel)]="categoryForm.imageUrl" name="categoryImage" /></label>
+      <label>Upload Image <input type="file" accept="image/*" (change)="uploadAndBindImage($event, 'category')" /></label>
+
+      <div class="actions">
+        <button type="submit">{{ editingCategoryId() ? 'Update Category' : 'Create Category' }}</button>
+        @if (editingCategoryId()) {
+          <button type="button" class="secondary" (click)="cancelEdit('category')">Cancel</button>
+        }
+      </div>
+    </form>
+
+    <form class="admin-form" (ngSubmit)="saveSubcategory()">
+      <h2>{{ editingSubcategoryId() ? 'Edit Subcategory' : 'Create Subcategory' }}</h2>
+      <label>Parent Category
+        <select required [(ngModel)]="subcategoryForm.categoryId" name="subCategoryParent">
+          <option value="" disabled>Select</option>
+          @for (category of subcategoriesForSubcategoryForm(); track category.id) {
+            <option [value]="category.id">{{ category.title }}</option>
+          }
+        </select>
+      </label>
+      <label>Title <input required [(ngModel)]="subcategoryForm.title" name="subCategoryTitle" /></label>
+      <label>Description <textarea required [(ngModel)]="subcategoryForm.description" name="subCategoryDescription"></textarea></label>
+      <label>Image URL <input required [(ngModel)]="subcategoryForm.imageUrl" name="subCategoryImage" /></label>
+      <label>Upload Image <input type="file" accept="image/*" (change)="uploadAndBindImage($event, 'subcategory')" /></label>
+
+      <div class="actions">
+        <button type="submit">{{ editingSubcategoryId() ? 'Update Subcategory' : 'Create Subcategory' }}</button>
+        @if (editingSubcategoryId()) {
+          <button type="button" class="secondary" (click)="cancelEdit('subcategory')">Cancel</button>
+        }
+      </div>
+    </form>
+
+    <form class="admin-form" (ngSubmit)="saveProduct()">
+      <h2>{{ editingProductId() ? 'Edit Product' : 'Create Product' }}</h2>
+      <label>Category
+        <select required [(ngModel)]="productForm.categoryId" name="productCategory">
+          <option value="" disabled>Select</option>
+          @for (category of categories(); track category.id) {
+            <option [value]="category.id">{{ category.title }}</option>
+          }
+        </select>
+      </label>
+      <label>Subcategory (optional)
+        <select [(ngModel)]="productForm.subcategoryId" name="productSubcategory">
+          <option value="">None</option>
+          @for (sub of subcategoriesForProduct(); track sub.id) {
+            <option [value]="sub.id">{{ sub.title }}</option>
+          }
+        </select>
+      </label>
+      <label>Title <input required [(ngModel)]="productForm.title" name="productTitle" /></label>
+      <label>Description <textarea required [(ngModel)]="productForm.description" name="productDescription"></textarea></label>
+      <label>Origin Country <input required [(ngModel)]="productForm.originCountry" name="productOrigin" /></label>
+      <label>Price (optional) <input type="number" min="0" step="0.01" [(ngModel)]="productForm.price" name="productPrice" /></label>
+      <label>Image URL <input required [(ngModel)]="productForm.imageUrl" name="productImage" /></label>
+      <label>Upload Image <input type="file" accept="image/*" (change)="uploadAndBindImage($event, 'product')" /></label>
+
+      <div class="actions">
+        <button type="submit">{{ editingProductId() ? 'Update Product' : 'Create Product' }}</button>
+        @if (editingProductId()) {
+          <button type="button" class="secondary" (click)="cancelEdit('product')">Cancel</button>
+        }
+      </div>
+    </form>
+  </div>
+
+  <section class="list-card">
+    <div class="list-head">
+      <h2>Categories</h2>
+      <input
+        type="search"
+        placeholder="Search category..."
+        [ngModel]="categorySearch()"
+        (ngModelChange)="categorySearch.set($event)"
+        name="categorySearch"
+      />
+    </div>
+    <div class="card-track">
+      @for (category of filteredCategories(); track category.id) {
+        <article class="preview-card">
+          <img [src]="category.imageUrl" [alt]="category.title" loading="lazy" />
+          <div class="card-body">
+            <div class="card-content">
+              <strong>{{ category.title }}</strong>
+              <p>{{ category.description }}</p>
+            </div>
+            <div class="item-actions">
+              <button type="button" class="secondary" (click)="editCategory(category)">Edit</button>
+              <button type="button" class="danger" (click)="deleteCategory(category)">Delete</button>
+            </div>
+          </div>
+        </article>
+      } @empty {
+        <p class="empty">No categories match your search.</p>
+      }
+    </div>
+  </section>
+
+  <section class="list-card">
+    <div class="list-head">
+      <h2>Subcategories</h2>
+      <input
+        type="search"
+        placeholder="Search subcategory..."
+        [ngModel]="subcategorySearch()"
+        (ngModelChange)="subcategorySearch.set($event)"
+        name="subcategorySearch"
+      />
+    </div>
+    <div class="card-track">
+      @for (sub of filteredSubcategories(); track sub.id) {
+        <article class="preview-card">
+          <img [src]="sub.imageUrl" [alt]="sub.title" loading="lazy" />
+          <div class="card-body">
+            <div class="card-content">
+              <strong>{{ sub.title }}</strong>
+              <p>{{ categoryTitle(sub.categoryId) }}</p>
+            </div>
+            <div class="item-actions">
+              <button type="button" class="secondary" (click)="editSubcategory(sub)">Edit</button>
+              <button type="button" class="danger" (click)="deleteSubcategory(sub)">Delete</button>
+            </div>
+          </div>
+        </article>
+      } @empty {
+        <p class="empty">No subcategories match your search.</p>
+      }
+    </div>
+  </section>
+
+  <section class="list-card">
+    <div class="list-head">
+      <h2>Products</h2>
+      <input
+        type="search"
+        placeholder="Search product..."
+        [ngModel]="productSearch()"
+        (ngModelChange)="productSearch.set($event)"
+        name="productSearch"
+      />
+    </div>
+    <div class="card-track">
+      @for (product of filteredProducts(); track product.id) {
+        <article class="preview-card">
+          <img [src]="product.imageUrl" [alt]="product.title" loading="lazy" />
+          <div class="card-body">
+            <div class="card-content">
+              <strong>{{ product.title }}</strong>
+              <p>{{ categoryTitle(product.categoryId) }} · {{ subcategoryTitle(product.subcategoryId) }}</p>
+              <p class="meta">{{ product.originCountry }}</p>
+            </div>
+            <div class="item-actions">
+              <button type="button" class="secondary" (click)="editProduct(product)">Edit</button>
+              <button type="button" class="danger" (click)="deleteProduct(product)">Delete</button>
+            </div>
+          </div>
+        </article>
+      } @empty {
+        <p class="empty">No products match your search.</p>
+      }
+    </div>
+  </section>
+</section>

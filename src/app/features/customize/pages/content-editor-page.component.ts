@@ -87,19 +87,65 @@ export class ContentEditorPageComponent {
 
   addCategory(): void {
     this.contentStore.addCategory(this.categoryForm);
-    this.statusMessage.set('Category added locally.');
+    const created = this.contentStore.categories().at(-1);
+    if (created && this.firebaseCatalog) {
+      this.firebaseCatalog
+        .addCategory({
+          slug: created.slug,
+          title: created.title,
+          imageUrl: created.imageUrl,
+          description: created.description
+        })
+        .then(() => this.statusMessage.set('Category added and synced to Firebase.'))
+        .catch(() => this.statusMessage.set('Category added locally. Firebase sync failed.'));
+    } else {
+      this.statusMessage.set('Category added locally.');
+    }
     this.resetCategoryForm();
   }
 
   addSubcategory(): void {
     this.contentStore.addSubcategory(this.subcategoryForm);
-    this.statusMessage.set('Subcategory added locally.');
+    const created = this.contentStore.subcategories().at(-1);
+    if (created && this.firebaseCatalog) {
+      this.firebaseCatalog
+        .addSubcategory({
+          slug: created.slug,
+          categoryId: created.categoryId,
+          title: created.title,
+          imageUrl: created.imageUrl,
+          description: created.description
+        })
+        .then(() => this.statusMessage.set('Subcategory added and synced to Firebase.'))
+        .catch(() => this.statusMessage.set('Subcategory added locally. Firebase sync failed.'));
+    } else {
+      this.statusMessage.set('Subcategory added locally.');
+    }
     this.resetSubcategoryForm();
   }
 
   addProduct(): void {
     this.contentStore.addProduct(this.productForm);
-    this.statusMessage.set('Product added locally.');
+    const created = this.contentStore.products().at(-1);
+    if (created && this.firebaseCatalog) {
+      this.firebaseCatalog
+        .addProduct({
+          slug: created.slug,
+          categoryId: created.categoryId,
+          subcategoryId: created.subcategoryId,
+          title: created.title,
+          imageUrl: created.imageUrl,
+          gallery: created.gallery,
+          description: created.description,
+          originCountry: created.originCountry,
+          price: created.price,
+          currency: created.currency
+        })
+        .then(() => this.statusMessage.set('Product added and synced to Firebase.'))
+        .catch(() => this.statusMessage.set('Product added locally. Firebase sync failed.'));
+    } else {
+      this.statusMessage.set('Product added locally.');
+    }
     this.resetProductForm();
   }
 
@@ -190,8 +236,8 @@ export class ContentEditorPageComponent {
       }
 
       this.statusMessage.set('Image uploaded to Firebase Storage.');
-    } catch {
-      this.statusMessage.set('Image upload failed. Add Firebase config in environment files.');
+    } catch (error) {
+      this.statusMessage.set(error instanceof Error ? error.message : 'Image upload failed. Add Firebase config in environment files.');
     }
   }
 

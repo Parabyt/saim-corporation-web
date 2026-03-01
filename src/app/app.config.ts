@@ -8,6 +8,8 @@ import { getAuth, provideAuth } from '@angular/fire/auth';
 
 import { environment } from '../environments/environment';
 import { routes } from './app.routes';
+import { ADMIN_CATALOG_BACKEND } from './core/ports/admin-catalog-backend.port';
+import { FirebaseAdminCatalogBackendService } from './core/services/firebase-admin-catalog-backend.service';
 
 const hasFirebaseConfig =
   Boolean(environment.firebase.apiKey) &&
@@ -24,5 +26,10 @@ const firebaseProviders = hasFirebaseConfig
   : [];
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideAnimations(), ...firebaseProviders]
+  providers: [
+    provideRouter(routes),
+    provideAnimations(),
+    ...firebaseProviders,
+    { provide: ADMIN_CATALOG_BACKEND, useExisting: FirebaseAdminCatalogBackendService }
+  ]
 };
