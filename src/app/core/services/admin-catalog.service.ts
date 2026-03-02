@@ -129,7 +129,7 @@ export class AdminCatalogService {
     }
   }
 
-  async uploadImage(file: File, folder: 'categories' | 'subcategories' | 'products'): Promise<string> {
+  async uploadImage(file: File, folder: 'categories' | 'subcategories' | 'products' | 'home'): Promise<string> {
     return this.backend.uploadImage(file, folder);
   }
 

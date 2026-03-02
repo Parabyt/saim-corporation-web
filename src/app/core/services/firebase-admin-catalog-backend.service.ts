@@ -68,7 +68,7 @@ export class FirebaseAdminCatalogBackendService implements AdminCatalogBackendPo
     return true;
   }
 
-  async uploadImage(file: File, folder: 'categories' | 'subcategories' | 'products'): Promise<string> {
+  async uploadImage(file: File, folder: 'categories' | 'subcategories' | 'products' | 'home'): Promise<string> {
     const firebaseCatalog = this.getFirebaseCatalog();
     if (!firebaseCatalog) {
       throw new Error('Firebase is not configured yet. Add keys in environment files.');

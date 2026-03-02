@@ -8,6 +8,96 @@
     <p class="status">{{ statusMessage() }}</p>
   }
 
+  <section class="list-card slider-section">
+    <div class="list-head">
+      <h2>Top Slider Section</h2>
+      <button type="button" (click)="saveSliderSection()">Save Slider</button>
+    </div>
+
+    <div class="slider-studio">
+      @if (selectedSlide(); as activeSlide) {
+        <div class="slider-preview" [style.background-image]="'url(' + activeSlide.imageUrl + ')'">
+          <div class="preview-overlay"></div>
+          <div class="preview-topbar">
+            <span class="pill active">Home</span>
+            <span class="pill">About</span>
+            <span class="pill">Products</span>
+            <span class="pill">Contact</span>
+          </div>
+
+          <button type="button" class="nav-arrow left" aria-label="Previous slide" (click)="previousSlide()">&#8592;</button>
+          <button type="button" class="nav-arrow right" aria-label="Next slide" (click)="nextSlide()">&#8594;</button>
+
+          <div class="preview-content">
+            <h3>{{ activeSlide.title }}</h3>
+            <p>{{ activeSlide.subtitle }}</p>
+            <div class="preview-tags">
+              @for (tag of activeSlide.tags; track tag) {
+                <span>{{ tag }}</span>
+              }
+            </div>
+          </div>
+
+          <div class="preview-indicators">
+            @for (slide of sliderSlides(); track slide.id; let i = $index) {
+              <button
+                type="button"
+                class="indicator"
+                [class.active]="selectedSlideIndex() === i"
+                [attr.aria-label]="'Select slide ' + (i + 1)"
+                (click)="selectSlide(i)"
+              >
+                <span></span>
+              </button>
+            }
+          </div>
+        </div>
+
+        <div class="slider-editor">
+          <h3>Editing Slide {{ selectedSlideIndex() + 1 }}</h3>
+          <label>Title
+            <input
+              [ngModel]="activeSlide.title"
+              (ngModelChange)="updateSliderField(selectedSlideIndex(), 'title', $event)"
+              name="selectedSlideTitle"
+            />
+          </label>
+          <label>Subtitle
+            <textarea
+              [ngModel]="activeSlide.subtitle"
+              (ngModelChange)="updateSliderField(selectedSlideIndex(), 'subtitle', $event)"
+              name="selectedSlideSubtitle"
+            ></textarea>
+          </label>
+          <label>Image URL
+            <input
+              [ngModel]="activeSlide.imageUrl"
+              (ngModelChange)="updateSliderField(selectedSlideIndex(), 'imageUrl', $event)"
+              name="selectedSlideImage"
+            />
+          </label>
+          <label>Upload Image
+            <input type="file" accept="image/*" (change)="uploadSliderImage($event)" />
+          </label>
+          <label>Tags (comma separated)
+            <input
+              [ngModel]="activeSlide.tags.join(', ')"
+              (ngModelChange)="updateSliderTags(selectedSlideIndex(), $event)"
+              name="selectedSlideTags"
+            />
+          </label>
+          <div class="slide-quicklist">
+            @for (slide of sliderSlides(); track slide.id; let i = $index) {
+              <button type="button" [class.active]="selectedSlideIndex() === i" (click)="selectSlide(i)">
+                Slide {{ i + 1 }}
+              </button>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </section>
+
   <div class="forms-grid">
     <form class="admin-form" (ngSubmit)="saveCategory()">
       <h2>{{ editingCategoryId() ? 'Edit Category' : 'Create Category' }}</h2>

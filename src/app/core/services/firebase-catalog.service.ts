@@ -85,7 +85,7 @@ export class FirebaseCatalogService {
     return addDoc(contactMessagesRef, message).then(() => undefined);
   }
 
-  uploadImage(file: File, bucketFolder: 'categories' | 'subcategories' | 'products' | 'requirements'): Promise<string> {
+  uploadImage(file: File, bucketFolder: 'categories' | 'subcategories' | 'products' | 'requirements' | 'home'): Promise<string> {
     if (!ALLOWED_IMAGE_TYPES.includes(file.type)) {
       throw new Error('Unsupported file type. Use JPG, PNG, or WEBP.');
     }

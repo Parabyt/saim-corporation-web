@@ -617,6 +617,25 @@ To keep iterative pixel-matching stable without blocking builds:
   - tablet/mobile: single-row horizontal scroll
 - Kept explicit per-item `Edit` and `Delete` buttons directly on each card.
 
+### Pass 51 (top slider section in admin)
+
+- Added a dedicated top section in `/admin` for homepage slider management.
+- Slider section supports:
+  - editing slide title/subtitle
+  - updating image URL
+  - uploading slider images from admin
+  - editing comma-separated tags
+  - saving all slider updates into centralized home content state
+- Extended backend upload path support for `home` assets and aligned Storage rules for `/home/**`.
+
+### Pass 52 (slider admin studio UI)
+
+- Reworked top slider admin into a live-preview studio to match frontend hero appearance:
+  - large left-side hero-style preview with overlay text/tags
+  - in-preview slide arrows and indicator controls
+  - right-side focused editor for currently selected slide
+- This allows users to assess how headline/subheadline/image/tags will look on the actual website before saving.
+
 ## Kumas import and Firestore seeding
 
 ### 1) Pull Kumas sitemap data

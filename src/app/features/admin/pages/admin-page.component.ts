@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 
 import { Category, Product, Subcategory } from '../../../core/models/catalog.models';
 import { AdminCatalogService } from '../../../core/services/admin-catalog.service';
+import { ContentStoreService } from '../../../core/services/content-store.service';
 
 @Component({
   selector: 'app-admin-page',
@@ -13,10 +14,15 @@ import { AdminCatalogService } from '../../../core/services/admin-catalog.servic
 })
 export class AdminPageComponent {
   private readonly adminCatalog = inject(AdminCatalogService);
+  private readonly contentStore = inject(ContentStoreService);
 
   readonly categories = this.adminCatalog.categories;
   readonly subcategories = this.adminCatalog.subcategories;
   readonly products = this.adminCatalog.products;
+  readonly homeContent = this.contentStore.homeContent;
+  readonly sliderSlides = signal(structuredClone(this.contentStore.homeContent().heroSlides));
+  readonly selectedSlideIndex = signal(0);
+  readonly selectedSlide = computed(() => this.sliderSlides()[this.selectedSlideIndex()] ?? this.sliderSlides()[0]);
 
   readonly statusMessage = signal('');
   readonly categorySearch = signal('');
@@ -250,6 +256,75 @@ export class AdminPageComponent {
     }
 
     input.value = '';
+  }
+
+  selectSlide(index: number): void {
+    if (index < 0 || index >= this.sliderSlides().length) {
+      return;
+    }
+    this.selectedSlideIndex.set(index);
+  }
+
+  nextSlide(): void {
+    const slides = this.sliderSlides();
+    if (!slides.length) {
+      return;
+    }
+    this.selectedSlideIndex.update((current) => (current + 1) % slides.length);
+  }
+
+  previousSlide(): void {
+    const slides = this.sliderSlides();
+    if (!slides.length) {
+      return;
+    }
+    this.selectedSlideIndex.update((current) => (current - 1 + slides.length) % slides.length);
+  }
+
+  updateSliderField(index: number, field: 'title' | 'subtitle' | 'imageUrl', value: string): void {
+    this.sliderSlides.update((slides) => {
+      const next = structuredClone(slides);
+      next[index][field] = value;
+      return next;
+    });
+  }
+
+  updateSliderTags(index: number, value: string): void {
+    this.sliderSlides.update((slides) => {
+      const next = structuredClone(slides);
+      next[index].tags = value
+        .split(',')
+        .map((tag) => tag.trim())
+        .filter((tag) => tag.length > 0);
+      return next;
+    });
+  }
+
+  async uploadSliderImage(event: Event): Promise<void> {
+    const input = event.target as HTMLInputElement;
+    const file = input.files?.item(0);
+    if (!file) {
+      return;
+    }
+
+    try {
+      const imageUrl = await this.adminCatalog.uploadImage(file, 'home');
+      this.updateSliderField(this.selectedSlideIndex(), 'imageUrl', imageUrl);
+      this.statusMessage.set('Slider image uploaded.');
+    } catch (error) {
+      this.statusMessage.set(error instanceof Error ? error.message : 'Slider image upload failed.');
+    }
+
+    input.value = '';
+  }
+
+  saveSliderSection(): void {
+    const current = this.homeContent();
+    this.contentStore.updateHomeContent({
+      ...current,
+      heroSlides: structuredClone(this.sliderSlides())
+    });
+    this.statusMessage.set('Top slider updated.');
   }
 
   categoryTitle(categoryId: string): string {
