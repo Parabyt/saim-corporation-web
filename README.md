@@ -636,6 +636,19 @@ To keep iterative pixel-matching stable without blocking builds:
   - right-side focused editor for currently selected slide
 - This allows users to assess how headline/subheadline/image/tags will look on the actual website before saving.
 
+### Pass 53 (company contact + social profile admin section)
+
+- Added a dedicated admin section to manage:
+  - company phone
+  - company email
+  - physical address
+  - social links (Instagram, Facebook, LinkedIn, YouTube) with on/off switches
+- Added persistent company profile state in `ContentStoreService`.
+- Wired live website surfaces to profile state:
+  - footer now renders phone/email/address and enabled social links dynamically
+  - contact page channel/social blocks now read from the same centralized profile
+- This keeps communication details editable from admin and immediately reflected across the site.
+
 ## Kumas import and Firestore seeding
 
 ### 1) Pull Kumas sitemap data

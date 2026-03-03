@@ -98,6 +98,67 @@
     </div>
   </section>
 
+  <section class="list-card company-section">
+    <div class="list-head">
+      <h2>Company Contact & Social Links</h2>
+      <button type="button" (click)="saveCompanyProfile()">Save Contact Profile</button>
+    </div>
+
+    <div class="company-grid">
+      <div class="company-fields">
+        <label>Phone Number
+          <input
+            [ngModel]="companyProfileForm().phone"
+            (ngModelChange)="updateCompanyField('phone', $event)"
+            name="companyPhone"
+            placeholder="+92 300 0000000"
+          />
+        </label>
+        <label>Email Address
+          <input
+            [ngModel]="companyProfileForm().email"
+            (ngModelChange)="updateCompanyField('email', $event)"
+            name="companyEmail"
+            placeholder="exports@saimcorporation.com"
+          />
+        </label>
+        <label>Physical Address
+          <textarea
+            [ngModel]="companyProfileForm().address"
+            (ngModelChange)="updateCompanyField('address', $event)"
+            name="companyAddress"
+            placeholder="Sialkot, Pakistan"
+          ></textarea>
+        </label>
+      </div>
+
+      <div class="social-manage">
+        <h3>Social Media Channels</h3>
+        @for (social of companyProfileForm().socials; track social.platform) {
+          <article class="social-item">
+            <div class="social-head">
+              <strong>{{ social.label }}</strong>
+              <label class="toggle">
+                <input
+                  type="checkbox"
+                  [checked]="social.enabled"
+                  (change)="updateSocialLink(social.platform, 'enabled', $any($event.target).checked)"
+                />
+                <span>{{ social.enabled ? 'On' : 'Off' }}</span>
+              </label>
+            </div>
+            <input
+              [value]="social.url"
+              (input)="updateSocialLink(social.platform, 'url', $any($event.target).value)"
+              [disabled]="!social.enabled"
+              [placeholder]="'Enter ' + social.label + ' URL'"
+            />
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
   <div class="forms-grid">
     <form class="admin-form" (ngSubmit)="saveCategory()">
       <h2>{{ editingCategoryId() ? 'Edit Category' : 'Create Category' }}</h2>

@@ -1,31 +1,56 @@
 <footer class="site-footer" #footerRoot>
-  <div class="content">
-    <div>
-      <h3>Saim Corporation</h3>
-      <p>Scalable import-export storefront architecture for global textile and commodity distribution.</p>
+  <div class="footer-inner">
+    <div class="content">
+      <div class="brand-block">
+        <div class="brand-header">
+          <div class="brand-logo" aria-hidden="true">SC</div>
+          <div>
+            <h3 class="brand">Saim Corporation</h3>
+            <p class="brand-sub">CORPORATION</p>
+          </div>
+        </div>
+        <p class="tagline">We create export-ready product programs for brands and companies using modern production systems.</p>
+        <div class="brand-socials">
+          @for (social of activeSocials(); track social.platform) {
+            <a class="brand-social" [href]="social.url" target="_blank" rel="noreferrer noopener">
+              {{ social.label }}
+            </a>
+          }
+        </div>
+      </div>
+
+      <div>
+        <h4>Usefull links</h4>
+        <a routerLink="/about">About us</a>
+        <a routerLink="/catalog">Catalogue</a>
+        <a routerLink="/contact">Contact us</a>
+      </div>
+
+      <div>
+        <h4>Additional</h4>
+        <a routerLink="/catalog/all">Products</a>
+        <a routerLink="/inquiry">Inquiry</a>
+      </div>
+
+      <div class="contacts-col">
+        <h4>Contacts</h4>
+        <a class="contact-row" [href]="'tel:' + companyProfile().phone">
+          <span class="icon" aria-hidden="true">📞</span>
+          <span>{{ companyProfile().phone }}</span>
+        </a>
+        <a class="contact-row" [href]="'mailto:' + companyProfile().email">
+          <span class="icon" aria-hidden="true">✉</span>
+          <span>{{ companyProfile().email }}</span>
+        </a>
+        <p class="address contact-row">
+          <span class="icon" aria-hidden="true">📍</span>
+          <span>{{ companyProfile().address }}</span>
+        </p>
+      </div>
     </div>
 
-    <div>
-      <h4>Corporate</h4>
-      <a routerLink="/about">About</a>
-      <a routerLink="/contact">Contact</a>
-      <a href="#">Order Tracking</a>
-    </div>
-
-    <div>
-      <h4>Policies</h4>
-      <a href="#">Membership Agreement</a>
-      <a href="#">Return Conditions</a>
-      <a href="#">Privacy & Security</a>
-    </div>
-
-    <div>
-      <h4>Follow</h4>
-      <a href="#">Instagram</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">YouTube</a>
+    <div class="footer-bottom">
+      <p>© {{ year }} Saim Corporation. All rights reserved.</p>
     </div>
   </div>
-
-  <p class="copy">© {{ year }} Saim Corporation. All rights reserved.</p>
 </footer>

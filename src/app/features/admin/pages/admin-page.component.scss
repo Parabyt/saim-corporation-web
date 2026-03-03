@@ -308,6 +308,61 @@ button.danger {
   font-size: 1rem;
 }
 
+.company-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.company-fields {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.social-manage {
+  border: 1px solid #d4e1ed;
+  border-radius: 14px;
+  background: #f8fbff;
+  padding: 0.7rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.social-manage h3 {
+  margin: 0;
+  color: #0a2d52;
+  font-size: 0.98rem;
+}
+
+.social-item {
+  border: 1px solid #d4e1ed;
+  border-radius: 12px;
+  padding: 0.6rem;
+  background: #ffffff;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.social-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
+}
+
+.social-head strong {
+  color: #0a2d52;
+  font-size: 0.9rem;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: #406483;
+}
+
 .slide-quicklist {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -470,6 +525,10 @@ button.danger {
   }
 
   .slider-studio {
+    grid-template-columns: 1fr;
+  }
+
+  .company-grid {
     grid-template-columns: 1fr;
   }
 

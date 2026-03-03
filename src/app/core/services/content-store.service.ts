@@ -12,6 +12,7 @@ import {
   SubcategoryCreateInput,
   SubcategoryUpdateInput
 } from '../models/catalog.models';
+import { CompanyProfile } from '../models/company-profile.models';
 import { HomeContent } from '../models/home.models';
 import { FirebaseCatalogService } from './firebase-catalog.service';
 
@@ -22,7 +23,8 @@ const STORAGE_KEYS = {
   categories: 'saim.categories',
   subcategories: 'saim.subcategories',
   products: 'saim.products',
-  home: 'saim.homeContent'
+  home: 'saim.homeContent',
+  companyProfile: 'saim.companyProfile'
 };
 
 const LEGACY_NEWSLETTER_TITLE = 'Stay Updated with New Fabric Drops';
@@ -102,6 +104,18 @@ const DEFAULT_HOME_CONTENT: HomeContent = {
   ]
 };
 
+const DEFAULT_COMPANY_PROFILE: CompanyProfile = {
+  phone: '+92 300 0000000',
+  email: 'exports@saimcorporation.com',
+  address: 'Sialkot, Pakistan',
+  socials: [
+    { platform: 'instagram', label: 'Instagram', enabled: true, url: 'https://instagram.com/' },
+    { platform: 'facebook', label: 'Facebook', enabled: true, url: 'https://facebook.com/' },
+    { platform: 'linkedin', label: 'LinkedIn', enabled: true, url: 'https://linkedin.com/' },
+    { platform: 'youtube', label: 'YouTube', enabled: true, url: 'https://youtube.com/' }
+  ]
+};
+
 @Injectable({ providedIn: 'root' })
 export class ContentStoreService {
   private readonly firebaseCatalog = inject(FirebaseCatalogService, { optional: true });
@@ -110,11 +124,13 @@ export class ContentStoreService {
   private readonly subcategoriesState = signal<Subcategory[]>(this.loadSubcategories());
   private readonly productsState = signal<Product[]>(this.loadProducts());
   private readonly homeContentState = signal<HomeContent>(this.loadHomeContent());
+  private readonly companyProfileState = signal<CompanyProfile>(this.loadCompanyProfile());
 
   readonly categories = computed(() => this.categoriesState());
   readonly subcategories = computed(() => this.subcategoriesState());
   readonly products = computed(() => this.productsState());
   readonly homeContent = computed(() => this.homeContentState());
+  readonly companyProfile = computed(() => this.companyProfileState());
 
   constructor() {
     localStorage.setItem(STORAGE_KEYS.catalogVersion, CATALOG_SEED_VERSION);
@@ -264,6 +280,11 @@ export class ContentStoreService {
     localStorage.setItem(STORAGE_KEYS.home, JSON.stringify(content));
   }
 
+  updateCompanyProfile(profile: CompanyProfile): void {
+    this.companyProfileState.set(this.normalizeCompanyProfile(profile));
+    localStorage.setItem(STORAGE_KEYS.companyProfile, JSON.stringify(this.companyProfileState()));
+  }
+
   getCategoryBySlug(slug: string): Category | undefined {
     return this.categoriesState().find((item) => item.slug === slug);
   }
@@ -396,6 +417,35 @@ export class ContentStoreService {
     }
 
     return this.normalizeHomeContent(saved);
+  }
+
+  private loadCompanyProfile(): CompanyProfile {
+    const saved = this.tryLoad<CompanyProfile>(STORAGE_KEYS.companyProfile);
+    if (!saved) {
+      return DEFAULT_COMPANY_PROFILE;
+    }
+
+    return this.normalizeCompanyProfile(saved);
+  }
+
+  private normalizeCompanyProfile(profile: CompanyProfile): CompanyProfile {
+    const socialByPlatform = new Map(profile.socials?.map((item) => [item.platform, item]) ?? []);
+    const normalizedSocials = DEFAULT_COMPANY_PROFILE.socials.map((seed) => {
+      const current = socialByPlatform.get(seed.platform);
+      return {
+        platform: seed.platform,
+        label: current?.label || seed.label,
+        enabled: current?.enabled ?? seed.enabled,
+        url: current?.url?.trim() || seed.url
+      };
+    });
+
+    return {
+      phone: profile.phone?.trim() || DEFAULT_COMPANY_PROFILE.phone,
+      email: profile.email?.trim() || DEFAULT_COMPANY_PROFILE.email,
+      address: profile.address?.trim() || DEFAULT_COMPANY_PROFILE.address,
+      socials: normalizedSocials
+    };
   }
 
   private normalizeHomeContent(content: HomeContent): HomeContent {

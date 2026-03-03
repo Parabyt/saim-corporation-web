@@ -2,6 +2,7 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { Category, Product, Subcategory } from '../../../core/models/catalog.models';
+import { CompanyProfile, SocialPlatform } from '../../../core/models/company-profile.models';
 import { AdminCatalogService } from '../../../core/services/admin-catalog.service';
 import { ContentStoreService } from '../../../core/services/content-store.service';
 
@@ -20,9 +21,11 @@ export class AdminPageComponent {
   readonly subcategories = this.adminCatalog.subcategories;
   readonly products = this.adminCatalog.products;
   readonly homeContent = this.contentStore.homeContent;
+  readonly companyProfile = this.contentStore.companyProfile;
   readonly sliderSlides = signal(structuredClone(this.contentStore.homeContent().heroSlides));
   readonly selectedSlideIndex = signal(0);
   readonly selectedSlide = computed(() => this.sliderSlides()[this.selectedSlideIndex()] ?? this.sliderSlides()[0]);
+  readonly companyProfileForm = signal<CompanyProfile>(structuredClone(this.contentStore.companyProfile()));
 
   readonly statusMessage = signal('');
   readonly categorySearch = signal('');
@@ -325,6 +328,22 @@ export class AdminPageComponent {
       heroSlides: structuredClone(this.sliderSlides())
     });
     this.statusMessage.set('Top slider updated.');
+  }
+
+  updateCompanyField(field: 'phone' | 'email' | 'address', value: string): void {
+    this.companyProfileForm.update((current) => ({ ...current, [field]: value }));
+  }
+
+  updateSocialLink(platform: SocialPlatform, field: 'enabled' | 'url', value: boolean | string): void {
+    this.companyProfileForm.update((current) => ({
+      ...current,
+      socials: current.socials.map((item) => (item.platform === platform ? { ...item, [field]: value } : item))
+    }));
+  }
+
+  saveCompanyProfile(): void {
+    this.contentStore.updateCompanyProfile(this.companyProfileForm());
+    this.statusMessage.set('Company contact and social profile updated.');
   }
 
   categoryTitle(categoryId: string): string {

@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, DestroyRef, ElementRef, OnDestroy, ViewChild, inject, signal } from '@angular/core';
+import { AfterViewInit, Component, DestroyRef, ElementRef, OnDestroy, ViewChild, computed, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 import { ContactMessageDraft } from '../../../core/models/contact-message.models';
 import { ContactMessageService } from '../../../core/services/contact-message.service';
+import { ContentStoreService } from '../../../core/services/content-store.service';
 import { environment } from '../../../../environments/environment';
 
 interface RecaptchaApi {
@@ -41,6 +42,7 @@ declare global {
 export class ContactPageComponent implements AfterViewInit, OnDestroy {
   private readonly formBuilder = inject(FormBuilder);
   private readonly contactService = inject(ContactMessageService);
+  private readonly contentStore = inject(ContentStoreService);
   private readonly destroyRef = inject(DestroyRef);
   private recaptchaLoader: Promise<void> | null = null;
   private recaptchaWidgetId: number | null = null;
@@ -54,28 +56,25 @@ export class ContactPageComponent implements AfterViewInit, OnDestroy {
   readonly captchaToken = signal('');
   readonly recaptchaSiteKey = environment.recaptchaSiteKey;
 
-  readonly channels = [
+  readonly companyProfile = this.contentStore.companyProfile;
+  readonly channels = computed(() => [
     {
       title: 'Email',
-      value: 'exports@saimcorporation.com',
+      value: this.companyProfile().email,
       detail: 'Best for quotations, specs, and documentation.'
     },
     {
       title: 'Phone',
-      value: '+92 300 0000000',
+      value: this.companyProfile().phone,
       detail: 'Mon-Sat, 9:00 AM to 7:00 PM (PKT).'
     },
     {
-      title: 'WhatsApp',
-      value: '+92 300 0000000',
-      detail: 'Fast updates for sampling and order status.'
-    },
-    {
       title: 'Office',
-      value: 'Sialkot, Pakistan',
+      value: this.companyProfile().address,
       detail: 'Manufacturing and export coordination center.'
     }
-  ];
+  ]);
+  readonly activeSocials = computed(() => this.companyProfile().socials.filter((item) => item.enabled && item.url.trim().length > 0));
 
   readonly contactForm = this.formBuilder.nonNullable.group({
     fullName: ['', [Validators.required, Validators.minLength(2)]],

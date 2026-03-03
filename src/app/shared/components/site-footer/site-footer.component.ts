@@ -1,5 +1,7 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild, computed, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+
+import { ContentStoreService } from '../../../core/services/content-store.service';
 
 @Component({
   selector: 'app-site-footer',
@@ -11,8 +13,11 @@ import { RouterLink } from '@angular/router';
 export class SiteFooterComponent implements AfterViewInit, OnDestroy {
   @ViewChild('footerRoot', { static: true }) private footerRoot?: ElementRef<HTMLElement>;
   private resizeObserver?: ResizeObserver;
+  private readonly contentStore = inject(ContentStoreService);
 
   readonly year = new Date().getFullYear();
+  readonly companyProfile = this.contentStore.companyProfile;
+  readonly activeSocials = computed(() => this.companyProfile().socials.filter((item) => item.enabled && item.url.trim().length > 0));
 
   ngAfterViewInit(): void {
     const footer = this.footerRoot?.nativeElement;

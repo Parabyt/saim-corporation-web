@@ -12,7 +12,7 @@
     <aside class="contact-channels">
       <h2>Reach Us Through</h2>
       <div class="channel-grid">
-        @for (channel of channels; track channel.title) {
+        @for (channel of channels(); track channel.title) {
           <article>
             <h3>{{ channel.title }}</h3>
             <p class="value">{{ channel.value }}</p>
@@ -22,9 +22,9 @@
       </div>
 
       <div class="social-row">
-        <a href="#" aria-label="Instagram">Instagram</a>
-        <a href="#" aria-label="LinkedIn">LinkedIn</a>
-        <a href="#" aria-label="YouTube">YouTube</a>
+        @for (social of activeSocials(); track social.platform) {
+          <a [href]="social.url" target="_blank" rel="noreferrer noopener" [attr.aria-label]="social.label">{{ social.label }}</a>
+        }
       </div>
     </aside>
 
