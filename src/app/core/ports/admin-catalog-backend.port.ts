@@ -10,6 +10,7 @@ export interface AdminCatalogBackendPort {
   upsertProduct(product: Product): Promise<boolean>;
   deleteProduct(id: string): Promise<boolean>;
   uploadImage(file: File, folder: 'categories' | 'subcategories' | 'products' | 'home'): Promise<string>;
+  deleteImageByUrl(imageUrl: string): Promise<boolean>;
 }
 
 export const ADMIN_CATALOG_BACKEND = new InjectionToken<AdminCatalogBackendPort>('ADMIN_CATALOG_BACKEND');

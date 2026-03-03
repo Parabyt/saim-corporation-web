@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { addDoc, collection, collectionData, deleteDoc, doc, Firestore, setDoc } from '@angular/fire/firestore';
-import { Storage, getDownloadURL, ref, uploadBytes } from '@angular/fire/storage';
+import { Storage, deleteObject, getDownloadURL, ref, uploadBytes } from '@angular/fire/storage';
 import { Observable, of } from 'rxjs';
 
 import { Category, Product, Subcategory } from '../models/catalog.models';
@@ -97,6 +97,19 @@ export class FirebaseCatalogService {
     const uniqueName = `${Date.now()}-${file.name}`;
     const storageRef = ref(this.storage, `${bucketFolder}/${uniqueName}`);
     return uploadBytes(storageRef, file).then(() => getDownloadURL(storageRef));
+  }
+
+  async deleteImageByUrl(imageUrl: string): Promise<void> {
+    try {
+      const imageRef = ref(this.storage, imageUrl);
+      await deleteObject(imageRef);
+    } catch (error) {
+      const code = (error as { code?: string })?.code;
+      if (code === 'storage/object-not-found') {
+        return;
+      }
+      throw error;
+    }
   }
 
   // Fallback helper for offline mode. Useful if Firebase credentials are not configured yet.

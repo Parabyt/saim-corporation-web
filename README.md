@@ -649,6 +649,16 @@ To keep iterative pixel-matching stable without blocking builds:
   - contact page channel/social blocks now read from the same centralized profile
 - This keeps communication details editable from admin and immediately reflected across the site.
 
+### Pass 54 (orphan image cleanup on update/delete)
+
+- Added safe media cleanup to admin operations:
+  - when category/subcategory/product image is replaced, old Firebase image is deleted if no longer referenced
+  - when category/subcategory/product is deleted, linked Firebase images are removed if unreferenced
+  - when top slider images are updated, replaced Firebase images are removed if unreferenced
+- Added centralized reference scanning to prevent deleting images still used elsewhere in catalog/home content.
+- Extended backend port + Firebase adapter with `deleteImageByUrl(...)`.
+- Updated Storage rules to allow admin deletes (`request.resource == null`) while keeping upload type/size constraints.
+
 ## Kumas import and Firestore seeding
 
 ### 1) Pull Kumas sitemap data

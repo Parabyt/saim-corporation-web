@@ -77,6 +77,16 @@ export class FirebaseAdminCatalogBackendService implements AdminCatalogBackendPo
     return firebaseCatalog.uploadImage(file, folder);
   }
 
+  async deleteImageByUrl(imageUrl: string): Promise<boolean> {
+    const firebaseCatalog = this.getFirebaseCatalog();
+    if (!firebaseCatalog) {
+      return false;
+    }
+
+    await firebaseCatalog.deleteImageByUrl(imageUrl);
+    return true;
+  }
+
   private getFirebaseCatalog(): FirebaseCatalogService | null {
     try {
       return this.injector.get(FirebaseCatalogService);

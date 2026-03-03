@@ -9,6 +9,10 @@ service firebase.storage {
       return request.resource.size < 2 * 1024 * 1024;
     }
 
+    function isDelete() {
+      return request.resource == null;
+    }
+
     function isSignedIn() {
       return request.auth != null;
     }
@@ -25,28 +29,28 @@ service firebase.storage {
     // Publicly viewable media used by website.
     match /categories/{allPaths=**} {
       allow read: if true;
-      allow write: if isAdmin() && isImage() && under2Mb();
+      allow write: if isAdmin() && (isDelete() || (isImage() && under2Mb()));
     }
 
     match /subcategories/{allPaths=**} {
       allow read: if true;
-      allow write: if isAdmin() && isImage() && under2Mb();
+      allow write: if isAdmin() && (isDelete() || (isImage() && under2Mb()));
     }
 
     match /products/{allPaths=**} {
       allow read: if true;
-      allow write: if isAdmin() && isImage() && under2Mb();
+      allow write: if isAdmin() && (isDelete() || (isImage() && under2Mb()));
     }
 
     match /home/{allPaths=**} {
       allow read: if true;
-      allow write: if isAdmin() && isImage() && under2Mb();
+      allow write: if isAdmin() && (isDelete() || (isImage() && under2Mb()));
     }
 
     // Inquiry attachments are private to admins.
     match /requirements/{allPaths=**} {
       allow read: if isAdmin();
-      allow write: if isAdmin() && isImage() && under2Mb();
+      allow write: if isAdmin() && (isDelete() || (isImage() && under2Mb()));
     }
 
     // Default deny.

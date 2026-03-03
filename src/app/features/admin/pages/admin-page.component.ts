@@ -321,13 +321,9 @@ export class AdminPageComponent {
     input.value = '';
   }
 
-  saveSliderSection(): void {
-    const current = this.homeContent();
-    this.contentStore.updateHomeContent({
-      ...current,
-      heroSlides: structuredClone(this.sliderSlides())
-    });
-    this.statusMessage.set('Top slider updated.');
+  async saveSliderSection(): Promise<void> {
+    const result = await this.adminCatalog.updateHeroSlides(this.sliderSlides());
+    this.statusMessage.set(result.message);
   }
 
   updateCompanyField(field: 'phone' | 'email' | 'address', value: string): void {
