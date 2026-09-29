@@ -128,9 +128,7 @@ export class ContactPageComponent implements AfterViewInit, OnDestroy {
       const result = await this.contactService.sendMessage(payload);
       this.submitState.set('success');
       this.statusMessage.set(
-        result.persistedTo === 'firebase'
-          ? 'Message sent successfully. Our team will get back to you shortly.'
-          : 'Message saved locally. Firebase is unavailable right now; we will enable cloud delivery once configured.'
+        'Message sent successfully. Our team will get back to you shortly.'
       );
       this.contactForm.reset({
         fullName: '',

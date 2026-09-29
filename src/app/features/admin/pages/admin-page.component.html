@@ -1,6 +1,7 @@
 <section class="admin-page section-width">
   <header class="admin-head">
     <h1>Admin Panel</h1>
+    <button type="button" (click)="logout()">Sign out</button>
     <p>Manage categories, subcategories, and products from one backend-agnostic workflow.</p>
   </header>
 
@@ -201,7 +202,12 @@
     <form class="admin-form" (ngSubmit)="saveProduct()">
       <h2>{{ editingProductId() ? 'Edit Product' : 'Create Product' }}</h2>
       <label>Category
-        <select required [(ngModel)]="productForm.categoryId" name="productCategory">
+        <select
+          required
+          [(ngModel)]="productForm.categoryId"
+          (ngModelChange)="onProductCategoryChange($event)"
+          name="productCategory"
+        >
           <option value="" disabled>Select</option>
           @for (category of categories(); track category.id) {
             <option [value]="category.id">{{ category.title }}</option>

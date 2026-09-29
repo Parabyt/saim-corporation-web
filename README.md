@@ -1,743 +1,175 @@
-# Saim Corporation Web (Angular)
+# Saim Corporation — Angular + PHP + MySQL
 
-Modular Angular 17 storefront for an import-export business, designed to replicate a Kumas-style ecommerce flow while remaining customizable and admin-panel ready.
+The existing Angular 17 storefront and admin UI now use a PHP REST API. MySQL stores catalog text, relationships, slider content, company/social settings, admin accounts, and contact/inquiry submissions. Optimized WebP files live on the web host; the database stores their paths. There is no Firebase SDK in the Angular runtime and no development authentication bypass.
 
-## What is implemented
+The storefront routes, catalog filters, slider, product galleries, contact channels, `/admin`, and `/customize` remain. `/admin/login` supplies password authentication. Custom theme editing remains browser-local, as before. The earlier implementation notes are preserved in [docs/legacy-project-history.md](docs/legacy-project-history.md); their Firebase instructions are historical and must not be used for this backend.
 
-- Kumas-inspired storefront structure and theming
-  - Announcement bar
-  - Centered-logo header
-  - Mega-menu style navigation
-  - Hero + marquee + collection/product sections
-  - Ecommerce-style footer
-- Scalable modular architecture (`core`, `shared`, `features`)
-- Slug-based catalog routing
-  - `/catalog`
-  - `/collections/:slug`
-  - `/products/:slug`
-- Local persistence (browser storage) for editable content
-  - Categories
-  - Subcategories
-  - Products
-  - Homepage block content
-- Admin-ready customization console (`/customize`)
-  - `Catalog` tab: add categories/subcategories/products
-  - `Homepage` tab: edit hero/marquee/newsletter/3 homepage blocks
-  - `Theme` tab: apply theme color/radius tokens
-  - `Load Kumas Sitemap Seed` action for rapid dataset loading
-- Product card interactions similar to ecommerce behavior
-  - Wishlist icon
-  - Hover quick-view CTA
-  - Inquiry CTA
-- Firebase-ready integration for Firestore + Storage + Auth
-  - File uploads supported from customization forms
-  - `/customize` protected with admin guard
+## Architecture and behavior
 
-## Pixel-Match and Animation Passes
+- `src/app/core/ports/backend.port.ts`: backend-neutral content, authentication, media, and submission repositories.
+- `PhpBackendService`: the HTTP adapter. Change the repository providers in `app.config.ts` to use another backend.
+- `ContentStoreService`: reactive storefront state. Successful server snapshots replace the cache, including empty lists. Existing browser data is preserved; a separate `saim.api.snapshot` cache is used. Cached/default content can display during a read failure; admin routes require a fresh server read.
+- `AdminCatalogService`: applies server responses only after successful writes. Failed edits retain the current catalog and editor form. Additional product gallery images survive cover replacement.
+- `backend/src`: validated PDO queries, transactions, sessions, media optimization and cleanup. No Composer packages are required.
+- Contact and inquiry submissions are stored in MySQL; they are not emailed automatically. A failed request is shown as a failure, never as “saved locally.” Admins can retrieve the most recent 200 submissions using `GET /api/submissions`; full history is in the database backup.
 
-### Pass 1
+## Requirements
 
-- Route/page transition animation added at app shell level.
-- Header interactions refined:
-  - Animated announcement ticker
-  - Underline hover on menu links
-  - Animated mega-menu reveal (fade + slide)
-- Homepage interactions refined:
-  - Section/card reveal animations
-  - Button hover motion and shadows
-  - Interactive collection chip hover effects
-- Product card micro-interactions refined:
-  - Hover lift + shadow
-  - Image zoom/saturation transition
-  - Quick-view slide/fade reveal
-  - Wishlist and inquiry hover feedback
+Node 20 for this Angular 17 project; PHP 8.3+ with `pdo_mysql`, `gd` (WebP/JPEG support), `fileinfo`, `curl`, `session`, and JSON; MySQL 8.4 (or compatible MariaDB 10.6+). Only MySQL 8.4 is covered by the local integration checks. Use HTTPS in production.
 
-### Pass 2
+## Local setup
 
-- Mobile navigation behavior improved:
-  - Animated slide-in drawer menu
-  - Overlay open/close behavior
-  - Desktop nav/icons hidden on mobile for cleaner parity
-- Catalog page visual structure updated:
-  - Ecommerce-like two-column layout (sidebar + product grid)
-  - Sticky collection filter sidebar
-  - Compact subcategory media list
-  - Product count header and denser product listing rhythm
-- Product detail page visual structure updated:
-  - Breadcrumb refinement
-  - Gallery + thumbnail strip
-  - Card-style detail panel
-  - Multi-CTA area (`Add to Inquiry`, `Buy Sample`)
-  - Shipping info block
-  - Refined related products block and hover behavior
+### Docker option
 
-### Pass 3
-
-- Global design token normalization added:
-  - Shared container width (`--container-max`)
-  - Typographic scale tokens (`--text-xs` to `--text-lg`)
-  - Section spacing tokens (`--section-space-md`, `--section-space-lg`)
-  - Reusable soft radius and shadow tokens
-- Typography and spacing rhythm calibrated across pages:
-  - Hero headline/body/button proportions refined
-  - Homepage section spacing made consistent
-  - Catalog filter/sidebar/product spacing and font-size alignment refined
-  - Product detail text hierarchy and related section scale tightened
-- Header text sizing and nav spacing aligned to global tokens for better desktop/mobile parity.
-
-### Pass 4
-
-- Header/nav exact dimensions tightened for parity:
-  - Announcement bar height and type reduced to closer visual weight
-  - Header row/nav row heights and paddings tuned
-  - Nav label font-size/line-height tuned for compact desktop rhythm
-- Homepage hero typography calibrated:
-  - Hero min-height increased and desktop/mobile adjusted by breakpoint
-  - Headline size/line-height/weight tuned for closer visual match
-  - Subtitle width, line-height, and CTA button dimensions tightened
-- Catalog filter panel and grid spacing tightened:
-  - Sidebar width/padding/font sizes made denser
-  - Sticky top offsets tuned by breakpoint
-  - Product grid gutters and heading metrics refined
-
-### Pass 5
-
-- Top navigation coordinate tuning by breakpoint:
-  - Header row horizontal padding adjusted for desktop/tablet
-  - Nav gap and label font size calibrated at `1200px` and `1024px` breakpoints
-  - Logo size and mobile row height tuned for cleaner line-up
-- Hero line-break and content width control:
-  - `h1` switched to `ch`-based max width for consistent wrapping
-  - Subtitle max-width adjusted for stable paragraph breaks
-  - Desktop/tablet/mobile content widths tuned at `1280px`, `980px`, `640px`
-- Catalog sticky/filter precision tuning:
-  - Sidebar sticky top offset made more accurate for compact header stack
-  - Large-desktop to tablet sidebar width/gutter interpolation tuned (`1320px`, `1200px`, `1080px`)
-
-### Pass 6 (latest)
-
-- Announcement bar parity tuning:
-  - Height reduced to match denser top-strip feel
-  - Ticker speed slowed for closer readability cadence
-  - Loop distance adjusted for smoother repetition
-- Hero vertical coordinate tuning by viewport:
-  - Hero content shifted slightly upward on large screens
-  - Per-breakpoint vertical reset/tuning (`1280px`, `980px`, `640px`) for consistent focal placement
-- Catalog sidebar card visual precision:
-  - Border color softened, radius tightened, shadow reduced for closer target treatment
-  - Sticky offset further refined for compact header stack alignment
-  - Grid gutter slightly reduced for denser listing rhythm
-
-### Pass 7 (header + hero rebuild)
-
-- Screenshot-inspired header redesign:
-  - Fixed transparent top bar with left-aligned brand lockup
-  - Compact desktop nav (`Home`, `About Us`, `Our Business`, `Contact`) with underline hover/active treatment
-  - Mobile drawer retained for small screens
-- Scroll-state sticky header behavior:
-  - Header remains visible while scrolling
-  - Background shifts to stronger frosted blur + darker tint for readability
-- Homepage hero converted to slider:
-  - 3-slide auto-rotating hero with image + title + subtitle + tags
-  - Manual bottom indicators to jump slides
-  - Cinematic overlay/grid treatment and transition timing tuned for smoothness
-- App-shell layout cleanup:
-  - Route-aware top spacing so home can be full-bleed under overlay header
-  - Inner pages keep safe top offset under fixed header
-
-### Pass 8 (slider smoothness + header consistency)
-
-- Header size stabilization:
-  - Header now uses fixed CSS height tokens (`--header-height`, `--header-height-mobile`)
-  - App-shell top offset now references the same tokens for consistent alignment
-- Hero slider transition quality:
-  - Replaced direct `background-image` swaps with layered slide elements
-  - Added smooth crossfade + subtle zoom effect on active slide
-- Indicator progress timing:
-  - Slide indicators now include an animated fill bar on the active item
-  - Fill animation duration is synced with auto-slide interval so users can predict next transition
-  - Manual indicator click resets auto-slide timing for a predictable cycle
-
-### Pass 9 (motion refinement)
-
-- Slider cadence tuned for premium pacing:
-  - Auto-advance increased to `6200ms`
-  - Crossfade timing adjusted with smoother easing curve
-- Motion synchronization improvements:
-  - Hero section now exposes a shared CSS timing variable for slide lifecycle
-  - Background zoom and indicator fill are aligned to the same duration token
-- Indicator polish:
-  - Slightly larger progress bars with softer inactive contrast
-  - Refined active-state scaling and gradient fill for clearer time-to-next-slide feedback
-
-### Pass 10 (header expansion + sliding controls)
-
-- Header behavior updated for larger visual band at top:
-  - Increased default header height to occupy the full top rectangular area
-  - On scroll, header now shrinks to a compact height while retaining blur + sticky behavior
-- Hero image transition updated:
-  - Switched from layered hide/show behavior to true horizontal slide animation
-  - Slide-track translation now drives image replacement motion
-- Manual navigation controls added:
-  - Fancy circular left/right arrow buttons placed at extreme ends and vertically centered
-  - Manual clicks reset auto-slide timing to keep indicator progress and transition cadence consistent
-
-### Pass 11 (export-niche hero content + admin-ready slide model)
-
-- Homepage hero content model upgraded:
-  - Added `heroSlides` schema in home content state (id, title, subtitle, imageUrl, tags)
-  - Homepage now reads all slide data from the central content store instead of hardcoded component values
-- Added 6 niche-specific default export slides:
-  - Leather goods
-  - Sportswear
-  - Gym wear
-  - Uniforms
-  - Workwear/protective apparel
-  - Private-label manufacturing
-- Customization console extended for future admin integration:
-  - Homepage tab now exposes editable fields for each hero slide (headline, subheadline, image URL, tags)
-  - Firebase image upload binding added per hero slide
-  - Persisted in existing home content storage flow for smooth migration to future backend/admin panel
-
-### Pass 12 (full-screen landing fold alignment)
-
-- First viewport alignment updated to screenshot behavior:
-  - Hero section now fills the full initial viewport (`100svh`) on desktop and mobile
-  - Hero content vertical offset now references header height tokens for consistent top spacing
-- Navigation bar proportion tuned:
-  - Reduced default/scrolled header heights to match compact screenshot-like top strip proportions
-
-### Pass 13 (niche-aligned hero imagery)
-
-- Updated all default hero slides with export-specific niches and messaging:
-  - Leather jackets, belts, and bags
-  - Sports uniforms and football-oriented products
-  - Gym wear, boxing gloves, and gym belts
-  - Uniform supply programs
-  - Performance sports apparel
-  - Private-label leather/activewear manufacturing
-- Kept the same admin-ready `heroSlides` content model so image/headline/tag updates remain configurable from the customization panel and future admin backend.
-
-### Pass 14 (hero text readability hardening)
-
-- Improved headline/subheadline readability across bright and high-contrast hero images:
-  - Added a directional dark overlay layer over hero media
-  - Added a subtle gradient backing panel behind hero text content
-  - Added text-shadow on eyebrow, headline, and subheadline for contrast stability
-- Responsive tuning included so readability treatment remains balanced on tablet/mobile.
-
-### Pass 15 (readability rollback to color-only)
-
-- Reverted Pass 14 overlay/backing/shadow readability layers per design preference.
-- Kept readability adjustment strictly to text color for hero copy and tags.
-
-### Pass 16 (marquee loop and speed fix)
-
-- Reworked homepage running-line into a seamless duplicated marquee track.
-- Motion now performs a full continuous right-to-left loop without visible reset jump.
-- Increased marquee speed for quicker rotation cadence.
-
-### Pass 17 (reference-inspired header visual redesign)
-
-- Header redesigned to match rounded capsule reference style:
-  - Floating top navigation bar with glass/blue gradient treatment
-  - Pill-style nav links with active white state and dot marker
-  - Right-side utility menu button and `Inquiry Now` CTA
-- Brand zone refined for niche positioning:
-  - Updated identity text to export-focused wording
-  - Compact lockup proportions aligned with premium logistics aesthetic
-- Existing hero tags and action buttons were kept unchanged as requested.
-
-### Pass 18 (company overview section)
-
-- Added a new homepage section directly below the marquee to present core company information:
-  - Company intro and positioning
-  - What we offer
-  - What we manufacture
-  - Achievements
-  - Network strength
-- Visual direction chosen to be elegant and editorial (inspired by the second reference style):
-  - Clean light canvas with balanced typography
-  - Structured highlight cards for key points
-  - Premium dark metric panel with experience/network stats
-
-### Pass 19 (style budget calibration)
-
-- Increased Angular `anyComponentStyle` budget thresholds to support visual-rich homepage/header styling:
-  - warning: `6kb`
-  - error: `10kb`
-
-### Pass 20 (categories two-row carousel)
-
-- Added a new `Categories` section below the company overview section.
-- Replaced static homepage block cards with a horizontal two-row category carousel:
-  - Displays all categories from content store
-  - Stylized category tiles with image, title, description, and `Explore` action
-  - Left/right arrow controls for smooth horizontal navigation
-  - Snap-scrolling layout for cleaner visual rhythm across desktop/mobile
-
-### Pass 21 (style budget calibration v2)
-
-- Adjusted Angular `anyComponentStyle` budgets to accommodate expanded homepage design system:
-  - warning: `8kb`
-  - error: `12kb`
-
-### Pass 22 (niche catalog curation + price toggle)
-
-- Replaced default catalog seeds with curated niche structure for export business:
-  - Categories: Sports Goods & Equipment, Leather Products, Apparel & Textile (Sportswear), Martial Arts & Boxing Gear, Uniforms & Workwear, Bags & Travel Accessories
-  - Curated subcategories across each category
-  - Expanded product seed list aligned to subcategories
-- Added high-quality web image URLs for categories, subcategories, and products to improve visual quality.
-- Added catalog seed versioning to force one-time migration from old local browser seed data to the new niche dataset.
-- Implemented optional product price visibility via centralized app config:
-  - `DEFAULT_APP_CONFIG.catalog.showPrice = false` (disabled by default for now)
-  - Product card and product detail views now respect this toggle.
-- Customization form still supports entering price data (optional), so admin panel integration can enable/show it later without data model changes.
-
-### Pass 23 (category image refinement)
-
-- Replaced category cover images with more niche-sensitive visuals:
-  - Sports Goods & Equipment: sports field/equipment context
-  - Leather Products: leather apparel/accessory context
-  - Apparel & Textile (Sportswear): team sportswear context
-  - Martial Arts & Boxing Gear: boxing training gear context
-  - Uniforms & Workwear: workforce uniform context
-  - Bags & Travel Accessories: travel/backpack context
-- Bumped catalog seed version to trigger one-time local reseed so updated category images appear immediately without manual storage cleanup.
-
-### Pass 24 (image preview fix for broken seed URLs)
-
-- Ran URL health checks across seeded category/subcategory/product image links.
-- Fixed broken Pexels image IDs returning `404` by replacing them with verified working sources.
-- Bumped catalog seed version again (`niche-v3-2026-02-24`) to ensure existing local browsers refresh with corrected images automatically.
-
-### Pass 25 (our process section)
-
-- Added a new `Our Process` section directly below `Featured Products`.
-- Implemented a single-row horizontal auto-scrolling stage list with duplicated track for seamless infinite motion.
-- Each process stage includes a niche-relevant image and stage title reflecting export-manufacturing workflow:
-  - Material sourcing
-  - Pattern/tech pack development
-  - Cutting/component preparation
-  - Stitching/assembly
-  - Quality inspection
-  - Packing/export logistics
-
-### Pass 26 (process card scale-up)
-
-- Increased `Our Process` item size to match large visual storytelling style:
-  - Wider stage cards
-  - Taller process images
-  - Larger, stronger stage titles
-- Kept continuous horizontal auto-scroll behavior with tuned timing for bigger card footprints.
-
-### Pass 27 (global network band)
-
-- Added a new no-title section below `Our Process`, inspired by export-destination map storytelling:
-  - Dark navy band aligned with brand theme
-  - Dotted world visual with animated location pins
-  - Right-side export destination narrative and `Get In Touch` CTA
-  - Subtle oversized `world` watermark for visual depth
-- Implemented as a distinct creative block (not a direct copy), with responsive behavior for tablet/mobile.
-
-### Pass 28 (style budget calibration v3)
-
-- Adjusted Angular `anyComponentStyle` budget thresholds to support additional homepage visual modules:
-  - warning: `10kb`
-  - error: `14kb`
-
-### Pass 29 (network section recreation)
-
-- Recreated the no-title network block with a cleaner creative direction:
-  - Removed previous dotted world map treatment
-  - Added a custom route-canvas visual with elegant dashed arcs and animated nodes
-  - Reduced typography scale for better visual balance
-  - Added destination chips for scannable market coverage
-- Kept dark export-theme language and CTA while improving overall refinement.
-
-### Pass 30 (about us page redesign)
-
-- Rebuilt `/about` page using Kummas About-page section logic as inspiration while keeping a distinct Saim visual identity.
-- Implemented a multi-section premium layout:
-  - Hero brand statement
-  - Company intro split panel
-  - CEO message block (with placeholder portrait image)
-  - Key metrics band
-  - Growth philosophy and team-effort dual cards
-  - Corporate responsibility grid
-  - Journey timeline
-  - Compliance and assurance badges
-- Maintained modular standalone component structure for future admin/CMS integration.
-
-### Pass 31 (CEO section alignment update)
-
-- Reworked CEO block to match reference intent:
-  - Large centered CEO portrait treatment
-  - Transparent-background placeholder asset for easy future replacement
-  - Removed side-card image framing and switched to center-stage composition
-- Kept CEO message content in a clean supporting panel beneath portrait.
-
-### Pass 32 (subcategory selection and routing support)
-
-- Catalog flow now supports clickable/selectable subcategory filtering in the sidebar.
-- Products list now filters by:
-  - selected category
-  - selected subcategory (within selected category)
-- Added active subcategory indicator in products heading for context clarity.
-- Added subcategory route support for future dedicated subcategory pages:
-  - `/subcategories/:slug`
-- Added content-store helper for subcategory slug lookup to support route-driven state.
-
-### Pass 33 (product card height consistency)
-
-- Standardized product card height and content rhythm to prevent variable card heights from long titles.
-- Implemented:
-  - fixed minimum card height with flex column layout
-  - two-line clamp for product titles
-  - two-line clamp for descriptions
-  - bottom action row anchored to card bottom
-
-### Pass 34 (sticky bottom info section)
-
-- Implemented global sticky-bottom behavior for footer/info section:
-  - Footer fixed to viewport bottom
-  - Main content scrolls above footer and reveals sticky bottom at end of page
-- Added dynamic footer height synchronization via `ResizeObserver`:
-  - Footer height is measured and written to CSS variable (`--site-footer-height`)
-  - Main layout margin updates automatically to prevent overlap/clipping across breakpoints
-
-### Pass 35 (post-collections section alignment)
-
-- Replaced the generic post-collections "newsletter" meaning with an import/export-specific trade inquiry strip:
-  - New export-focused messaging and CTAs (`Send Requirements`, `Browse Catalog`)
-  - Added quick operational highlights (MOQ flexibility, quality checks, shipping modes)
-- Preserved admin/customization compatibility:
-  - Existing editable fields (`newsletterTitle`, `newsletterText`) now drive the trade inquiry strip content
-  - Homepage editor label updated from `Newsletter` to `Trade Inquiry Strip`
-- Added migration logic to replace legacy default textile/fabric copy with the new trade-oriented defaults for existing saved home content.
-
-### Pass 36 (trade strip layout/readability fix)
-
-- Fixed the post-collections trade strip visual breakage:
-  - Corrected heading contrast on dark background (`h2` now forced white in this section)
-  - Rebalanced desktop grid columns to prevent extreme text squeezing
-  - Reformatted quick-fact items so label text no longer merges with bold titles
-- Kept style-budget compliance by tightening declarations while preserving the intended layout.
-
-### Pass 37 (trade CTA spacing + inquiry flow)
-
-- Added explicit spacing between `Send Requirements` and `Browse Catalog` CTAs in the post-collections trade strip.
-- Implemented a real `Send Requirements` flow:
-  - New public route: `/inquiry`
-  - New inquiry form page with validation and optional reference image upload
-  - Submission persistence service with local storage fallback and Firebase write support (`requirements` collection) when configured
-- Updated Firebase catalog service to support:
-  - `addRequirement(...)`
-  - `uploadImage(..., 'requirements')`
-
-### Pass 38 (blank screen fix on inquiry route)
-
-- Fixed runtime crash on `/inquiry` when Firebase providers are not configured.
-- Root cause:
-  - `RequirementInquiryService` attempted eager DI of `FirebaseCatalogService`, which could trigger provider resolution errors in non-Firebase setups.
-- Fix:
-  - Switched to safe lazy resolution via `Injector.get(...)` wrapped in `try/catch`.
-  - Inquiry submit/upload now gracefully fall back to local-only persistence when Firebase is unavailable.
-
-### Pass 39 (contact us page + messaging workflow)
-
-- Added a full public `Contact Us` page at `/contact` with:
-  - contact channels (email, phone, WhatsApp, office details, social links)
-  - polished two-column layout and responsive behavior
-  - validated message form fields (user/company/contact/subject/message)
-  - captcha checkbox (`I am not a robot`)
-  - mandatory terms & conditions acceptance
-  - `Send Message` submit workflow with user status feedback
-- Implemented message persistence service:
-  - new `ContactMessageService` writes to local storage by default
-  - Firebase-enabled fallback to `contactMessages` collection when providers are configured
-- Updated `FirebaseCatalogService` with `addContactMessage(...)`.
-- Updated public navigation targets:
-  - Header and mobile drawer `Contact` now point to `/contact`
-  - Header inquiry CTA now points to `/inquiry`
-  - Home “Get In Touch” CTAs now point to `/contact`
-  - Footer corporate links updated for `/about` and `/contact`
-
-### Pass 40 (reCAPTCHA-style UX gating on contact form)
-
-- Reworked contact form verification block to match a reCAPTCHA checkbox card visual style (`I'm not a robot` + branding area).
-- Added interaction gating:
-  - reCAPTCHA checkbox remains disabled until all required contact fields are valid and Terms are accepted.
-  - if prerequisites become invalid again, the captcha checkbox is automatically reset.
-- Updated submit button behavior:
-  - `Send Message` stays disabled until full form validity is met (including terms + captcha).
-
-### Pass 41 (real Google reCAPTCHA checkbox integration)
-
-- Replaced simulated captcha UI with real Google reCAPTCHA v2 checkbox widget on `/contact`.
-- Added script lifecycle + widget callbacks in contact page logic:
-  - loads `https://www.google.com/recaptcha/api.js?render=explicit`
-  - renders widget into form container
-  - syncs `captchaConfirmed` and `captchaToken` into reactive form state
-  - resets widget automatically when prerequisites become invalid
-- Preserved gating rule:
-  - reCAPTCHA interaction stays blocked until required fields are valid and terms are accepted
-  - send button remains disabled until full form validity (including real captcha completion)
-- Added environment key support:
-  - `recaptchaSiteKey` in `src/environments/environment.ts`
-  - `recaptchaSiteKey` in `src/environments/environment.prod.ts`
-  - defaults use Google official test key; replace with your real site key for production.
-
-### Pass 42 (reCAPTCHA load reliability fallback)
-
-- Improved reCAPTCHA loader resilience on restricted networks:
-  - primary script source: `google.com`
-  - automatic fallback source: `recaptcha.net`
-- Added readiness wait loop to ensure `window.grecaptcha.render` is available before widget render.
-- Result: fewer false "Unable to load reCAPTCHA" states where the primary domain is blocked but fallback domain is reachable.
-
-### Pass 43 (reCAPTCHA faded-state visual fix)
-
-- Kept reCAPTCHA interaction disabled logic, but removed artificial visual dimming.
-- Updated disabled-state presentation:
-  - removed reduced opacity on disabled captcha shell
-  - changed blocking overlay from semi-white to transparent
-- Result: captcha now appears crisp/normal while still non-interactive until prerequisites are satisfied.
-
-### Pass 44 (finite catalog window + inherited view-all filters)
-
-- Reduced extreme side padding for catalog/product content containers:
-  - catalog page container width adjusted from `92vw` to `95vw`
-  - product detail page container width adjusted from `92vw` to `95vw`
-- Added finite product window on catalog page:
-  - catalog now shows first 12 filtered products
-  - if more items exist, shows `View All Products` CTA
-- Added dedicated all-products screen:
-  - new route: `/catalog/all`
-  - includes search input + explicit `Search` action
-  - includes subcategory filter controls
-  - shows products constrained to inherited category/subcategory context from previous screen via query params
-  - auto-selects inherited subcategory when opening from catalog view
-- Catalog `View All Products` now passes selected category/subcategory to the new screen.
-
-### Pass 45 (firebase project config + rules bootstrap)
-
-- Added Firebase project config files:
-  - `firebase.json`
-  - `.firebaserc` (placeholder project id)
-  - `firestore.rules`
-  - `firestore.indexes.json`
-  - `storage.rules`
-- Added npm commands for Firebase CLI workflows (using `npx firebase-tools`):
-  - `firebase:login`
-  - `firebase:use`
-  - `firebase:emulators`
-  - `firebase:deploy:rules`
-  - `firebase:deploy:hosting`
-  - `firebase:deploy`
-- Rules are aligned for current app flows:
-  - public read for catalog collections/media
-  - public create for `requirements` and `contactMessages`
-  - admin-only read/update/delete and media writes
-  - explicit default deny for unspecified paths
-
-### Pass 46 (firebase runtime sync for catalog admin flow)
-
-- Wired Firestore collections as runtime source-of-truth for catalog data when Firebase is configured:
-  - `categories`
-  - `subcategories`
-  - `products`
-- `ContentStoreService` now subscribes to Firebase catalog streams and persists snapshots locally for fallback continuity.
-- Updated customization actions so admin add operations sync to Firestore:
-  - category add -> `addCategory(...)`
-  - subcategory add -> `addSubcategory(...)`
-  - product add -> `addProduct(...)`
-- Improved upload error feedback so file policy violations are surfaced to admin users directly.
-
-## Build budget adjustments
-
-To keep iterative pixel-matching stable without blocking builds:
-
-- `angular.json` production budgets are currently:
-  - `initial`: warning `750kb`, error `1200kb`
-  - `anyComponentStyle`: warning `15kb`, error `20kb`
-
-### Pass 47 (build warning resolution)
-
-- Resolved Angular production build warnings by calibrating bundle/style budgets to current storefront scale.
-- Verified clean `npm run build` output after budget update.
-
-### Pass 48 (cost-safe Firebase operations checklist)
-
-- Added deployment safety:
-  - Firebase hosting now runs `npm run build` as `predeploy` to avoid deploying stale assets.
-- Cost-safe data strategy (enforced by app + rules):
-  - Firestore for text metadata only (`categories`, `subcategories`, `products`, form submissions)
-  - Storage for image binaries only (never Base64 in Firestore)
-  - Max upload size limited to 2 MB with MIME restrictions (`jpeg/png/webp`)
-- Recommended guardrails for free-tier sustainability:
-  - Keep product and category reads list-based and avoid unnecessary realtime listeners on pages that do not need live updates.
-  - Compress images before upload (target <= 400 KB for catalog thumbnails and <= 800 KB for hero images).
-  - Keep admin-only write paths protected by email-based admin checks in Firestore/Storage rules.
-  - Set Firebase budget alerts for:
-    - Firestore document reads/day
-    - Storage egress/day
-    - Storage total bytes
-  - Rotate test data periodically and remove orphan images when records are deleted.
-
-### Pass 49 (dedicated admin panel + backend abstraction)
-
-- Added a dedicated admin page at `/admin` (guarded by existing admin auth guard).
-- Implemented CRUD UI for:
-  - Categories
-  - Subcategories
-  - Products
-- Added edit/delete workflows and list management directly in the admin page.
-- Added admin image uploads for category/subcategory/product assets.
-- Introduced backend abstraction for future API swaps:
-  - New port: `ADMIN_CATALOG_BACKEND` (`AdminCatalogBackendPort`)
-  - Default adapter: `FirebaseAdminCatalogBackendService`
-  - Orchestration layer: `AdminCatalogService` (UI/business layer depends on port, not Firebase SDK directly)
-- Enhanced local store with full CRUD primitives and cascade delete behavior:
-  - deleting category also removes linked subcategories/products
-  - deleting subcategory also removes linked products
-- Firebase sync moved to deterministic upsert/delete by document id for easier cross-backend parity.
-
-### Pass 50 (admin UX refresh: card grids + search + compact spacing)
-
-- Reduced extreme horizontal edge spacing on admin page by widening admin container utilization.
-- Reworked admin listing UI into visual preview cards (image + metadata + actions) for:
-  - categories
-  - subcategories
-  - products
-- Added search bars per listing section to quickly filter large datasets.
-- Implemented finite-height, horizontally scrollable card tracks with responsive behavior:
-  - desktop: two-row horizontal card grid
-  - tablet/mobile: single-row horizontal scroll
-- Kept explicit per-item `Edit` and `Delete` buttons directly on each card.
-
-### Pass 51 (top slider section in admin)
-
-- Added a dedicated top section in `/admin` for homepage slider management.
-- Slider section supports:
-  - editing slide title/subtitle
-  - updating image URL
-  - uploading slider images from admin
-  - editing comma-separated tags
-  - saving all slider updates into centralized home content state
-- Extended backend upload path support for `home` assets and aligned Storage rules for `/home/**`.
-
-### Pass 52 (slider admin studio UI)
-
-- Reworked top slider admin into a live-preview studio to match frontend hero appearance:
-  - large left-side hero-style preview with overlay text/tags
-  - in-preview slide arrows and indicator controls
-  - right-side focused editor for currently selected slide
-- This allows users to assess how headline/subheadline/image/tags will look on the actual website before saving.
-
-### Pass 53 (company contact + social profile admin section)
-
-- Added a dedicated admin section to manage:
-  - company phone
-  - company email
-  - physical address
-  - social links (Instagram, Facebook, LinkedIn, YouTube) with on/off switches
-- Added persistent company profile state in `ContentStoreService`.
-- Wired live website surfaces to profile state:
-  - footer now renders phone/email/address and enabled social links dynamically
-  - contact page channel/social blocks now read from the same centralized profile
-- This keeps communication details editable from admin and immediately reflected across the site.
-
-### Pass 54 (orphan image cleanup on update/delete)
-
-- Added safe media cleanup to admin operations:
-  - when category/subcategory/product image is replaced, old Firebase image is deleted if no longer referenced
-  - when category/subcategory/product is deleted, linked Firebase images are removed if unreferenced
-  - when top slider images are updated, replaced Firebase images are removed if unreferenced
-- Added centralized reference scanning to prevent deleting images still used elsewhere in catalog/home content.
-- Extended backend port + Firebase adapter with `deleteImageByUrl(...)`.
-- Updated Storage rules to allow admin deletes (`request.resource == null`) while keeping upload type/size constraints.
-
-## Kumas import and Firestore seeding
-
-### 1) Pull Kumas sitemap data
-
-```bash
-npm run import:kumas
-```
-
-This generates:
-
-- `data/kumas-seed.json`
-- `src/assets/seeds/kumas-seed.json`
-
-### 2) Seed Firestore (optional)
-
-Add Firebase service account JSON at project root as `service-account.json`, then run:
-
-```bash
-npm run seed:firestore
-```
-
-It writes to:
-
-- `categories`
-- `products`
-
-## Auth guard behavior
-
-- Route `/customize` uses an admin-only guard.
-- Admin check is email-based via `adminEmails` in:
-  - `src/environments/environment.ts`
-  - `src/environments/environment.prod.ts`
-- In development, `allowCustomizeWithoutAuth: true` allows access without Firebase Auth configured.
-- In production, set `allowCustomizeWithoutAuth: false`.
-
-## Firebase setup
-
-1. Create Firebase project.
-2. Enable Firestore, Storage, and Authentication (Google provider).
-3. Fill keys in:
-   - `src/environments/environment.ts`
-   - `src/environments/environment.prod.ts`
-4. Add real admin emails to `adminEmails`.
-5. Replace placeholder Firebase project id in `.firebaserc`.
-6. Deploy rules and indexes:
-
-```bash
-npm run firebase:login
-npm run firebase:use
-npm run firebase:deploy:rules
-```
-
-## Admin panel and backend swap guide
-
-- Admin panel route: `/admin`
-- Auth: guarded by `adminOnlyGuard` (Google login + `adminEmails` allowlist, with dev bypass if enabled).
-- Current backend adapter:
-  - `src/app/core/services/firebase-admin-catalog-backend.service.ts`
-- Backend port contract:
-  - `src/app/core/ports/admin-catalog-backend.port.ts`
-- To switch to another backend API in future:
-  1. Create a new service implementing `AdminCatalogBackendPort` (REST/Supabase/etc).
-  2. Update provider binding in `src/app/app.config.ts`:
-     - `{ provide: ADMIN_CATALOG_BACKEND, useExisting: YourNewBackendService }`
-  3. Keep `AdminCatalogService` and admin page unchanged.
-
-## Commands
-
-```bash
-npm install
+```sh
+npm ci
+docker compose up --build -d
+# Fresh schema and current checked-in storefront content:
+docker compose exec api php bin/console.php migrate
+docker compose exec api php bin/console.php import seed.json
+# Hidden password prompt; the secret does not enter shell history.
+bash -c 'read -rsp "Admin password: " SAIM_ADMIN_PASSWORD; echo; printf "%s" "$SAIM_ADMIN_PASSWORD" | docker compose exec -T api php bin/console.php create-admin admin@example.com; unset SAIM_ADMIN_PASSWORD'
 npm start
-npm run build
-npm run import:kumas
-npm run seed:firestore
-npm run firebase:emulators
-npm run firebase:deploy
 ```
 
-## Notes
+Open `http://localhost:4200`. MySQL and the API ports bind only to loopback. Development credentials in Compose are local-only. Database/media volumes persist across container recreation. Do not use `docker compose down -v` unless intentionally discarding those development volumes.
 
-- Current app mirrors Kumas-style structure and interaction patterns. Exact pixel-perfect parity for every page still requires complete 1:1 component-by-component reconstruction against all live page templates.
-- The current codebase is prepared for future admin panel integration by exposing centralized content/theme state and route-level guards.
+### Native PHP + MySQL option
+
+1. Install the requirements. On macOS: `brew install php@8.3 mysql@8.4`; add their `bin` folders to `PATH`. Start a local MySQL instance, create database `saim` with `utf8mb4`, and a dedicated database user with privileges on that database only. Secure the local MySQL root account after installation.
+2. Copy `backend/config.example.php` to `backend/config.local.php`. Set the DSN and database credentials. This private file is ignored by Git. Keep `origin` as `http://localhost:4200` and `secure_cookie=false` only for local HTTP.
+3. Run:
+
+```sh
+npm ci
+php backend/bin/console.php migrate
+php backend/bin/console.php import backend/seed.json
+bash -c 'read -rsp "Admin password: " SAIM_ADMIN_PASSWORD; echo; printf "%s" "$SAIM_ADMIN_PASSWORD" | php backend/bin/console.php create-admin admin@example.com; unset SAIM_ADMIN_PASSWORD'
+npm run api:serve
+# In another terminal:
+npm start
+```
+
+`proxy.conf.json` proxies `/api` and `/media` to `127.0.0.1:8080`. Use the Angular origin consistently: do not mix `localhost` and `127.0.0.1` in the browser. Direct writes to port 8080 from another browser origin are deliberately rejected. `api:serve` sets upload/memory limits explicitly. Docker sets the same limits in PHP INI.
+
+## Migration and recovery from Firebase
+
+No migration command connects to or deletes Firebase data. The old Firebase rules, project metadata, and historical seed script remain as reference only. Firebase packages and deployment/seed npm shortcuts have been removed. A deleted Firebase project cannot be reconstructed by this code.
+
+Before switching a live site, preserve all available Firestore/Storage exports, downloaded assets, and browser data. Do not clear browser storage or overwrite the previous site before exporting it. To recover the original browser cache, run this in that site's browser console and save the download privately:
+
+```js
+const read = key => JSON.parse(localStorage.getItem(key) || 'null');
+const recovered = {
+  categories: read('saim.categories'),
+  subcategories: read('saim.subcategories'),
+  products: read('saim.products'),
+  home: read('saim.homeContent'),
+  company: read('saim.companyProfile')
+};
+const url = URL.createObjectURL(new Blob([JSON.stringify(recovered, null, 2)], {type:'application/json'}));
+const a = document.createElement('a'); a.href = url; a.download = 'saim-recovered.json'; a.click();
+URL.revokeObjectURL(url);
+```
+
+Inspect the recovery file before import. Fields that are `null` were never cached: fill them from a verified export or the corresponding defaults in `backend/seed.json`. Retain IDs, slugs, `categoryId`, `subcategoryId`, product galleries, slide order, and enabled social flags. Firestore exports need conversion to the same JSON shape; automatic Firestore export parsing is not included. Preserve original exports separately.
+
+Import into a **fresh content database**:
+
+```sh
+php backend/bin/console.php migrate
+php backend/bin/console.php import /private/path/saim-recovered.json
+```
+
+The importer validates the complete catalog, home, and company data in one transaction and refuses to overwrite any nonempty content tables. Account creation is independent. Seed data is an explicit starting option, not recovered production data; `npm run seed:export` regenerates `backend/seed.json` from the existing checked-in Angular defaults.
+
+Existing HTTPS image URLs are retained as references. Deleted Firebase Storage URLs will remain broken until the original files are recovered and re-uploaded through the admin UI. New uploads are decoded, resized to at most 1600px (1920px for slides), re-encoded to WebP and limited to 800KB. Original filenames/metadata are discarded. SVG and non-image uploads are rejected; input is limited to 5MB and 16 megapixels. External images are never downloaded or deleted by cleanup.
+
+Save an entity after uploading its replacement. Upload alone never removes its previous image. Only after a successful database transaction does the server check all catalog/gallery/slider/home-block/inquiry references and delete a replaced, unreferenced managed file. Shared images are protected. A failed save leaves the old image intact. Unattached uploads can be removed after seven days with `php backend/bin/console.php cleanup-media`; run during a maintenance window so abandoned long-lived editor forms cannot reference a cleaned upload.
+
+The customization console's Kumas import adds/updates matching IDs transactionally and never deletes unrelated records. Duplicate slugs or invalid relationships reject the entire import. Use the CLI fresh-database importer for a full recovery.
+
+## Authentication and validation
+
+Passwords are hashed using PHP `password_hash` and verified on the server. Admin accounts are created only through the private CLI; there is no public registration or browser email allowlist. Passwords must be 12–72 bytes. Disable an account with `UPDATE admins SET active=0 WHERE email=...` in a trusted database console; subsequent authenticated requests are rejected. There is no public password-reset endpoint. For recovery, disable the old account and create a new administrator through the CLI.
+
+Sessions use strict IDs, HTTP-only SameSite=Strict cookies, Secure in production, ID rotation on login, 30-minute inactivity expiry and an 8-hour absolute expiry. All writes, including login, logout, uploads and public submissions, require the session CSRF token; supplied browser origins must match configuration. Authentication/authorization is rechecked on every protected operation. SQL-backed login and public upload/submission throttles survive new sessions. PHP session files must use a private directory writable only by the hosting account.
+
+All catalog writes validate server-side: lengths, URL schemes, slug uniqueness, parent existence and subcategory ownership. Database foreign keys enforce cascading category/subcategory deletion. A subcategory containing products cannot be moved to another category until its products are moved/removed. External image/social links require HTTPS. Public inquiries may only attach reference images uploaded by their current session.
+
+Contact reCAPTCHA is verified by PHP, including the configured production hostname. Configure a real site key in `environment.prod.ts` and the matching secret/hostname in the private PHP config. Production intentionally ships with an empty site key and rejects the test secret until configured. Local development uses Google's test pair. Inquiry upload/submission protection uses CSRF, size limits, ownership checks and rate limiting.
+
+## REST surface
+
+All paths are relative to `/api`. JSON errors have `{ "error": "message" }`; cookies carry authentication. JSON mutations require `Content-Type: application/json` and `X-CSRF-Token` from `GET /auth/session`. Upload uses multipart form data with `file` and `folder`.
+
+| Routes | Methods | Access |
+| --- | --- | --- |
+| `/content` | GET | Public complete snapshot |
+| `/categories`, `/subcategories`, `/products` | GET, POST | Public reads; admin writes |
+| `/categories/:id`, `/subcategories/:id`, `/products/:id` | GET, PUT, DELETE | Public reads; admin writes |
+| `/home`, `/company` | GET, PUT | Public reads; admin writes |
+| `/slides`, `/social-links` | GET, PUT | Public reads; admin replace/reorder lists (`slides` / `socials` property) |
+| `/catalog/import` | POST | Admin atomic additive import |
+| `/auth/session`, `/auth/login`, `/auth/logout` | GET, POST, POST | Session/login/logout |
+| `/media` | POST | Admin for catalog/home; public rate-limited `requirements` uploads |
+| `/requirements`, `/contact-messages` | POST | Validated public submissions |
+| `/submissions` | GET | Admin only |
+
+Catalog POST/PUT accepts the complete Angular model including a stable ID and slug. Successful catalog/home/company writes return the committed content snapshot. Media deletion is exclusively server-managed; there is no arbitrary file-delete endpoint.
+
+## Hostinger deployment (manual; nothing auto-deploys)
+
+1. In hPanel, create a MySQL database/user. Enable PHP 8.3+ and the required extensions for the website ([Hostinger extension settings](https://www.hostinger.com/support/4667515-how-to-manage-php-extensions-and-options-in-hostinger/)). Enable SSL, set `upload_max_filesize=5M`, `post_max_size=6M`, `memory_limit=256M`, `display_errors=Off`, and `log_errors=On`.
+2. Build locally with `npm ci && npm run build`. Upload only `dist/saim-corporation-web/browser/` contents into `public_html`. Copy `deployment/hostinger.htaccess` to `public_html/.htaccess` to preserve Angular deep links and HTTPS. The deployment assumes the domain root, not a subdirectory.
+3. Put the backend folder in a private sibling such as `domains/example.com/saim-backend/`, **outside** `public_html`. Do not upload `.git`, `node_modules`, database dumps, secrets, or development tooling to the web root.
+4. Create `public_html/api/`. Copy `backend/public/api/.htaccess` there. Its `index.php` should be a thin wrapper with the correct private path:
+
+   ```php
+   <?php
+   require dirname(__DIR__, 2) . '/saim-backend/public/api/index.php';
+   ```
+
+5. Create `public_html/media/`, copy `backend/public/media/.htaccess` there, and allow the hosting account to write it (normally directories 755/files 644; never 777). Only generated `.webp` filenames are served. Confirm the host honors the uploaded `.htaccess` files before opening admin access.
+6. Create the private `saim-backend/config.local.php`: production environment, exact HTTPS origin, MySQL credentials from hPanel, `secure_cookie=true`, `media_dir` set to the absolute `public_html/media` path, and real reCAPTCHA secret/hostname. Restrict the config file to the hosting account (600 when supported). Do not expose it through an HTTP alias.
+7. Via SSH, run the private CLI `migrate`, then `import` with the reviewed migration file, and `create-admin`. If SSH is unavailable, import `schema.sql` through phpMyAdmin and prepare the data/account in a private local database, then restore its reviewed SQL dump through phpMyAdmin. Never create a publicly reachable setup script.
+8. Verify `/api/content`, store routes/deep links, login/logout, category/subcategory filters, product galleries, slider ordering, contact/social settings, reCAPTCHA submissions, and one upload/replacement. Confirm anonymous writes fail and `/api/missing` is a JSON error, not Angular HTML. Remove any temporary testing accounts/files. The PHP development server is not used on Hostinger.
+
+For session settings, see [PHP's session-security guidance](https://www.php.net/manual/en/session.security.ini.php). No CORS wildcard or cross-site credential sharing is required: Angular and PHP use the same origin.
+
+## Backup and restoration
+
+A recoverable backup needs **both** the database and managed media, plus a protected copy of private configuration and the deployed frontend version. `console.php export` exports public content only; it is not a full backup (it excludes accounts, submissions and the media registry).
+
+Pause admin edits, public submissions/uploads, and scheduled cleanup using a maintenance page or host-level access restriction while taking a paired backup. Store backups outside `public_html`, encrypt them at rest, restrict access, retain multiple dated versions, and keep an off-host copy.
+
+```sh
+# Use a protected MySQL option file or the interactive password prompt; never put a password in the command.
+mysqldump --defaults-extra-file=/private/path/mysql-client.cnf --single-transaction --no-tablespaces --set-gtid-purged=OFF DATABASE > /private/backups/database.sql
+tar -czf /private/backups/media.tar.gz -C /absolute/public_html media
+sha256sum /private/backups/database.sql /private/backups/media.tar.gz > /private/backups/SHA256SUMS
+```
+
+phpMyAdmin SQL export and hPanel file backups are alternatives. Back up all tables, including `media`, `admins`, `settings`, `slides`, `social_links`, `product_images`, and `submissions`. Database text alone cannot restore image binaries.
+
+To restore: keep maintenance mode on, verify backup checksums, create a **new empty database**, import the SQL dump, and restore `media/` from the matching backup while preserving its protective `.htaccess`. Restore private config with the new DSN/user and correct absolute media directory; deploy the matching frontend build. Do not run the seed importer over restored content. Invalidate old sessions (clear only this application's session storage or change `session_name` during the restore), verify foreign-key relationships, image files, login, storefront routes, and settings, then switch traffic. Keep the previous database/files intact for rollback until verification completes. Test this restoration process periodically in an isolated environment.
+
+## Verification
+
+```sh
+npm run build
+CHROME_BIN="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" npm test -- --watch=false --browsers=ChromeHeadless
+find backend -name '*.php' -exec php -l {} \;
+```
+
+For HTTP/MySQL integration tests, create a dedicated database whose name contains `_test` or `integration`; point a private `SAIM_CONFIG` file at it, migrate and import the seed, then start the API with that same configuration on localhost. Tests refuse remote URLs and non-test database names. They create temporary fixture records/accounts and restore content settings afterward.
+
+```sh
+SAIM_CONFIG=/private/path/test-config.php php backend/bin/console.php migrate
+SAIM_CONFIG=/private/path/test-config.php php backend/bin/console.php import backend/seed.json
+SAIM_CONFIG=/private/path/test-config.php npm run api:serve
+# In another terminal, with the same config:
+SAIM_CONFIG=/private/path/test-config.php SAIM_TEST_ALLOW_WRITES=1 npm run api:test
+```
+
+`PHP_BIN` can name a non-default PHP executable; `SAIM_TEST_URL` can override the localhost API URL. The suite covers session/CSRF rotation, unauthorized writes, origin checks, account disabling, rate limits, MIME rejection/WebP output, relationship validation, rollback, shared/gallery/slider image cleanup, cascade deletion, company/social persistence, empty lists, and inquiry ownership. Google network verification and Hostinger's Apache/LiteSpeed configuration require separate environment checks before deployment.

@@ -5,7 +5,7 @@ import { HomeContent } from '../../../core/models/home.models';
 import { Category, Product } from '../../../core/models/catalog.models';
 import { DEFAULT_APP_CONFIG } from '../../../core/config/app.config.model';
 import { ContentStoreService } from '../../../core/services/content-store.service';
-import { FirebaseCatalogService } from '../../../core/services/firebase-catalog.service';
+import { AdminCatalogService } from '../../../core/services/admin-catalog.service';
 import { ThemeService } from '../../../core/services/theme.service';
 
 @Component({
@@ -17,7 +17,7 @@ import { ThemeService } from '../../../core/services/theme.service';
 })
 export class ContentEditorPageComponent {
   private readonly contentStore = inject(ContentStoreService);
-  private readonly firebaseCatalog = inject(FirebaseCatalogService, { optional: true });
+  private readonly adminCatalog = inject(AdminCatalogService);
   private readonly themeService = inject(ThemeService);
 
   readonly categories = this.contentStore.categories;
@@ -78,81 +78,30 @@ export class ContentEditorPageComponent {
       }
 
       const data = (await response.json()) as { categories: Category[]; products: Product[] };
-      this.contentStore.replaceCatalog(data.categories, data.products);
+      await this.adminCatalog.importCatalog({ categories: data.categories, subcategories: [], products: data.products });
       this.statusMessage.set(`Loaded ${data.categories.length} categories and ${data.products.length} products from Kumas seed.`);
-    } catch {
-      this.statusMessage.set('Failed to load Kumas seed. Run npm run import:kumas first.');
+    } catch (error) {
+      this.statusMessage.set(error instanceof Error ? error.message : 'Seed import failed.');
     }
   }
 
-  addCategory(): void {
-    this.contentStore.addCategory(this.categoryForm);
-    const created = this.contentStore.categories().at(-1);
-    if (created && this.firebaseCatalog) {
-      this.firebaseCatalog
-        .addCategory({
-          slug: created.slug,
-          title: created.title,
-          imageUrl: created.imageUrl,
-          description: created.description
-        })
-        .then(() => this.statusMessage.set('Category added and synced to Firebase.'))
-        .catch(() => this.statusMessage.set('Category added locally. Firebase sync failed.'));
-    } else {
-      this.statusMessage.set('Category added locally.');
-    }
-    this.resetCategoryForm();
+  async addCategory(): Promise<void> {
+    try { await this.adminCatalog.createCategory(this.categoryForm); this.resetCategoryForm(); this.statusMessage.set('Category saved.'); }
+    catch (error) { this.showError(error); }
   }
-
-  addSubcategory(): void {
-    this.contentStore.addSubcategory(this.subcategoryForm);
-    const created = this.contentStore.subcategories().at(-1);
-    if (created && this.firebaseCatalog) {
-      this.firebaseCatalog
-        .addSubcategory({
-          slug: created.slug,
-          categoryId: created.categoryId,
-          title: created.title,
-          imageUrl: created.imageUrl,
-          description: created.description
-        })
-        .then(() => this.statusMessage.set('Subcategory added and synced to Firebase.'))
-        .catch(() => this.statusMessage.set('Subcategory added locally. Firebase sync failed.'));
-    } else {
-      this.statusMessage.set('Subcategory added locally.');
-    }
-    this.resetSubcategoryForm();
+  async addSubcategory(): Promise<void> {
+    try { await this.adminCatalog.createSubcategory(this.subcategoryForm); this.resetSubcategoryForm(); this.statusMessage.set('Subcategory saved.'); }
+    catch (error) { this.showError(error); }
   }
-
-  addProduct(): void {
-    this.contentStore.addProduct(this.productForm);
-    const created = this.contentStore.products().at(-1);
-    if (created && this.firebaseCatalog) {
-      this.firebaseCatalog
-        .addProduct({
-          slug: created.slug,
-          categoryId: created.categoryId,
-          subcategoryId: created.subcategoryId,
-          title: created.title,
-          imageUrl: created.imageUrl,
-          gallery: created.gallery,
-          description: created.description,
-          originCountry: created.originCountry,
-          price: created.price,
-          currency: created.currency
-        })
-        .then(() => this.statusMessage.set('Product added and synced to Firebase.'))
-        .catch(() => this.statusMessage.set('Product added locally. Firebase sync failed.'));
-    } else {
-      this.statusMessage.set('Product added locally.');
-    }
-    this.resetProductForm();
+  async addProduct(): Promise<void> {
+    try { await this.adminCatalog.createProduct(this.productForm); this.resetProductForm(); this.statusMessage.set('Product saved.'); }
+    catch (error) { this.showError(error); }
   }
-
-  saveHomeContent(): void {
-    this.contentStore.updateHomeContent(this.homeForm());
-    this.statusMessage.set('Homepage content updated.');
+  async saveHomeContent(): Promise<void> {
+    try { await this.adminCatalog.saveHome(this.homeForm()); this.statusMessage.set('Homepage saved.'); }
+    catch (error) { this.showError(error); }
   }
+  private showError(error: unknown): void { this.statusMessage.set(error instanceof Error ? error.message : 'Save failed.'); }
 
   applyTheme(): void {
     this.themeService.setTheme({
@@ -210,14 +159,10 @@ export class ContentEditorPageComponent {
       return;
     }
 
-    if (!this.firebaseCatalog) {
-      this.statusMessage.set('Firebase is not configured yet. Add keys in environment files.');
-      return;
-    }
 
     try {
-      const folder = type === 'category' ? 'categories' : type === 'subcategory' ? 'subcategories' : 'products';
-      const imageUrl = await this.firebaseCatalog.uploadImage(file, folder);
+      const folder = type === 'category' ? 'categories' : type === 'subcategory' ? 'subcategories' : type.startsWith('home-') ? 'home' : 'products';
+      const imageUrl = await this.adminCatalog.uploadImage(file, folder);
 
       if (type === 'category') {
         this.categoryForm.imageUrl = imageUrl;
@@ -235,9 +180,9 @@ export class ContentEditorPageComponent {
         this.updateHomeBlock(blockIndex, 'imageUrl', imageUrl);
       }
 
-      this.statusMessage.set('Image uploaded to Firebase Storage.');
+      this.statusMessage.set('Image uploaded. Save the form to apply it.');
     } catch (error) {
-      this.statusMessage.set(error instanceof Error ? error.message : 'Image upload failed. Add Firebase config in environment files.');
+      this.statusMessage.set(error instanceof Error ? error.message : 'Image upload failed.');
     }
   }
 

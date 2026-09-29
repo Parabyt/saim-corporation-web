@@ -1,46 +1,13 @@
 import { Injectable, computed, inject, signal } from '@angular/core';
-import { Auth, GoogleAuthProvider, User, onAuthStateChanged, signInWithPopup, signOut } from '@angular/fire/auth';
-
-import { environment } from '../../../environments/environment';
-
+import { AUTH_REPOSITORY, AdminUser } from '../ports/backend.port';
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private readonly auth = inject(Auth, { optional: true });
-  private readonly userState = signal<User | null>(null);
-
-  readonly isAuthAvailable = computed(() => Boolean(this.auth));
-  readonly user = computed(() => this.userState());
-  readonly isLoggedIn = computed(() => Boolean(this.userState()));
-  readonly isAdmin = computed(() => {
-    const email = this.userState()?.email?.toLowerCase();
-    if (!email) {
-      return false;
-    }
-
-    return environment.adminEmails.map((item) => item.toLowerCase()).includes(email);
-  });
-
-  constructor() {
-    if (!this.auth) {
-      return;
-    }
-
-    onAuthStateChanged(this.auth, (user) => this.userState.set(user));
-  }
-
-  async loginWithGoogle(): Promise<void> {
-    if (!this.auth) {
-      throw new Error('Firebase Auth not configured.');
-    }
-
-    await signInWithPopup(this.auth, new GoogleAuthProvider());
-  }
-
-  async logout(): Promise<void> {
-    if (!this.auth) {
-      return;
-    }
-
-    await signOut(this.auth);
-  }
+  private readonly repository = inject(AUTH_REPOSITORY);
+  private readonly userState = signal<AdminUser | null>(null);
+  readonly user = this.userState.asReadonly();
+  readonly isAdmin = computed(() => this.user()?.role === 'admin');
+  readonly isLoggedIn = computed(() => Boolean(this.user()));
+  async restore(): Promise<void> { this.userState.set(await this.repository.session()); }
+  async login(email: string, password: string): Promise<void> { this.userState.set(await this.repository.login(email, password)); }
+  async logout(): Promise<void> { await this.repository.logout(); this.userState.set(null); }
 }

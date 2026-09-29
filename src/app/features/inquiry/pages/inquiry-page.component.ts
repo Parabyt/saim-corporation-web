@@ -75,9 +75,7 @@ export class InquiryPageComponent {
       const result = await this.inquiryService.submitRequirement(payload);
       this.submitState.set('success');
       this.submitMessage.set(
-        result.persistedTo === 'firebase'
-          ? 'Requirements sent successfully. Our export team will contact you shortly.'
-          : 'Requirements captured successfully. Firebase is unavailable, so this is saved locally for now.'
+        'Requirements sent successfully. Our export team will contact you shortly.'
       );
       this.inquiryForm.reset({
         companyName: '',

@@ -1,3 +1,5 @@
+import { AuthService } from '../../../core/services/auth.service';
+import { Router } from '@angular/router';
 import { Component, computed, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -14,6 +16,10 @@ import { ContentStoreService } from '../../../core/services/content-store.servic
   styleUrl: './admin-page.component.scss'
 })
 export class AdminPageComponent {
+  private readonly auth = inject(AuthService);
+  private readonly router = inject(Router);
+  async logout(): Promise<void> { try { await this.auth.logout(); await this.router.navigateByUrl('/admin/login'); } catch (error) { this.statusMessage.set(error instanceof Error ? error.message : 'Sign out failed.'); } }
+
   private readonly adminCatalog = inject(AdminCatalogService);
   private readonly contentStore = inject(ContentStoreService);
 
@@ -25,6 +31,7 @@ export class AdminPageComponent {
   readonly sliderSlides = signal(structuredClone(this.contentStore.homeContent().heroSlides));
   readonly selectedSlideIndex = signal(0);
   readonly selectedSlide = computed(() => this.sliderSlides()[this.selectedSlideIndex()] ?? this.sliderSlides()[0]);
+  readonly selectedProductCategoryId = signal('');
   readonly companyProfileForm = signal<CompanyProfile>(structuredClone(this.contentStore.companyProfile()));
 
   readonly statusMessage = signal('');
@@ -60,7 +67,7 @@ export class AdminPageComponent {
   };
 
   readonly subcategoriesForProduct = computed(() => {
-    const categoryId = this.productForm.categoryId;
+    const categoryId = this.selectedProductCategoryId();
     return this.subcategories().filter((item) => item.categoryId === categoryId);
   });
 
@@ -108,18 +115,21 @@ export class AdminPageComponent {
   });
 
   async saveCategory(): Promise<void> {
-    if (!this.categoryForm.title.trim() || !this.categoryForm.description.trim() || !this.categoryForm.imageUrl.trim()) {
-      this.statusMessage.set('Category title, description, and image are required.');
-      return;
-    }
+    try {
+      if (!this.categoryForm.title.trim() || !this.categoryForm.description.trim() || !this.categoryForm.imageUrl.trim()) {
+        this.statusMessage.set('Category title, description, and image are required.');
+        return;
+      }
 
-    const editingId = this.editingCategoryId();
-    const result = editingId
-      ? await this.adminCatalog.updateCategory(editingId, this.categoryForm)
-      : await this.adminCatalog.createCategory(this.categoryForm);
+      const editingId = this.editingCategoryId();
+      const result = editingId
+        ? await this.adminCatalog.updateCategory(editingId, this.categoryForm)
+        : await this.adminCatalog.createCategory(this.categoryForm);
 
-    this.statusMessage.set(result.message);
-    this.resetCategoryForm();
+      this.statusMessage.set(result.message);
+      this.resetCategoryForm();
+
+    } catch (error) { this.statusMessage.set(error instanceof Error ? error.message : 'Save failed.'); }
   }
 
   editCategory(category: Category): void {
@@ -131,36 +141,42 @@ export class AdminPageComponent {
   }
 
   async deleteCategory(category: Category): Promise<void> {
-    const confirmed = window.confirm(`Delete category "${category.title}" and all linked subcategories/products?`);
-    if (!confirmed) {
-      return;
-    }
+    try {
+      const confirmed = window.confirm(`Delete category "${category.title}" and all linked subcategories/products?`);
+      if (!confirmed) {
+        return;
+      }
 
-    const result = await this.adminCatalog.deleteCategory(category.id);
-    this.statusMessage.set(result.message);
-    if (this.editingCategoryId() === category.id) {
-      this.resetCategoryForm();
-    }
+      const result = await this.adminCatalog.deleteCategory(category.id);
+      this.statusMessage.set(result.message);
+      if (this.editingCategoryId() === category.id) {
+        this.resetCategoryForm();
+      }
+
+    } catch (error) { this.statusMessage.set(error instanceof Error ? error.message : 'Save failed.'); }
   }
 
   async saveSubcategory(): Promise<void> {
-    if (
-      !this.subcategoryForm.categoryId.trim() ||
-      !this.subcategoryForm.title.trim() ||
-      !this.subcategoryForm.description.trim() ||
-      !this.subcategoryForm.imageUrl.trim()
-    ) {
-      this.statusMessage.set('Subcategory category, title, description, and image are required.');
-      return;
-    }
+    try {
+      if (
+        !this.subcategoryForm.categoryId.trim() ||
+        !this.subcategoryForm.title.trim() ||
+        !this.subcategoryForm.description.trim() ||
+        !this.subcategoryForm.imageUrl.trim()
+      ) {
+        this.statusMessage.set('Subcategory category, title, description, and image are required.');
+        return;
+      }
 
-    const editingId = this.editingSubcategoryId();
-    const result = editingId
-      ? await this.adminCatalog.updateSubcategory(editingId, this.subcategoryForm)
-      : await this.adminCatalog.createSubcategory(this.subcategoryForm);
+      const editingId = this.editingSubcategoryId();
+      const result = editingId
+        ? await this.adminCatalog.updateSubcategory(editingId, this.subcategoryForm)
+        : await this.adminCatalog.createSubcategory(this.subcategoryForm);
 
-    this.statusMessage.set(result.message);
-    this.resetSubcategoryForm();
+      this.statusMessage.set(result.message);
+      this.resetSubcategoryForm();
+
+    } catch (error) { this.statusMessage.set(error instanceof Error ? error.message : 'Save failed.'); }
   }
 
   editSubcategory(subcategory: Subcategory): void {
@@ -173,46 +189,53 @@ export class AdminPageComponent {
   }
 
   async deleteSubcategory(subcategory: Subcategory): Promise<void> {
-    const confirmed = window.confirm(`Delete subcategory "${subcategory.title}" and linked products?`);
-    if (!confirmed) {
-      return;
-    }
+    try {
+      const confirmed = window.confirm(`Delete subcategory "${subcategory.title}" and linked products?`);
+      if (!confirmed) {
+        return;
+      }
 
-    const result = await this.adminCatalog.deleteSubcategory(subcategory.id);
-    this.statusMessage.set(result.message);
-    if (this.editingSubcategoryId() === subcategory.id) {
-      this.resetSubcategoryForm();
-    }
+      const result = await this.adminCatalog.deleteSubcategory(subcategory.id);
+      this.statusMessage.set(result.message);
+      if (this.editingSubcategoryId() === subcategory.id) {
+        this.resetSubcategoryForm();
+      }
+
+    } catch (error) { this.statusMessage.set(error instanceof Error ? error.message : 'Save failed.'); }
   }
 
   async saveProduct(): Promise<void> {
-    if (
-      !this.productForm.categoryId.trim() ||
-      !this.productForm.title.trim() ||
-      !this.productForm.description.trim() ||
-      !this.productForm.imageUrl.trim() ||
-      !this.productForm.originCountry.trim()
-    ) {
-      this.statusMessage.set('Product category, title, description, image, and origin country are required.');
-      return;
-    }
+    try {
+      if (
+        !this.productForm.categoryId.trim() ||
+        !this.productForm.title.trim() ||
+        !this.productForm.description.trim() ||
+        !this.productForm.imageUrl.trim() ||
+        !this.productForm.originCountry.trim()
+      ) {
+        this.statusMessage.set('Product category, title, description, image, and origin country are required.');
+        return;
+      }
 
-    const editingId = this.editingProductId();
-    const payload = {
-      ...this.productForm,
-      subcategoryId: this.productForm.subcategoryId.trim() || undefined
-    };
-    const result = editingId
-      ? await this.adminCatalog.updateProduct(editingId, payload)
-      : await this.adminCatalog.createProduct(payload);
+      const editingId = this.editingProductId();
+      const payload = {
+        ...this.productForm,
+        subcategoryId: this.productForm.subcategoryId.trim() || undefined
+      };
+      const result = editingId
+        ? await this.adminCatalog.updateProduct(editingId, payload)
+        : await this.adminCatalog.createProduct(payload);
 
-    this.statusMessage.set(result.message);
-    this.resetProductForm();
+      this.statusMessage.set(result.message);
+      this.resetProductForm();
+
+    } catch (error) { this.statusMessage.set(error instanceof Error ? error.message : 'Save failed.'); }
   }
 
   editProduct(product: Product): void {
     this.editingProductId.set(product.id);
     this.productForm.categoryId = product.categoryId;
+    this.selectedProductCategoryId.set(product.categoryId);
     this.productForm.subcategoryId = product.subcategoryId ?? '';
     this.productForm.title = product.title;
     this.productForm.description = product.description;
@@ -223,16 +246,19 @@ export class AdminPageComponent {
   }
 
   async deleteProduct(product: Product): Promise<void> {
-    const confirmed = window.confirm(`Delete product "${product.title}"?`);
-    if (!confirmed) {
-      return;
-    }
+    try {
+      const confirmed = window.confirm(`Delete product "${product.title}"?`);
+      if (!confirmed) {
+        return;
+      }
 
-    const result = await this.adminCatalog.deleteProduct(product.id);
-    this.statusMessage.set(result.message);
-    if (this.editingProductId() === product.id) {
-      this.resetProductForm();
-    }
+      const result = await this.adminCatalog.deleteProduct(product.id);
+      this.statusMessage.set(result.message);
+      if (this.editingProductId() === product.id) {
+        this.resetProductForm();
+      }
+
+    } catch (error) { this.statusMessage.set(error instanceof Error ? error.message : 'Save failed.'); }
   }
 
   async uploadAndBindImage(event: Event, type: 'category' | 'subcategory' | 'product'): Promise<void> {
@@ -259,6 +285,21 @@ export class AdminPageComponent {
     }
 
     input.value = '';
+  }
+
+  onProductCategoryChange(categoryId: string): void {
+    this.selectedProductCategoryId.set(categoryId);
+    this.productForm.categoryId = categoryId;
+
+    if (!categoryId) {
+      this.productForm.subcategoryId = '';
+      return;
+    }
+
+    const isStillValid = this.subcategoriesForProduct().some((item) => item.id === this.productForm.subcategoryId);
+    if (!isStillValid) {
+      this.productForm.subcategoryId = '';
+    }
   }
 
   selectSlide(index: number): void {
@@ -322,8 +363,11 @@ export class AdminPageComponent {
   }
 
   async saveSliderSection(): Promise<void> {
-    const result = await this.adminCatalog.updateHeroSlides(this.sliderSlides());
-    this.statusMessage.set(result.message);
+    try {
+      const result = await this.adminCatalog.updateHeroSlides(this.sliderSlides());
+      this.statusMessage.set(result.message);
+
+    } catch (error) { this.statusMessage.set(error instanceof Error ? error.message : 'Save failed.'); }
   }
 
   updateCompanyField(field: 'phone' | 'email' | 'address', value: string): void {
@@ -337,9 +381,12 @@ export class AdminPageComponent {
     }));
   }
 
-  saveCompanyProfile(): void {
-    this.contentStore.updateCompanyProfile(this.companyProfileForm());
-    this.statusMessage.set('Company contact and social profile updated.');
+  async saveCompanyProfile(): Promise<void> {
+    try {
+      const result = await this.adminCatalog.saveCompany(this.companyProfileForm());
+      this.statusMessage.set(result.message);
+
+    } catch (error) { this.statusMessage.set(error instanceof Error ? error.message : 'Save failed.'); }
   }
 
   categoryTitle(categoryId: string): string {
@@ -386,6 +433,7 @@ export class AdminPageComponent {
   private resetProductForm(): void {
     this.editingProductId.set(null);
     this.productForm.categoryId = '';
+    this.selectedProductCategoryId.set('');
     this.productForm.subcategoryId = '';
     this.productForm.title = '';
     this.productForm.description = '';

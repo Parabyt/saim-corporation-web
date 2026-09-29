@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 import { adminOnlyGuard } from './core/guards/admin-only.guard';
 
 export const routes: Routes = [
+  { path: 'admin/login', loadComponent: () => import('./features/admin/pages/admin-login.component').then(m => m.AdminLoginComponent) },
   {
     path: '',
     loadComponent: () => import('./features/home/pages/home-page.component').then((m) => m.HomePageComponent)
