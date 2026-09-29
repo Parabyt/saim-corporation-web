@@ -1,0 +1,867 @@
+{
+  "categories": [
+    {
+      "slug": "sports-goods-equipment",
+      "title": "Sports Goods & Equipment",
+      "imageUrl": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "description": "Export-ready sports gear for training centers, clubs, and distributors.",
+      "id": "cat-seed-1"
+    },
+    {
+      "slug": "leather-products",
+      "title": "Leather Products",
+      "imageUrl": "https://images.pexels.com/photos/7679725/pexels-photo-7679725.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "description": "Premium leather jackets, belts, wallets, and bags crafted for global retail markets.",
+      "id": "cat-seed-2"
+    },
+    {
+      "slug": "apparel-textile-sportswear",
+      "title": "Apparel & Textile (Sportswear)",
+      "imageUrl": "https://images.pexels.com/photos/1884574/pexels-photo-1884574.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "description": "High-performance sportswear and active textiles tailored for bulk programs.",
+      "id": "cat-seed-3"
+    },
+    {
+      "slug": "martial-arts-boxing-gear",
+      "title": "Martial Arts & Boxing Gear",
+      "imageUrl": "https://images.pexels.com/photos/6296107/pexels-photo-6296107.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "description": "Professional-grade boxing and MMA gear for academies, gyms, and wholesale buyers.",
+      "id": "cat-seed-4"
+    },
+    {
+      "slug": "uniforms-workwear",
+      "title": "Uniforms & Workwear",
+      "imageUrl": "https://images.pexels.com/photos/33150526/pexels-photo-33150526.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "description": "Structured uniform and workwear solutions for institutional and corporate sectors.",
+      "id": "cat-seed-5"
+    },
+    {
+      "slug": "bags-travel-accessories",
+      "title": "Bags & Travel Accessories",
+      "imageUrl": "https://images.pexels.com/photos/26649016/pexels-photo-26649016.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "description": "Durable travel, utility, and duffle bag collections built for export demand.",
+      "id": "cat-seed-6"
+    }
+  ],
+  "subcategories": [
+    {
+      "id": "sub-seed-1",
+      "slug": "football-equipment",
+      "title": "Football Equipment",
+      "description": "Balls, training accessories, cones, and protective gear for football programs.",
+      "imageUrl": "https://images.pexels.com/photos/274506/pexels-photo-274506.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "categoryId": "cat-seed-1"
+    },
+    {
+      "id": "sub-seed-2",
+      "slug": "cricket-gear",
+      "title": "Cricket Gear",
+      "description": "Bats, pads, gloves, and helmets designed for club and academy use.",
+      "imageUrl": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "categoryId": "cat-seed-1"
+    },
+    {
+      "id": "sub-seed-3",
+      "slug": "fitness-equipment",
+      "title": "Fitness Equipment",
+      "description": "Core fitness and conditioning equipment for commercial gyms and retailers.",
+      "imageUrl": "https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "categoryId": "cat-seed-1"
+    },
+    {
+      "id": "sub-seed-4",
+      "slug": "leather-jackets",
+      "title": "Leather Jackets",
+      "description": "Classic and modern jacket silhouettes in premium genuine leather.",
+      "imageUrl": "https://images.pexels.com/photos/6764316/pexels-photo-6764316.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "categoryId": "cat-seed-2"
+    },
+    {
+      "id": "sub-seed-5",
+      "slug": "leather-belts-wallets",
+      "title": "Leather Belts & Wallets",
+      "description": "Everyday leather accessories with durable stitching and refined finishing.",
+      "imageUrl": "https://images.pexels.com/photos/2976374/pexels-photo-2976374.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "categoryId": "cat-seed-2"
+    },
+    {
+      "id": "sub-seed-6",
+      "slug": "leather-bags",
+      "title": "Leather Bags",
+      "description": "Messenger, tote, and business bags engineered for frequent use.",
+      "imageUrl": "https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "categoryId": "cat-seed-2"
+    },
+    {
+      "id": "sub-seed-7",
+      "slug": "team-sportswear",
+      "title": "Team Sportswear",
+      "description": "Match and training kits for clubs, schools, and franchise teams.",
+      "imageUrl": "https://images.pexels.com/photos/1884574/pexels-photo-1884574.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "categoryId": "cat-seed-3"
+    },
+    {
+      "id": "sub-seed-8",
+      "slug": "compression-activewear",
+      "title": "Compression & Activewear",
+      "description": "Breathable activewear with stretch comfort and moisture management.",
+      "imageUrl": "https://images.pexels.com/photos/4662438/pexels-photo-4662438.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "categoryId": "cat-seed-3"
+    },
+    {
+      "id": "sub-seed-9",
+      "slug": "training-tracksuits",
+      "title": "Training Tracksuits",
+      "description": "Warm-up and travel tracksuits for performance and athleisure markets.",
+      "imageUrl": "https://images.pexels.com/photos/2294354/pexels-photo-2294354.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "categoryId": "cat-seed-3"
+    },
+    {
+      "id": "sub-seed-10",
+      "slug": "boxing-gloves",
+      "title": "Boxing Gloves",
+      "description": "Training and sparring gloves in multiple weights and protection levels.",
+      "imageUrl": "https://images.pexels.com/photos/4761799/pexels-photo-4761799.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "categoryId": "cat-seed-4"
+    },
+    {
+      "id": "sub-seed-11",
+      "slug": "mma-protective-gear",
+      "title": "MMA Protective Gear",
+      "description": "Head guards, shin protection, and sparring safety essentials.",
+      "imageUrl": "https://images.pexels.com/photos/8612016/pexels-photo-8612016.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "categoryId": "cat-seed-4"
+    },
+    {
+      "id": "sub-seed-12",
+      "slug": "gym-belts-wraps",
+      "title": "Gym Belts & Wraps",
+      "description": "Weight belts and wrist support accessories for strength training.",
+      "imageUrl": "https://images.pexels.com/photos/6550823/pexels-photo-6550823.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "categoryId": "cat-seed-4"
+    },
+    {
+      "id": "sub-seed-13",
+      "slug": "school-uniforms",
+      "title": "School Uniforms",
+      "description": "Complete schoolwear sets with consistent fabric and sizing standards.",
+      "imageUrl": "https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "categoryId": "cat-seed-5"
+    },
+    {
+      "id": "sub-seed-14",
+      "slug": "corporate-industrial-uniforms",
+      "title": "Corporate & Industrial Uniforms",
+      "description": "Structured work uniforms for production, logistics, and service teams.",
+      "imageUrl": "https://images.pexels.com/photos/532565/pexels-photo-532565.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "categoryId": "cat-seed-5"
+    },
+    {
+      "id": "sub-seed-15",
+      "slug": "hospitality-healthcare-uniforms",
+      "title": "Hospitality & Healthcare Uniforms",
+      "description": "Comfort-first uniforms for clinical, hospitality, and front-office roles.",
+      "imageUrl": "https://images.pexels.com/photos/8460034/pexels-photo-8460034.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "categoryId": "cat-seed-5"
+    },
+    {
+      "id": "sub-seed-16",
+      "slug": "duffle-gym-bags",
+      "title": "Duffle & Gym Bags",
+      "description": "Sport-focused carry solutions with reinforced panels and zippers.",
+      "imageUrl": "https://images.pexels.com/photos/3621185/pexels-photo-3621185.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "categoryId": "cat-seed-6"
+    },
+    {
+      "id": "sub-seed-17",
+      "slug": "travel-backpacks",
+      "title": "Travel Backpacks",
+      "description": "Ergonomic backpacks with compartmentalized storage layouts.",
+      "imageUrl": "https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "categoryId": "cat-seed-6"
+    },
+    {
+      "id": "sub-seed-18",
+      "slug": "tactical-utility-bags",
+      "title": "Tactical & Utility Bags",
+      "description": "Rugged utility carry systems for field, travel, and cargo operations.",
+      "imageUrl": "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "categoryId": "cat-seed-6"
+    }
+  ],
+  "products": [
+    {
+      "id": "prd-seed-1",
+      "slug": "pro-match-football-size-5",
+      "title": "Pro Match Football Size 5",
+      "description": "Thermally bonded match ball with consistent flight and shape retention.",
+      "imageUrl": "https://images.pexels.com/photos/274506/pexels-photo-274506.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/274506/pexels-photo-274506.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-1",
+      "subcategoryId": "sub-seed-1",
+      "originCountry": "Pakistan",
+      "price": 22,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-2",
+      "slug": "speed-training-cone-set",
+      "title": "Speed Training Cone Set",
+      "description": "Flexible marker cone set for agility drills and tactical sessions.",
+      "imageUrl": "https://images.pexels.com/photos/1618200/pexels-photo-1618200.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/1618200/pexels-photo-1618200.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-1",
+      "subcategoryId": "sub-seed-1",
+      "originCountry": "Pakistan",
+      "price": 9.5,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-3",
+      "slug": "english-willow-cricket-bat",
+      "title": "English Willow Cricket Bat",
+      "description": "Balanced bat profile for competitive and professional level play.",
+      "imageUrl": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-1",
+      "subcategoryId": "sub-seed-2",
+      "originCountry": "Pakistan",
+      "price": 78,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-4",
+      "slug": "cricket-batting-gloves-pair",
+      "title": "Cricket Batting Gloves Pair",
+      "description": "Shock-absorbing palm and finger protection for long innings.",
+      "imageUrl": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-1",
+      "subcategoryId": "sub-seed-2",
+      "originCountry": "Pakistan",
+      "price": 18,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-5",
+      "slug": "hex-dumbbell-pair-10kg",
+      "title": "Hex Dumbbell Pair 10kg",
+      "description": "Durable grip dumbbells suited for gyms and rehabilitation centers.",
+      "imageUrl": "https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-1",
+      "subcategoryId": "sub-seed-3",
+      "originCountry": "China",
+      "price": 36,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-6",
+      "slug": "resistance-band-pro-kit",
+      "title": "Resistance Band Pro Kit",
+      "description": "Multi-level resistance set with handles and door anchor.",
+      "imageUrl": "https://images.pexels.com/photos/4498574/pexels-photo-4498574.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/4498574/pexels-photo-4498574.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-1",
+      "subcategoryId": "sub-seed-3",
+      "originCountry": "China",
+      "price": 14,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-7",
+      "slug": "men-biker-leather-jacket",
+      "title": "Men Biker Leather Jacket",
+      "description": "Classic biker fit with reinforced seams and premium lining.",
+      "imageUrl": "https://images.pexels.com/photos/6764316/pexels-photo-6764316.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/6764316/pexels-photo-6764316.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-2",
+      "subcategoryId": "sub-seed-4",
+      "originCountry": "Pakistan",
+      "price": 110,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-8",
+      "slug": "women-slim-fit-leather-jacket",
+      "title": "Women Slim Fit Leather Jacket",
+      "description": "Contemporary silhouette with polished finish and comfortable structure.",
+      "imageUrl": "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-2",
+      "subcategoryId": "sub-seed-4",
+      "originCountry": "Pakistan",
+      "price": 118,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-9",
+      "slug": "genuine-leather-formal-belt",
+      "title": "Genuine Leather Formal Belt",
+      "description": "Minimal buckle profile and edge-finished strap for formalwear.",
+      "imageUrl": "https://images.pexels.com/photos/2976374/pexels-photo-2976374.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/2976374/pexels-photo-2976374.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-2",
+      "subcategoryId": "sub-seed-5",
+      "originCountry": "Pakistan",
+      "price": 16,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-10",
+      "slug": "bi-fold-leather-wallet",
+      "title": "Bi-fold Leather Wallet",
+      "description": "Compact wallet with organized card slots and stitched durability.",
+      "imageUrl": "https://images.pexels.com/photos/2079249/pexels-photo-2079249.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/2079249/pexels-photo-2079249.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-2",
+      "subcategoryId": "sub-seed-5",
+      "originCountry": "Pakistan",
+      "price": 14,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-11",
+      "slug": "executive-leather-messenger-bag",
+      "title": "Executive Leather Messenger Bag",
+      "description": "Structured messenger with laptop compartment and shoulder strap.",
+      "imageUrl": "https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-2",
+      "subcategoryId": "sub-seed-6",
+      "originCountry": "Pakistan",
+      "price": 64,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-12",
+      "slug": "leather-weekender-travel-bag",
+      "title": "Leather Weekender Travel Bag",
+      "description": "Spacious travel bag with reinforced base and premium hardware.",
+      "imageUrl": "https://images.pexels.com/photos/936075/pexels-photo-936075.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/936075/pexels-photo-936075.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-2",
+      "subcategoryId": "sub-seed-6",
+      "originCountry": "Pakistan",
+      "price": 89,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-13",
+      "slug": "custom-football-team-jersey",
+      "title": "Custom Football Team Jersey",
+      "description": "Breathable jersey with sublimation print support and logo placement.",
+      "imageUrl": "https://images.pexels.com/photos/1884574/pexels-photo-1884574.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/1884574/pexels-photo-1884574.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-3",
+      "subcategoryId": "sub-seed-7",
+      "originCountry": "Pakistan",
+      "price": 19,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-14",
+      "slug": "basketball-match-kit-set",
+      "title": "Basketball Match Kit Set",
+      "description": "Lightweight jersey and shorts set for team-level performance.",
+      "imageUrl": "https://images.pexels.com/photos/1752757/pexels-photo-1752757.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/1752757/pexels-photo-1752757.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-3",
+      "subcategoryId": "sub-seed-7",
+      "originCountry": "Pakistan",
+      "price": 21,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-15",
+      "slug": "compression-base-layer-top",
+      "title": "Compression Base Layer Top",
+      "description": "Body-fit performance top for training and match-day layering.",
+      "imageUrl": "https://images.pexels.com/photos/4662438/pexels-photo-4662438.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/4662438/pexels-photo-4662438.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-3",
+      "subcategoryId": "sub-seed-8",
+      "originCountry": "Pakistan",
+      "price": 15,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-16",
+      "slug": "active-training-leggings",
+      "title": "Active Training Leggings",
+      "description": "Flexible and moisture-wicking leggings designed for high mobility.",
+      "imageUrl": "https://images.pexels.com/photos/4498156/pexels-photo-4498156.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/4498156/pexels-photo-4498156.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-3",
+      "subcategoryId": "sub-seed-8",
+      "originCountry": "Pakistan",
+      "price": 17,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-17",
+      "slug": "polyester-team-tracksuit",
+      "title": "Polyester Team Tracksuit",
+      "description": "Two-piece tracksuit with durable stitching for daily training.",
+      "imageUrl": "https://images.pexels.com/photos/2294354/pexels-photo-2294354.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/2294354/pexels-photo-2294354.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-3",
+      "subcategoryId": "sub-seed-9",
+      "originCountry": "Pakistan",
+      "price": 28,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-18",
+      "slug": "performance-warm-up-suit",
+      "title": "Performance Warm-Up Suit",
+      "description": "Lightweight warm-up suit for team travel and pre-game sessions.",
+      "imageUrl": "https://images.pexels.com/photos/7679720/pexels-photo-7679720.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/7679720/pexels-photo-7679720.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-3",
+      "subcategoryId": "sub-seed-9",
+      "originCountry": "Pakistan",
+      "price": 31,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-19",
+      "slug": "pro-sparring-boxing-gloves",
+      "title": "Pro Sparring Boxing Gloves",
+      "description": "Multi-layer foam gloves designed for advanced sparring cycles.",
+      "imageUrl": "https://images.pexels.com/photos/4761799/pexels-photo-4761799.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/4761799/pexels-photo-4761799.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-4",
+      "subcategoryId": "sub-seed-10",
+      "originCountry": "Pakistan",
+      "price": 34,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-20",
+      "slug": "training-bag-gloves",
+      "title": "Training Bag Gloves",
+      "description": "Durable gloves optimized for heavy bag and mitt work.",
+      "imageUrl": "https://images.pexels.com/photos/4162581/pexels-photo-4162581.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/4162581/pexels-photo-4162581.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-4",
+      "subcategoryId": "sub-seed-10",
+      "originCountry": "Pakistan",
+      "price": 24,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-21",
+      "slug": "mma-shin-guard-set",
+      "title": "MMA Shin Guard Set",
+      "description": "Contoured shin protection with secure dual-strap closure.",
+      "imageUrl": "https://images.pexels.com/photos/8612016/pexels-photo-8612016.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/8612016/pexels-photo-8612016.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-4",
+      "subcategoryId": "sub-seed-11",
+      "originCountry": "Pakistan",
+      "price": 28,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-22",
+      "slug": "combat-head-guard",
+      "title": "Combat Head Guard",
+      "description": "Lightweight impact guard with full-coverage cheek protection.",
+      "imageUrl": "https://images.pexels.com/photos/7045444/pexels-photo-7045444.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/7045444/pexels-photo-7045444.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-4",
+      "subcategoryId": "sub-seed-11",
+      "originCountry": "Pakistan",
+      "price": 32,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-23",
+      "slug": "leather-weight-lifting-belt",
+      "title": "Leather Weight Lifting Belt",
+      "description": "Firm core-support belt for heavy lifts and strength sessions.",
+      "imageUrl": "https://images.pexels.com/photos/6550823/pexels-photo-6550823.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/6550823/pexels-photo-6550823.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-4",
+      "subcategoryId": "sub-seed-12",
+      "originCountry": "Pakistan",
+      "price": 26,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-24",
+      "slug": "elastic-wrist-wrap-pair",
+      "title": "Elastic Wrist Wrap Pair",
+      "description": "Secure wrist wraps designed for pressing and combat workouts.",
+      "imageUrl": "https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-4",
+      "subcategoryId": "sub-seed-12",
+      "originCountry": "Pakistan",
+      "price": 9,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-25",
+      "slug": "school-shirt-trouser-set",
+      "title": "School Shirt & Trouser Set",
+      "description": "Daily-wear school uniform set with colorfast fabric quality.",
+      "imageUrl": "https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-5",
+      "subcategoryId": "sub-seed-13",
+      "originCountry": "Pakistan",
+      "price": 22,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-26",
+      "slug": "school-blazer-program-pack",
+      "title": "School Blazer Program Pack",
+      "description": "Structured blazer and skirt/trouser variants for institutions.",
+      "imageUrl": "https://images.pexels.com/photos/3148452/pexels-photo-3148452.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/3148452/pexels-photo-3148452.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-5",
+      "subcategoryId": "sub-seed-13",
+      "originCountry": "Pakistan",
+      "price": 35,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-27",
+      "slug": "industrial-coverall-suit",
+      "title": "Industrial Coverall Suit",
+      "description": "Heavy-duty coveralls for plant, workshop, and maintenance teams.",
+      "imageUrl": "https://images.pexels.com/photos/532565/pexels-photo-532565.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/532565/pexels-photo-532565.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-5",
+      "subcategoryId": "sub-seed-14",
+      "originCountry": "Pakistan",
+      "price": 29,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-28",
+      "slug": "corporate-service-uniform-set",
+      "title": "Corporate Service Uniform Set",
+      "description": "Tailored shirts, trousers, and outerwear for service operations.",
+      "imageUrl": "https://images.pexels.com/photos/532568/pexels-photo-532568.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/532568/pexels-photo-532568.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-5",
+      "subcategoryId": "sub-seed-14",
+      "originCountry": "Pakistan",
+      "price": 27,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-29",
+      "slug": "healthcare-scrub-set",
+      "title": "Healthcare Scrub Set",
+      "description": "Comfort stretch scrub set designed for long-shift use.",
+      "imageUrl": "https://images.pexels.com/photos/8460034/pexels-photo-8460034.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/8460034/pexels-photo-8460034.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-5",
+      "subcategoryId": "sub-seed-15",
+      "originCountry": "Pakistan",
+      "price": 18,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-30",
+      "slug": "hospitality-front-desk-uniform",
+      "title": "Hospitality Front Desk Uniform",
+      "description": "Formal hospitality uniform with custom trim and branding options.",
+      "imageUrl": "https://images.pexels.com/photos/3771089/pexels-photo-3771089.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/3771089/pexels-photo-3771089.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-5",
+      "subcategoryId": "sub-seed-15",
+      "originCountry": "Pakistan",
+      "price": 24,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-31",
+      "slug": "water-resistant-gym-duffle",
+      "title": "Water-Resistant Gym Duffle",
+      "description": "Compartmented duffle bag for gym, sport, and daily carry.",
+      "imageUrl": "https://images.pexels.com/photos/3621185/pexels-photo-3621185.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/3621185/pexels-photo-3621185.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-6",
+      "subcategoryId": "sub-seed-16",
+      "originCountry": "China",
+      "price": 21,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-32",
+      "slug": "team-travel-duffle-large",
+      "title": "Team Travel Duffle Large",
+      "description": "Large-volume duffle with reinforced handles for team logistics.",
+      "imageUrl": "https://images.pexels.com/photos/3621185/pexels-photo-3621185.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/3621185/pexels-photo-3621185.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-6",
+      "subcategoryId": "sub-seed-16",
+      "originCountry": "China",
+      "price": 24,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-33",
+      "slug": "multi-compartment-travel-backpack",
+      "title": "Multi-Compartment Travel Backpack",
+      "description": "Travel-ready backpack with laptop sleeve and side utility access.",
+      "imageUrl": "https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-6",
+      "subcategoryId": "sub-seed-17",
+      "originCountry": "China",
+      "price": 27,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-34",
+      "slug": "urban-business-backpack",
+      "title": "Urban Business Backpack",
+      "description": "Slim-profile backpack designed for business and short travel routes.",
+      "imageUrl": "https://images.pexels.com/photos/842811/pexels-photo-842811.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/842811/pexels-photo-842811.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-6",
+      "subcategoryId": "sub-seed-17",
+      "originCountry": "China",
+      "price": 25,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-35",
+      "slug": "modular-utility-carry-bag",
+      "title": "Modular Utility Carry Bag",
+      "description": "Rugged utility bag with high-capacity pocket configuration.",
+      "imageUrl": "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-6",
+      "subcategoryId": "sub-seed-18",
+      "originCountry": "China",
+      "price": 33,
+      "currency": "USD"
+    },
+    {
+      "id": "prd-seed-36",
+      "slug": "outdoor-tactical-backpack",
+      "title": "Outdoor Tactical Backpack",
+      "description": "Load-stable tactical backpack suited for rugged travel and field operations.",
+      "imageUrl": "https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "gallery": [
+        "https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      ],
+      "categoryId": "cat-seed-6",
+      "subcategoryId": "sub-seed-18",
+      "originCountry": "China",
+      "price": 36,
+      "currency": "USD"
+    }
+  ],
+  "home": {
+    "heroSlides": [
+      {
+        "id": "hero-1",
+        "title": "Leather Jackets, Belts, And Bags For Export",
+        "subtitle": "Premium stitched leather collections for international distributors and private labels.",
+        "imageUrl": "https://images.unsplash.com/photo-1551048632-948310cee98b?auto=format&fit=crop&w=1800&q=80",
+        "tags": [
+          "#LeatherJackets",
+          "#LeatherBelts",
+          "#LeatherBags",
+          "#GlobalExport"
+        ]
+      },
+      {
+        "id": "hero-2",
+        "title": "Team Sports Uniforms And Football Gear",
+        "subtitle": "Wholesale sports uniforms and match-day apparel tailored for clubs and academies.",
+        "imageUrl": "https://images.unsplash.com/photo-1575361204480-aadea25e6e68?auto=format&fit=crop&w=1800&q=80",
+        "tags": [
+          "#SportsUniform",
+          "#FootballWear",
+          "#TeamKits",
+          "#BulkSupply"
+        ]
+      },
+      {
+        "id": "hero-3",
+        "title": "Gym Wear And Boxing Equipment Range",
+        "subtitle": "Training apparel, boxing gloves, and lifting belts built for performance markets.",
+        "imageUrl": "https://images.unsplash.com/photo-1549576490-b0b4831ef60a?auto=format&fit=crop&w=1800&q=80",
+        "tags": [
+          "#GymWear",
+          "#BoxingGloves",
+          "#GymBelts",
+          "#FitnessExport"
+        ]
+      },
+      {
+        "id": "hero-4",
+        "title": "Industrial And Service Uniform Programs",
+        "subtitle": "Durable uniform sets for manufacturing, hospitality, and service teams.",
+        "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1800&q=80",
+        "tags": [
+          "#Uniforms",
+          "#WorkUniform",
+          "#InstitutionalSupply",
+          "#CustomOrders"
+        ]
+      },
+      {
+        "id": "hero-5",
+        "title": "Performance Sports Apparel For Global Buyers",
+        "subtitle": "Breathable, moisture-managed sportswear for retail and teamwear segments.",
+        "imageUrl": "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1800&q=80",
+        "tags": [
+          "#SportsWear",
+          "#PerformanceFabric",
+          "#Wholesale",
+          "#GlobalTrade"
+        ]
+      },
+      {
+        "id": "hero-6",
+        "title": "Private Label Leather And Activewear Manufacturing",
+        "subtitle": "End-to-end OEM support for export-ready apparel and accessory product lines.",
+        "imageUrl": "https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1800&q=80",
+        "tags": [
+          "#PrivateLabel",
+          "#LeatherGoods",
+          "#Activewear",
+          "#OEMExport"
+        ]
+      }
+    ],
+    "marqueeText": "FAST DELIVERY • HIGH STOCK AVAILABILITY • EXPORT QUALITY • CUSTOM ORDERS • WHOLESALE READY •",
+    "newsletterTitle": "Share Your Sourcing Brief",
+    "newsletterText": "Tell us your product specs, target market, and quantity goals. We will map the right manufacturing route, quality plan, and shipping mode for your import program.",
+    "blocks": [
+      {
+        "id": "blk-1",
+        "title": "Export Ready Stock",
+        "subtitle": "High-volume lots prepared for global dispatch.",
+        "imageUrl": "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=1000&q=80",
+        "link": "/catalog"
+      },
+      {
+        "id": "blk-2",
+        "title": "Trend Driven Patterns",
+        "subtitle": "Fast-moving collections for seasonal demand.",
+        "imageUrl": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1000&q=80",
+        "link": "/catalog"
+      },
+      {
+        "id": "blk-3",
+        "title": "Wholesale Pricing",
+        "subtitle": "Optimized sourcing for repeat B2B orders.",
+        "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1000&q=80",
+        "link": "/catalog"
+      }
+    ]
+  },
+  "company": {
+    "phone": "+92 300 0000000",
+    "email": "exports@saimcorporation.com",
+    "address": "Sialkot, Pakistan",
+    "socials": [
+      {
+        "platform": "instagram",
+        "label": "Instagram",
+        "enabled": true,
+        "url": "https://instagram.com/"
+      },
+      {
+        "platform": "facebook",
+        "label": "Facebook",
+        "enabled": true,
+        "url": "https://facebook.com/"
+      },
+      {
+        "platform": "linkedin",
+        "label": "LinkedIn",
+        "enabled": true,
+        "url": "https://linkedin.com/"
+      },
+      {
+        "platform": "youtube",
+        "label": "YouTube",
+        "enabled": true,
+        "url": "https://youtube.com/"
+      }
+    ]
+  }
+}

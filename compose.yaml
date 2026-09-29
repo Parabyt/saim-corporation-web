@@ -1,0 +1,26 @@
+services:
+  db:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: saim
+      MYSQL_USER: saim
+      MYSQL_PASSWORD: local-dev-only
+      MYSQL_ROOT_PASSWORD: local-root-only
+    ports: ["127.0.0.1:3306:3306"]
+    volumes: ["saim-db:/var/lib/mysql"]
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-plocal-root-only"]
+      interval: 5s
+      retries: 20
+  api:
+    build: ./backend
+    ports: ["127.0.0.1:8080:8080"]
+    environment:
+      SAIM_CONFIG: /app/config.docker.php
+    volumes: ["./backend:/app", "saim-media:/app/public/media"]
+    depends_on:
+      db:
+        condition: service_healthy
+volumes:
+  saim-db:
+  saim-media:

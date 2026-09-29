@@ -40,3 +40,11 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Private backend configuration, runtime media and database backups
+/backend/config.local.php
+/backend/public/media/*
+!/backend/public/media/.htaccess
+/backend/backups/
+/service-account.json
+*.sql.gz

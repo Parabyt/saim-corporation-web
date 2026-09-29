@@ -1,0 +1,12 @@
+Options -Indexes -MultiViews
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+# Never turn API/media errors into Angular HTML.
+RewriteRule ^(?:api|media)(?:/|$) - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
